@@ -1,0 +1,134 @@
+
+body{
+    background-image: url(movie.jpg);
+    background-size: cover;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+.box{
+    position: absolute; 
+    width: 450px;
+    height: 500px;
+    background-color: black;
+    opacity: 0.9;
+    top: 10%;
+    left: 32%;
+    color: white;
+    
+
+}
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.input1{
+    position: relative;
+    width:50%;
+    height: 50px;
+    overflow: hidden;
+    
+}
+.input1 input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: black;
+    padding-top: 10px;
+    outline: none;
+    color: white;
+}
+.input1 label{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-bottom: 1px solid white;
+    pointer-events: none;
+}
+.input1 label::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid red;
+    left: 0px;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease ;
+}
+.content-email{
+    position: absolute;
+    bottom: 5px;
+    transition: all 0.3s ease;
+}
+.input1 input:focus + .label-email .content-email,.input1 input:valid+.label-email .content-email{
+    transform: translateY(-150%);
+    color: red;
+    font-size: 14px;
+
+    
+}
+.input1 input:focus + .label-email::after, .input1 input:valid + .label-email::after{
+    transform: translateX(0%);
+}
+input[type='submit']{
+    width:50%;
+    height: 50px;
+    background-color: red;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+input[type='submit']:hover{
+ background-color: rgb(204, 0, 27);
+}
+.help{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.help label{
+    color: white;
+    
+}
+.help a{
+    color: white;
+    text-decoration: none;
+}
+.help a:hover{
+    color: red;
+}
+@media screen and (max-width: 1024px) {
+    .box{
+        width: 100%;
+        position: static;
+        height: 100vh;
+        opacity: 1;
+    }
+
+
+}
+@media screen and (max-width: 768px) {
+    .box{
+        position: static;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+    }
+
+}
