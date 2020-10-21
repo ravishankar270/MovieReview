@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.question{
+    width: 70%;
+    margin: auto;
+    color: red;
+}
+
+.forum{
+    width: 70% ;
+    height: 100vh;
+    margin: auto;
+}
+.comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.desc{
+    width: 70%;
+    margin: 20px;
+    text-align: justify;
+
+    background-color: rgb(255, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+hr{
+    background-color: red;
+}
+.fa-thumbs-o-up{
+    padding: 10px;
+    margin: 0px 4px 0px;
+}
+.fa-thumbs-o-down{
+    padding: 10px;
+    margin: 0px 4px 0px;
+}

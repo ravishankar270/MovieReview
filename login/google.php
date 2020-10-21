@@ -4,7 +4,7 @@ session_start();
     $google_client=new Google_client();
     $google_client->setClientId("16817687725-0vn2hhn7m3pdfuk7mcukjmgutb5mj88s.apps.googleusercontent.com");
     $google_client->setClientSecret('fmkbIn_UKTwgKKIn8uH-R3CX');
-    $google_client->setRedirectUri('http://localhost/login/home.php');
+    $google_client->setRedirectUri('http://localhost/login/login/home.php');
     
     $google_client->addScope('email');
     $google_client->addScope('profile');
