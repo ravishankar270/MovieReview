@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href="forum.css?v=<?php echo time(); ?>" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FORUM</title>
 </head>
@@ -14,6 +15,7 @@
     if (!isset($_SESSION['access_token'])){
         header("url: ..login/login.php");
     }
+    
     $servername = "localhost";
         $username = "root";
         $password = "";
@@ -23,16 +25,14 @@
     $conn = new mysqli($servername, $username, $password,$dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-      }
-      
-    if($_SERVER['REQUEST_METHOD']=='POST'){
-        
-        if($_POST['post']!=""){
-            $desc=$_POST['post'];
-        $sql="insert into comments (theory_id,user_id, comments,likes,dislikes) values (2, 1,'$desc',20,30)";
-        mysqli_query($conn,$sql);
-        unset($_POST['post']);
-        }
+      }else if($_SERVER['REQUEST_METHOD']=='POST'){
+                if(isset($_POST['post']) && $_POST['post']!==""){
+                    $desc=$_POST['post'];
+                    $desc = strip_tags($desc);
+                    $sql="insert into comments (theory_id,user_id, comments,likes,dislikes) values (2, 1,'$desc',0,0)";
+                    mysqli_query($conn,$sql);
+                    unset($_POST['post']);
+                    }
     }
 
     
@@ -40,18 +40,52 @@
     // Check connection
     
         
-        $sql="select comments,likes,dislikes from comments";
+        $sql="select comment_id,comments,likes,dislikes from comments ORDER BY comment_id DESC";
         $result = $conn->query($sql);
         
-        
+        $conn->close();
         
     ?>
+
+    <script>
+    function likes(ele,id){
+       
+        if(ele.name=='like'){
+            lid="d"+String(id)
+            lid=document.getElementById(lid).value
+        }else if(ele.name=='dislikes'){
+            
+            lid=document.getElementById(id).value
+        }
+        const data=[ele.value,id,ele.name,lid]
+        const json=JSON.stringify(data)
+        
+        var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(xmlhttp.responseText)
+                if (ele.name==='like'){
+                document.getElementById(id).innerHTML=xmlhttp.responseText;
+                document.getElementById(id).style.color="blue"
+                }else{
+                    id="d"+String(id)
+                    document.getElementById(id).innerHTML=xmlhttp.responseText;
+                    document.getElementById(id).style.color="blue"
+            }
+
+      }
+    };
+    xmlhttp.open("GET","getData.php?q="+json,true);
+   
+    xmlhttp.send();
+    }
+    </script>
     <div class="forum">
     <div class='question'>
         <h1>What is your Favourite movie</h1>
         <form class="create-post" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>' method='POST'>
         <textarea class="post" name="post" required></textarea>
-        <input type="submit" name="create" value="POST" focus/>
+        <input type="submit" class='submit' name="create" value="POST" focus/>
         </form>
 
 
@@ -61,18 +95,27 @@
     <div class="comments">
     <?php
     while($row = $result->fetch_assoc()) {
-        echo "<div class=\"desc\">".$row['comments']."
-        <div class=\"content\">
-        <i class=\"fa fa-thumbs-o-up\" style=\"font-size:14px\">".$row['likes']."</i>
-        <i class=\"fa fa-thumbs-o-down\" style=\"font-size:14px\">".$row['dislikes']."</i>
+        echo "<div class=\"desc\">
+        <div class=\"content\">".$row['comments']."<br><br>
+        
+        <button type=\"submit\" class=\"like\"  onclick=\"likes(this,".$row['comment_id'].")\" name=\"like\" value=".$row['likes']."><i id=".$row['comment_id']." class=\"fa fa-thumbs-o-up\" style=\"font-size:14px\" >".$row['likes']."</i></button>
+        <button type=\"submit\" class=\"dislikes\" onclick=\"likes(this,".$row['comment_id'].")\" name=\"dislikes\" value=".$row['dislikes']."><i id=\"d".$row['comment_id']."\" class=\"fa fa-thumbs-o-down\" style=\"font-size:14px\">".$row['dislikes']."</i></button>
+        
         </div>
         </div>" ;
       }
     ?>
     </div>
     </div>
-
-    <script src="https://cdn.ckeditor.com/4.15.0/basic/ckeditor.js"></script>
+    <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+    <script src="https://cdn.ckeditor.com/4.15.0/basic/ckeditor.js">
+CKEDITOR.on('instanceCreated', function(e) {
+    e.editor.addCss( 'body { background-color: red; }' );
+});</script>
     <script>
         CKEDITOR.replace( 'post' );
     </script>
