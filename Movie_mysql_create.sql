@@ -4,6 +4,7 @@ CREATE TABLE `User` (
 	`password` varchar(255),
 	`Phone_no` FLOAT NOT NULL,
 	`Email_id` varchar(255) NOT NULL,
+	`cliend_id` varchar(500) NOT NULL,
 	PRIMARY KEY (`user_id`)
 );
 
@@ -63,6 +64,21 @@ CREATE TABLE `watch_list` (
 	PRIMARY KEY (`user_id`,`E_id`)
 );
 
+CREATE TABLE `fan theory` (
+	`theory_id` INT NOT NULL AUTO_INCREMENT,
+	`question` varchar(1000) NOT NULL,
+	`user_id` INT NOT NULL,
+	PRIMARY KEY (`theory_id`)
+);
+
+CREATE TABLE `Comments` (
+	`comment_id` INT NOT NULL AUTO_INCREMENT,
+	`theory_id` INT NOT NULL,
+	`user_id` INT NOT NULL,
+	`comments` varchar(1000) NOT NULL,
+	PRIMARY KEY (`comment_id`)
+);
+
 ALTER TABLE `Reviews` ADD CONSTRAINT `Reviews_fk0` FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`);
 
 ALTER TABLE `Reviews` ADD CONSTRAINT `Reviews_fk1` FOREIGN KEY (`E_id`) REFERENCES `Entertainment`(`E_id`);
@@ -80,4 +96,10 @@ ALTER TABLE `rating` ADD CONSTRAINT `rating_fk1` FOREIGN KEY (`E_id`) REFERENCES
 ALTER TABLE `watch_list` ADD CONSTRAINT `watch_list_fk0` FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`);
 
 ALTER TABLE `watch_list` ADD CONSTRAINT `watch_list_fk1` FOREIGN KEY (`E_id`) REFERENCES `Entertainment`(`E_id`);
+
+ALTER TABLE `fan theory` ADD CONSTRAINT `fan theory_fk0` FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`);
+
+ALTER TABLE `Comments` ADD CONSTRAINT `Comments_fk0` FOREIGN KEY (`theory_id`) REFERENCES `fan theory`(`theory_id`);
+
+ALTER TABLE `Comments` ADD CONSTRAINT `Comments_fk1` FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`);
 
