@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="movie_review_details.css">
+    <title>Website Detail Page</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/assets/logo.png"></a>
+        <div class="toggle"><img src="img/assets/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> Face</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at facilisis purus. Morbi posuere turpis sit amet nulla posuere scelerisque ut quis justo. Proin id ligula aliquet, pharetra orci vitae, feugiat magna. Fusce sit amet purus magna. Donec consectetur leo quis leo dictum, vitae scelerisque orci congue. Fusce eleifend sed est at semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <a href="#" class="play" onclick="toggle()"><img src="img/assets/play.png">Watch Trailer</a>
+            <div class="slide"></div>
+            
+            <ul class="sci">
+                <li><a href="#"><img src="img/assets/facebook.png"></a></li>
+                <li><a href="#"><img src="img/assets/twitter.png"></a></li>
+                <li><a href="#"><img src="img/assets/instagram.png"></a></li>
+
+            </ul>
+        </div>
+        </div>
+        <div class="trailer">
+            <video src="img/assets/joker_video.mp4" controls="true"></video>
+            <img src="img/assets/close.png" class="close" onclick="toggle()"> 
+        </div>
+        <script type="text/javascript">
+            function toggle(){
+                var trailer = document.querySelector('.trailer');
+                trailer.classList.toggle('active')
+            }
+        </script>
+   
+</body>
+</html>
