@@ -139,7 +139,7 @@ header .toggle img
     transform: translate(-50%,-50%);
     z-index: 10000;
     background: rgba(0,0,0,0.95);
-    widows: 100%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -222,7 +222,7 @@ header .toggle img
 
     }
     .trailer video{
-        
+
         max-width: 90px;
         outline:none;
     }
