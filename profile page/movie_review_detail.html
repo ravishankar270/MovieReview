@@ -30,13 +30,14 @@
         </div>
         </div>
         <div class="trailer">
-            <video src="img/assets/joker_video.mp4" controls="true"></video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zAGVQLHvwOY" 
+            frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img src="img/assets/close.png" class="close" onclick="toggle()"> 
         </div>
         <script type="text/javascript">
             function toggle(){
                 var trailer = document.querySelector('.trailer');
-                var trailer = document.querySelector('video');
+                // var trailer = document.querySelector('video');
 
                 trailer.classList.toggle('active')
             }
