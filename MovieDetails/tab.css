@@ -16,7 +16,7 @@
     padding: 10px;
     font-family: sans-serif;
     font-size: 18px;
-    background-color: #eee;
+    background-color:grey;
 }
 .tabContainer .buttonContainer button:hover{
     background-color: #d7d4d4;
