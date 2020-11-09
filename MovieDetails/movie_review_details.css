@@ -46,7 +46,7 @@ header .toggle img
     width:100%;
     min-height: 100vh;
     padding: 0 100px;
-    background: url(img/assets/bg.jpg);
+    background: url(images/bg.jpg);
     background-position: center;
     background-size: cover;
     display:flex;
