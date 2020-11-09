@@ -655,6 +655,7 @@
 
       .card .btn1 a:hover{
         transform: scale(0.9);
+        background-color: #69bde7;
       }
 
       .card .bottom-text .btn2 a:hover{
@@ -670,4 +671,17 @@
           margin: 20px 0;
         }
       }
-      
+
+      .btn3{
+        text-align: center;
+        text-decoration: none;
+        background: #69bde7;
+        color: #f2f2f2;
+        padding: 7px 10px;
+        border-radius: 3px;
+        display: inline-flex;
+        transition: 0.2s;
+      }
+      .btn-3 .btn3 a:hover{
+        transform: scale(0.9);
+          }
