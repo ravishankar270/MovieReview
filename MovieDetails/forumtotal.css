@@ -1,0 +1,44 @@
+
+.fantheory{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+    margin: auto;
+    background-color: black;
+}
+.subset{
+    width: 100%;
+    min-height:80px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: antiquewhite;
+    border-bottom: 1px solid black;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #1f2833;
+    color: white;
+}
+.subset:hover{
+    background-color: beige; 
+    color: black;
+
+}
+.content1{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa {
+    opacity: 0.3;
+
+}
+.views{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 5%;
+}

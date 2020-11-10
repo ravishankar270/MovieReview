@@ -24,14 +24,27 @@
     
     // Create connection
     $conn = new mysqli($servername, $username, $password,$dbname);
+    if(isset($_GET['q'])){
+
+     $array =explode("," ,$_GET['q']);
+
+     $a=intval($array[0]);
+     $sql="select comment_id,comments,likes,dislikes,theory_id from comments where theory_id =$a order by comment_id DESC" ;
+     $result = $conn->query($sql) or die($conn->error);
+     $_SESSION['id']=$a;
+     $_SESSION['question']=$array[1];
+     
+    }
+    $id=$_SESSION['id'];
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }else if($_SERVER['REQUEST_METHOD']=='POST'){
                 if(isset($_POST['post']) && $_POST['post']!==""){
                     $desc=$_POST['post'];
                     $desc = strip_tags($desc);
-                    $sql="insert into comments (theory_id,user_id, comments,likes,dislikes) values (2, 1,'$desc',0,0)";
+                    $sql="insert into comments (theory_id,user_id, comments,likes,dislikes) values ($id, 1,'$desc',0,0)";
                     mysqli_query($conn,$sql);
+                    
                     unset($_POST['post']);
                     }
     }
@@ -39,10 +52,11 @@
     
     
     // Check connection
-    
         
-        $sql="select comment_id,comments,likes,dislikes from comments ORDER BY comment_id DESC";
-        $result = $conn->query($sql);
+        
+        $sql="select comment_id,comments,likes,dislikes,theory_id from comments where theory_id =$id order by comment_id DESC" ;
+        $result = $conn->query($sql) or die($conn->error);
+    
         
         $conn->close();
         
@@ -225,7 +239,7 @@
         </header>
     <div class="forum">
     <div class='question'>
-        <h1>What is your Favourite movie</h1>
+        <h1><?php print_r($_SESSION['question']);?></h1>
         <form class="create-post" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>' method='POST'>
         <textarea class="post" name="post" required></textarea>
         <input type="submit" class='submit' name="create" value="POST" focus/>
@@ -238,6 +252,7 @@
     <div class="comments">
     <?php
     while($row = $result->fetch_assoc()) {
+        
         echo "<div class=\"desc\">
         <div class=\"content\">".$row['comments']."<br><br>
         
@@ -247,6 +262,7 @@
         </div>
         </div>" ;
       }
+    
     ?>
     </div>
     </div>
@@ -256,9 +272,7 @@
     }
 </script>
     <script src="https://cdn.ckeditor.com/4.15.0/basic/ckeditor.js">
-CKEDITOR.on('instanceCreated', function(e) {
-    e.editor.addCss( 'body { background-color: red; }' );
-});</script>
+</script>
     <script>
         CKEDITOR.replace( 'post' );
     </script>
