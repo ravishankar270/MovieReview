@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,7 @@
     <title>Profile Card</title>
 </head>
 <body>
+
     <?php
 
     define('DB_SERVER', 'localhost');
@@ -47,17 +52,14 @@
                     <i class="far fa-envelope"></i>
                 </a>
 
-                <?php
-    while ($row = mysqli_fetch_assoc($result))
-        
-?>
+                
                 <div class="main">
                     <div class="image">
                         <div class="hover">
                             <i class="fas fa-camera fa-2x"></i>
                         </div>
                     </div>
-                    <h3 class="name"><?php echo $row['Name']; ?></h3>
+                    <h3 class="name"><?php echo $_SESSION["Name"]; ?></h3>
                     <h3 class="sub-name">@J_wright</h3>
                 </div>
             </div>
@@ -66,7 +68,7 @@
                 <div class="left">
                     <div class="about-container">
                         <h3 class="title">About</h3>
-                        <p class="text">Lorem Ipsum is simply text of the printing and types industry.</p>
+                        <p class="text">Lorem Ipsum is simply text of the pri  nting and types industry.</p>
                     </div>
                     <div class="icons-container">
                         <a href="#" class="icon">
