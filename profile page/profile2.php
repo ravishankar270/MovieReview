@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,15 +25,16 @@ session_start();
             die("Connection Failed : ". $conn->connect_error);
         } else {
             
-        $sql="SELECT * from `user`";
-    
-        }
+        $sql="SELECT * from `user` where user_id=721";
         $result = mysqli_query( $conn,$sql);
-        $resultcheck = mysqli_num_rows($result);
-        
-?>
-    <!-- <h3 style="color:aliceblue; text-align: center; padding-top:50px">Profile</h3> -->
-    <div class="modal">
+        $resultcheck = mysqli_num_rows($result) > 0;
+
+        if($resultcheck)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                ?>
+<div class="modal">
         <img src="img/pic3.jpeg" alt="">
         <div class="close"></div>
     </div>
@@ -59,8 +56,8 @@ session_start();
                             <i class="fas fa-camera fa-2x"></i>
                         </div>
                     </div>
-                    <h3 class="name"><?php echo $_SESSION["Name"]; ?></h3>
-                    <h3 class="sub-name">@J_wright</h3>
+                    <h3 class="name"><?php echo $row['Name']; ?></h3>
+                    <h3 class="sub-name"><?php echo $row['username']; ?></h3>
                 </div>
             </div>
 
@@ -68,7 +65,7 @@ session_start();
                 <div class="left">
                     <div class="about-container">
                         <h3 class="title">About</h3>
-                        <p class="text">Lorem Ipsum is simply text of the pri  nting and types industry.</p>
+                        <p class="text"><?php echo $row['Bio']; ?></p>
                     </div>
                     <div class="icons-container">
                         <a href="#" class="icon">
@@ -111,6 +108,23 @@ session_start();
             </div>
         </div>
     </div>
+                <?php
+
+
+
+            }
+        }
+        else {
+            echo "no";
+        }
+    
+        }
+        
+     
+        
+?>
+    <!-- <h3 style="color:aliceblue; text-align: center; padding-top:50px">Profile</h3> -->
+    
 
     <script src="app.js"></script>
 </body>
