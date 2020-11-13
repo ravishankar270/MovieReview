@@ -3,6 +3,7 @@
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
+        
     }
 
     body{
@@ -31,8 +32,30 @@
         text-align: left;
         font-size: 70px;
         font-family: 'Times New Roman', Times, serif;
+
     }
- 
+    .profile {
+        margin-top: 8px;
+        color: white;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        padding-top: 15px; 
+        background-color: red;
+        border-radius: 50px;
+        border: 1px solid white;
+        cursor: pointer;
+
+
+    }
+    .profile a{
+        text-decoration: none;
+        color: white;
+        width: 100%;
+    }
+    .profile:hover{
+        opacity: 0.7;
+    }
     .sliderchild a{
         padding-left: 50px;
         padding-top: 100px;
@@ -61,13 +84,13 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    /* .imagecon:nth-child(5){
+     .imagecon:nth-child(5){
         background-image: url('homepage-images/joker.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-    } */
+    } 
 
-    /* @keyframes slider{
+     @keyframes slider{
         12.5%
         {
             margin-left: -100%;
@@ -100,7 +123,7 @@
         {
             margin-left: -400%;
         }
-    } */
+    } 
 
 
     /* Nav Bar */
@@ -170,6 +193,7 @@
     
     .logo-container{
         flex: 1;
+        cursor: pointer;
         display: flex;
         align-items: center;
     }
@@ -191,6 +215,7 @@
     }
     
     .logo{
+        cursor: pointer;
         color: #fff;
         font-size: 1.1rem;
         font-weight: 600;
@@ -416,6 +441,9 @@
     }
     
     @media (max-width: 920px){
+        .google{
+            display: none;
+        }
         .hamburger-menu-container{
             display: flex;
         }
@@ -663,6 +691,10 @@
         transform: scale(0.9);
       }
       @media screen and (max-width: 978px) {
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
         .container1{
           flex-wrap: wrap;
           flex-direction: column;

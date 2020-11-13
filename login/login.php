@@ -6,7 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css" />
+    <link rel='stylesheet' href="login.css?v=<?php echo time(); ?>" type="text/css" />
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
+     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Login page</title>
 </head>
 
@@ -85,9 +87,13 @@
                 </div>
 
                 <a href="#">Forget Password?</a>
-                <div>
-                <input type='button' value='Login with Google' onClick="window.location='<?php echo $auth; ?>'"/>
-                </div>
+                
+            </div>
+            <div class="google" >
+                <div class="logoG">
+                <i class='fab fa-google-plus-g' style='font-size:24px;color:red'></i>
+            </div>
+                <div class="text" onClick="window.location='<?php echo $auth; ?>'">Google</div>
             </div>
             
             

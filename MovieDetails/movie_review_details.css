@@ -39,7 +39,52 @@ header .toggle img
     max-width: 100%;
 }
 
+.whole{
+    display: flex;
+    width: 60%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
+    justify-content: space-between;
+}
+textarea{
+    resize: vertical;
+
+}
+.stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    margin: auto;
+
+    text-indent: 25px;
+}
+.review{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.watch{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    padding:30px; 
+    color: #25aae1;
+}
+.watch p{
+    margin:5px;
+}
 .banner
 {
     position: relative;

@@ -1,1 +1,3 @@
-<a href='logout.php'>Logout</a>
+<?php 
+header("location: ../homepage/homepage.php")
+?>

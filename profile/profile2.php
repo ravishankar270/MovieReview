@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +33,7 @@
                             <i class="fas fa-camera fa-2x"></i>
                         </div>
                     </div>
-                    <h3 class="name">John Wright</h3>
+                    <h3 class="name"><?php echo $_SESSION['Name'] ?></h3>
                     <h3 class="sub-name">@J_wright</h3>
                 </div>
             </div>

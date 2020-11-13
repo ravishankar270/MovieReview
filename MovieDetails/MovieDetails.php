@@ -5,9 +5,9 @@
     <title>Tabs</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href="movie_review_details.css?v=<?php echo time(); ?>" type="text/css" />    
     <link rel="stylesheet" type="text/css" href="tab.css">
-    <link rel="stylesheet" href="movie_review_details.css">
 </head>
 <body>
     <?php
@@ -54,6 +54,25 @@
             
             
             <div class="tabPanel">
+                <div class="whole">
+                    <div class="watch">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <p>Add to Watchlist</p>
+                </div>
+                <div class='review'>
+                    <div class="stars">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half"></i>
+                    </div>
+                    <div class="text">
+                               <textarea placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70"></textarea>
+                    </div>
+                    
+                </div>
+            </div>
                 <section>
                     <nav>
                         <div class="head-review">
