@@ -42,8 +42,10 @@
     <div class="container">
         <div class="card">
             <div class="header">
-                <div class="hamburger-menu">
-                    <div class="center"></div>
+                <div class="">
+                    <div class="center">
+                    <?php echo $row['user_id']; ?>
+                    </div>
                 </div>
                 <a href="#" class="mail">
                     <i class="far fa-envelope"></i>
