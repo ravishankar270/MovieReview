@@ -10,9 +10,31 @@
     <title>Profile Card</title>
 </head>
 <body>
- 
-    <!-- <h3 style="color:aliceblue; text-align: center; padding-top:50px">Profile</h3> -->
-    <div class="modal">
+
+    <?php
+
+    define('DB_SERVER', 'localhost');
+    define('DB_USERNAME', 'root');
+    define('DB_PASSWORD', '');
+    define('DB_NAME', 'moviereview');
+    
+    // Try connecting to the Database
+    $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        if($conn->connect_error){
+            echo "$conn->connect_error";
+            die("Connection Failed : ". $conn->connect_error);
+        } else {
+            
+        $sql="SELECT * from `user` where user_id=721";
+        $result = mysqli_query( $conn,$sql);
+        $resultcheck = mysqli_num_rows($result) > 0;
+
+        if($resultcheck)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                ?>
+<div class="modal">
         <img src="img/pic3.jpeg" alt="">
         <div class="close"></div>
     </div>
@@ -20,20 +42,24 @@
     <div class="container">
         <div class="card">
             <div class="header">
-                <div class="hamburger-menu">
-                    <div class="center"></div>
+                <div class="">
+                    <div class="center">
+                    <?php echo $row['user_id']; ?>
+                    </div>
                 </div>
                 <a href="#" class="mail">
                     <i class="far fa-envelope"></i>
                 </a>
+
+                
                 <div class="main">
                     <div class="image">
                         <div class="hover">
                             <i class="fas fa-camera fa-2x"></i>
                         </div>
                     </div>
-                    <h3 class="name">John Wright</h3>
-                    <h3 class="sub-name">@J_wright</h3>
+                    <h3 class="name"><?php echo $row['Name']; ?></h3>
+                    <h3 class="sub-name"><?php echo $row['username']; ?></h3>
                 </div>
             </div>
 
@@ -41,7 +67,7 @@
                 <div class="left">
                     <div class="about-container">
                         <h3 class="title">About</h3>
-                        <p class="text">Lorem Ipsum is simply text of the printing and types industry.</p>
+                        <p class="text"><?php echo $row['Bio']; ?></p>
                     </div>
                     <div class="icons-container">
                         <a href="#" class="icon">
@@ -84,6 +110,24 @@
             </div>
         </div>
     </div>
+                <?php
+
+
+
+            }
+        }
+        else {
+            echo "no";
+        }
+    
+        }
+        
+     
+        
+?>
+    <!-- <h3 style="color:aliceblue; text-align: center; padding-top:50px">Profile</h3> -->
+    
+
     <script src="app.js"></script>
 </body>
 </html>
