@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,6 @@
 </head>
 <body>
     <?php
-    session_start();
     if (!isset($_SESSION['access_token'])){
         
         header("location:   http://localhost/login/login/login.php");
@@ -72,52 +73,16 @@
                     </div>
                     
                 </div>
+
             </div>
-                <section>
-                    <nav>
-                        <div class="head-review">
-                            <img class="sec-img" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
-                         </div>
-                    </nav>
-                    
-                    <article>
-                        <div class="body-review">
-                            <div class="name-review">Ilarehs S.</div>
-                            <div class="place-review">Mumbai</div>
-                            <div class="rating">
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star-half"></i>
-                            </div>
-                            <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-                         </div>
-                    </article>
-                  </section> 
-        <br>
-                  <section>
-                    <nav>   
-                        <div class="head-review">
-                            <img class="sec-img" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" width="250px">
-                         </div>
-                    </nav>
-                    
-                    <article>
-                        <div class="body-review">
-                            <div class="name-review">Suicide S.</div>
-                            <div class="place-review">Chembur</div>
-                            <div class="rating">
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star"></i>
-                               <i class="fas fa-star-half"></i>
-                            </div>
-                            <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
-                         </div>
-                    </article>
-                  </section> 
+            <section>
+              <div>
+            <?php 
+            include("moviereview.php")
+            ?>
+          </div>
+            </section>
+                 
         </div>
         <div class="tabPanel"><?php 
         include('forumtotal.php');

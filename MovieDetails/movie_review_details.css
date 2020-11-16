@@ -58,6 +58,7 @@ textarea{
     justify-content: center;
     align-items: center;
     height: 40%;
+    cursor: pointer;
 }
 .text{
     display: flex;
@@ -81,6 +82,7 @@ textarea{
     width: 40%;
     padding:30px; 
     color: #25aae1;
+    cursor: pointer;
 }
 .watch p{
     margin:5px;
