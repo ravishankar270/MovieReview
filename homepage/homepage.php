@@ -283,6 +283,12 @@
     </div>
     <br>
     <br>
+    <br>
+    <div style="background-color: #181818; margin-left:30px; margin-right:30px;">
+    <br>
+    <br>
+    <h1 style="margin-left: 60px; color: white;">Top Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <br>
 
     <div class="container5">
         <div id="slide-left-container">
@@ -292,23 +298,63 @@
         <div id="cards-container">
           <div class="cards">
             <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Animals" style="width:100%">
-              <div class="container5">
+              <img src="homepage-images/avengers.jpg" alt="Animals" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
                 <h4>
-                  <b>Animals</b>
+                  <b style="padding-left: 30px; color:#fff;">Avengers Endgame</b>
                 </h4>
               </div>
             </div>
             <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Nature" style="width:100%">
-              <div class="container5">
+              <img src="homepage-images/john-wick.jpg" alt="Nature" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 57px; color:#fff;">John Wick 3</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/dunkirk.jpg" alt="Architecture" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 67px; color:#fff;">Dunkirk</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/blade-runner.jpg" alt="Technology" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 35px; color:#fff;">Blade Runner 2049</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/batman.jpg" alt="People" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 38px; color:#fff;">Dark Night Rises</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/inception.jpg" alt="Animals" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 64px; color:#fff;">Inception</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="http://via.placeholder.com/220x220" alt="Nature" style="width:100%; height:410px;">
+              <div class="container5" >
                 <h4>
                   <b>Nature</b>
                 </h4>
               </div>
             </div>
             <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Architecture" style="width:100%">
+              <img src="http://via.placeholder.com/220x220" alt="Architecture" style="width:100%; height:410px;">
               <div class="container5">
                 <h4>
                   <b>Architecture</b>
@@ -316,7 +362,7 @@
               </div>
             </div>
             <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Technology" style="width:100%">
+              <img src="http://via.placeholder.com/220x220" alt="Technology" style="width:100%; height:410px;">
               <div class="container5">
                 <h4>
                   <b>Technology</b>
@@ -324,48 +370,8 @@
               </div>
             </div>
             <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="People" style="width:100%">
-              <div class="container5">
-                <h4>
-                  <b>People</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Animals" style="width:100%">
-              <div class="container5">
-                <h4>
-                  <b>Animals</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Nature" style="width:100%">
-              <div class="container5">
-                <h4>
-                  <b>Nature</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Architecture" style="width:100%">
-              <div class="container5">
-                <h4>
-                  <b>Architecture</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Technology" style="width:100%">
-              <div class="container5">
-                <h4>
-                  <b>Technology</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="People" style="width:100%">
-              <div class="container5">
+              <img src="http://via.placeholder.com/220x220" alt="People" style="width:100%; height:410px;">
+              <div class="container5" >
                 <h4>
                   <b>People</b>
                 </h4>
@@ -380,6 +386,119 @@
         </div>
     
       </div>
+    </div>
+
+    <br>
+    <br>
+    
+
+
+    <br>
+    <br>
+    <br>
+    <div style="background-color: #181818; margin-left:30px; margin-right:30px;">
+    <br>
+    <br>
+    <h1 style="margin-left: 60px; color: white;">Top TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <br>
+
+    <div class="container5">
+        <div id="slide-left-container">
+          <div class="slide-left">
+          </div>
+        </div>
+        <div id="cards-container">
+          <div class="cards">
+            <div class="card5">
+              <img src="homepage-images/bb.jpg" alt="Animals" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 50px; color:#fff;">Breaking Bad</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/got.jpg" alt="Nature" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 41px; color:#fff;">Game Of Thrones</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/pb.jpg" alt="Architecture" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 50px; color:#fff;">Peaky Blinders</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/sg.png" alt="Technology" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 50px; color:#fff;">Sacred Games</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/stranger-things.jpg" alt="People" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 38px; color:#fff;">Stranger Things</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="homepage-images/inception.jpg" alt="Animals" style="width:100%; height:410px;">
+              <div class="container5" style="height:70px;">
+                <h4>
+                  <b style="padding-left: 64px; color:#fff;">Inception</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="http://via.placeholder.com/220x220" alt="Nature" style="width:100%; height:410px;">
+              <div class="container5" >
+                <h4>
+                  <b>Nature</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="http://via.placeholder.com/220x220" alt="Architecture" style="width:100%; height:410px;">
+              <div class="container5">
+                <h4>
+                  <b>Architecture</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="http://via.placeholder.com/220x220" alt="Technology" style="width:100%; height:410px;">
+              <div class="container5">
+                <h4>
+                  <b>Technology</b>
+                </h4>
+              </div>
+            </div>
+            <div class="card5">
+              <img src="http://via.placeholder.com/220x220" alt="People" style="width:100%; height:410px;">
+              <div class="container5" >
+                <h4>
+                  <b>People</b>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div id="slide-right-container">
+          <div class="slide-right">
+          </div>
+        </div>
+    
+      </div>
+    </div>
 
     <br>
     <br>
@@ -416,7 +535,7 @@
     <br>
     <br>
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="homepage.js"></script>
     </body>
 </html>
