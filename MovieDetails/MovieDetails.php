@@ -116,7 +116,6 @@
         include('forumtotal.php');
         ?></div>
                 
-            <div class="tabPanel">ADD QUIZ</div>
         </div>
 
 <script type="text/javascript">

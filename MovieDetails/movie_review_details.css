@@ -46,7 +46,7 @@ header .toggle img
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-
+    border: 1px solid black;
     justify-content: space-between;
 }
 textarea{
@@ -96,6 +96,7 @@ input[type="submit"]:hover{
     align-items: center;
     width: 40%;
     padding:30px; 
+    margin-top:20px; 
     color: #25aae1;
     cursor: pointer;
 }

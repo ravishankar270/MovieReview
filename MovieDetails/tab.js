@@ -3,20 +3,18 @@ var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel");
 
 function showPanel(panelIndex,colorCode) {
     tabButtons.forEach(function(node){
-        node.style.backgroundColor="";
+        node.style.borderBottom="";
         node.style.color="";
     });
-    tabButtons[panelIndex].style.backgroundColor=colorCode;
-    tabButtons[panelIndex].style.color="white";
+    tabButtons[panelIndex].style.borderBottom="2px solid"+colorCode;
+    tabButtons[panelIndex].style.color=colorCode;
+    
     tabPanels.forEach(function(node){
         node.style.display="none";
     });
     tabPanels[panelIndex].style.display="block";
-    tabPanels[panelIndex].style.backgroaundColor=colorCode;
 }
 showPanel(0,'#f44336');
 
-function _class(name){
-  return document.getElementsByClassName(name);
-}
+
 

@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +27,8 @@
             echo "$conn->connect_error";
             die("Connection Failed : ". $conn->connect_error);
         } else {
-            
-        $sql="SELECT * from `user` where user_id=721";
+        $id=$_SESSION['id'];
+        $sql="SELECT * from user where user_id=$id";
         $result = mysqli_query( $conn,$sql);
         $resultcheck = mysqli_num_rows($result) > 0;
 
