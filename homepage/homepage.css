@@ -674,7 +674,7 @@
       .btn1 a{
         text-align: center;
         text-decoration: none;
-        background: #404040;
+        background: #585858;
         color: #f2f2f2;
         padding: 7px 10px;
         border-radius: 3px;
@@ -826,26 +826,18 @@ ul{
 a{
     text-decoration:none;
 }
-.container{
 
-    background-color:#a4152c;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-}
 .box1{
     width:350px;
-    height:610px;
-    background-color:#1e1e26;
-    border-radius: 10px;
+    height:510px;
+    background-color:#303030    ;
     box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    margin: 20px 10px;
+    margin: 30px 10px;
 }
 .model{
     height: 350px;
@@ -858,19 +850,33 @@ a{
     align-items: center;
     width: 300px;
 }
-.details p{
-    font-family: calibri;
-    font-weight: bold;
-    color:#6a6a74;
+.btn2{
     text-align: center;
-    margin-top: 20px;
 }
+
+.btn2 a{
+  text-align: center;
+  text-decoration: none;
+  background: #585858;
+  color: #f2f2f2;
+  padding: 7px 10px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2s;
+  margin-bottom:20px;
+}
+.btn2 a:hover{
+    transform: scale(0.9);
+    background-color: #69bde7;
+  }
 .marvel{
-    color:#32323e;
+    padding-top: 22px;
+    /* padding-bottom: 15px; */
+    color:#fff;
     font-weight: bold;
     letter-spacing: 2px;
     font-family: bebas kai;
-    font-size: 25px;
+    font-size: 21px;
 }
 .logo1{
     height: 60px;
@@ -882,11 +888,12 @@ a{
     transition: all ease 0.3s;
 }
 .box1:hover .marvel{
-    color:#c0292b;
+    color:#69bde7;
     transition: all ease 0.5s;
 }
 --responsive for mobile phone--
-@media(max-width:720px){
+@media(max-width:720px)
+{
     .box1{
         width: 94%;
         height: 500px;

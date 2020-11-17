@@ -288,24 +288,43 @@
     <br>
     <br>
     <br>
+
+
+
+
+
     <!-- slider -->
+
+
+
+
+    
     <div class="container" style="background-color: #181818; margin-left:30px; margin-right:30px;">
     <br>
     <br>
+    <br>
+    <h1 style="margin-left: 60px; color: white;">Top Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <br>
+    
+    
     <ul id="autoWidth1" class="cs-hidden">
     <!--1------------------------------>
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">AVENGERS ENDGAME</p>
     <!--model-->
     <img src="homepage-images/avengers.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>
+        </div>
     
     </div>
     </li>
@@ -313,15 +332,19 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">JOHN WICK</p>
     <!--model-->
-    <img src="homepage-images/batman.jpg" class="model">
+    <img src="homepage-images/john-wick.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>
+        </div>
     
     </div>
     </li>
@@ -329,15 +352,19 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">DUNKIRK</p>
     <!--model-->
-    <img src="homepage-images/bb.jpg" class="model">
+    <img src="homepage-images/dunkirk.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>
+        </div>
     
     </div>
     </li>
@@ -345,15 +372,18 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">BLADE RUNNER</p>
     <!--model-->
-    <img src="homepage-images/dunkirk.jpg" class="model">
+    <img src="homepage-images/blade-runner.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>    </div>
     
     </div>
     </li>
@@ -361,15 +391,18 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">INCEPTION</p>
     <!--model-->
     <img src="homepage-images/inception.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>    </div>
     
     </div>
     </li>
@@ -377,118 +410,23 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">DARK NIGHT</p>
     <!--model-->
-    <img src="homepage-images/john-wick.jpg" class="model">
+    <img src="homepage-images/batman.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>    </div>
     
     </div>
     </li>
     </ul>
-    <!-- <h1 style="margin-left: 60px; color: white;">Top Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
-
-    <div class="container5">
-        <div id="slide-left-container">
-          <div class="slide-left">
-          </div>
-        </div>
-        <div id="cards-container">
-          <div class="cards">
-            <div class="card5">
-              <img src="homepage-images/avengers.jpg" alt="Animals" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 30px; color:#fff;">Avengers Endgame</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/john-wick.jpg" alt="Nature" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 57px; color:#fff;">John Wick 3</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/dunkirk.jpg" alt="Architecture" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 67px; color:#fff;">Dunkirk</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/blade-runner.jpg" alt="Technology" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 35px; color:#fff;">Blade Runner 2049</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/batman.jpg" alt="People" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 38px; color:#fff;">Dark Night Rises</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/inception.jpg" alt="Animals" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 64px; color:#fff;">Inception</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Nature" style="width:100%; height:410px;">
-              <div class="container5" >
-                <h4>
-                  <b>Nature</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Architecture" style="width:100%; height:410px;">
-              <div class="container5">
-                <h4>
-                  <b>Architecture</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Technology" style="width:100%; height:410px;">
-              <div class="container5">
-                <h4>
-                  <b>Technology</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="People" style="width:100%; height:410px;">
-              <div class="container5" >
-                <h4>
-                  <b>People</b>
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div id="slide-right-container">
-          <div class="slide-right">
-          </div>
-        </div>
-    
-      </div> -->
     </div>
 
     <br>
@@ -504,19 +442,26 @@
     <div class="container" style="background-color: #181818; margin-left:30px; margin-right:30px;">
     <br>
     <br>
+    <br>
+    <h1 style="margin-left: 60px; color: white;">Top TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <br>
     <ul id="autoWidth" class="cs-hidden">
     <!--1------------------------------>
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">BREAKING BAD</p>
     <!--model-->
-    <img src="homepage-images/avengers.jpg" class="model">
+    <img src="homepage-images/bb.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>     
     </div>
     
     </div>
@@ -525,15 +470,18 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">GAME OF THRONES</p>
     <!--model-->
-    <img src="homepage-images/batman.jpg" class="model">
+    <img src="homepage-images/got.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>     </div>
     
     </div>
     </li>
@@ -541,15 +489,19 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">PEAKY BLINDERS</p>
     <!--model-->
-    <img src="homepage-images/bb.jpg" class="model">
+    <img src="homepage-images/pb.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div> 
+        </div>
     
     </div>
     </li>
@@ -557,15 +509,19 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">SACRED GAMES</p>
     <!--model-->
-    <img src="homepage-images/dunkirk.jpg" class="model">
+    <img src="homepage-images/sg.png" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div> 
+        </div>
     
     </div>
     </li>
@@ -573,15 +529,19 @@
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARVEL</p>
+    <p class="marvel">STRANGER THINGS</p>
     <!--model-->
-    <img src="homepage-images/inception.jpg" class="model">
+    <img src="homepage-images/stranger-things.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div> 
+        </div>
     
     </div>
     </li>
@@ -596,111 +556,16 @@
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
-    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
-    </div>
+    <div class="btn2">
+        <a href="#">More Details</a>
+          
+        <a href="#">Watch Trailer</a>
+      </div>     </div>
     
     </div>
     </li>
     </ul>
-    <!-- <h1 style="margin-left: 60px; color: white;">Top TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
-
-    <div class="container5">
-        <div id="slide-left-container">
-          <div class="slide-left">
-          </div>
-        </div>
-        <div id="cards-container">
-          <div class="cards">
-            <div class="card5">
-              <img src="homepage-images/bb.jpg" alt="Animals" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 50px; color:#fff;">Breaking Bad</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/got.jpg" alt="Nature" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 41px; color:#fff;">Game Of Thrones</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/pb.jpg" alt="Architecture" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 50px; color:#fff;">Peaky Blinders</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/sg.png" alt="Technology" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 50px; color:#fff;">Sacred Games</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/stranger-things.jpg" alt="People" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 38px; color:#fff;">Stranger Things</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="homepage-images/inception.jpg" alt="Animals" style="width:100%; height:410px;">
-              <div class="container5" style="height:70px;">
-                <h4>
-                  <b style="padding-left: 64px; color:#fff;">Inception</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Nature" style="width:100%; height:410px;">
-              <div class="container5" >
-                <h4>
-                  <b>Nature</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Architecture" style="width:100%; height:410px;">
-              <div class="container5">
-                <h4>
-                  <b>Architecture</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="Technology" style="width:100%; height:410px;">
-              <div class="container5">
-                <h4>
-                  <b>Technology</b>
-                </h4>
-              </div>
-            </div>
-            <div class="card5">
-              <img src="http://via.placeholder.com/220x220" alt="People" style="width:100%; height:410px;">
-              <div class="container5" >
-                <h4>
-                  <b>People</b>
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div id="slide-right-container">
-          <div class="slide-right">
-          </div>
-        </div>
-    
-      </div> -->
     </div>
 
     <br>
