@@ -15,3 +15,8 @@ function showPanel(panelIndex,colorCode) {
     tabPanels[panelIndex].style.backgroaundColor=colorCode;
 }
 showPanel(0,'#f44336');
+
+function _class(name){
+  return document.getElementsByClassName(name);
+}
+

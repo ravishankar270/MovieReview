@@ -60,12 +60,27 @@ textarea{
     height: 40%;
     cursor: pointer;
 }
+input[type="submit"]{
+    background-color: #25aae1;
+    outline: none;
+    border: none;
+    width: 20%;
+    height: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+
+}
+input[type="submit"]:hover{
+    opacity: 0.8;
+
+}
 .text{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-end;
     height: 60%;
     margin: auto;
+    flex-direction: column;
 
     text-indent: 25px;
 }

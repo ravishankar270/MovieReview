@@ -15,9 +15,7 @@
 </head>
 <body>
   <?php
-  if (!isset($_SESSION['access_token'])){
-        header("url: ..login/login.php");
-    }
+  
     
     $servername = "localhost";
         $username = "root";

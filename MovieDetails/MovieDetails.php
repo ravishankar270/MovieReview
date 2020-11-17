@@ -8,15 +8,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href="movie_review_details.css?v=<?php echo time(); ?>" type="text/css" />    
-    <link rel="stylesheet" type="text/css" href="tab.css">
+    <link rel='stylesheet' href="movie_review_details.css?v=<?php echo time(); ?>" type="text/css" />   
+    <link rel='stylesheet' href="tab.css?v=<?php echo time(); ?>" type="text/css" />    
+    
 </head>
 <body>
     <?php
-    if (!isset($_SESSION['access_token'])){
+    if (!isset($_SESSION['access_token']) and !isset($_SESSION['Name'])){
         
         header("location:   http://localhost/login/login/login.php");
-    }?>
+    }
+    $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname="moviereview";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password,$dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+      if($_SERVER['REQUEST_METHOD']=='POST'){
+                if(isset($_POST['description']) && $_POST['description']!==""){
+                    $desc=$_POST['description'];
+                    $name=$_SESSION['Name'];
+                    $id=$_SESSION['id'];
+                    $desc = strip_tags($desc);
+                    $sql="insert into reviews (description,Spoiler_tag, user_id,E_id,username) values ('$desc', 'yes',$id,1,'$name')";
+                    mysqli_query($conn,$sql);
+                    
+                    unset($_POST['description']);
+                    }
+    }
+    ?>
 
     <header>
         <a href="#" class="logo"><img src="images/logo.png"></a>
@@ -42,9 +66,11 @@
             frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img src="images/close.png" class="close" onclick="toggle()"> 
         </div>
+        
 
 
         <div class="tabContainer">
+          <div class="vertical">
     
             <div class="buttonContainer">
                 <button onclick="showPanel(0,'#f44336')">Reviews</button>
@@ -52,6 +78,7 @@
                 <button onclick="showPanel(2,'#2196f3')">Quiz</button>
               
             </div>
+          </div>
             
             
             <div class="tabPanel">
@@ -68,9 +95,10 @@
                                <i class="fas fa-star"></i>
                                <i class="fas fa-star-half"></i>
                     </div>
-                    <div class="text">
-                               <textarea placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70"></textarea>
-                    </div>
+                    <form class="text" method="POST" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+                               <textarea name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70" required></textarea>
+                               <input type="submit" name="post_reviews" value="POST" >
+                    </form>
                     
                 </div>
 
@@ -99,6 +127,6 @@
         trailer.classList.toggle('active')
     }
 </script>
-<script src="tab.js"></script>
+<script src="tab.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

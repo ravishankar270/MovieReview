@@ -7,25 +7,29 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel='stylesheet' href="homepage.css?v=<?php echo time(); ?>" type="text/css" />
+          <link rel='stylesheet' href="homepage.css?v=<?php echo time(); ?>" type="text/css" />
+          <link rel='stylesheet' href="lightslider.css?v=<?php echo time(); ?>" type="text/css" />
         <script src="https://kit.fontawesome.com/3e55b52515.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="JQuery3.3.1.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="lightslider.js?v=<?php echo time();?>"></script>
+        <script src="homepage.js?v=<?php echo time();?>"></script>
     </head>
     <body>
 
             <!-- Nav Bar -->
 
         <header>
-            <div class="container">
+            <div class="container2">
                 <input type="checkbox" name="" id="check">
                 
                 <div class="logo-container">
-                    <h3 class="logo">Movie <span>Hall</span></h3>
+                    <h3 class="logo">Movie </h3>
                 </div>
 
                 <div class="search-box">
                     <input class="search-txt" type="text" name="" placeholder=" Type to search">
                     <a class="search-btn" href="#">
-                        <i class="fa fa-search" style="color: white;" aria-hidden="true"></i>
+                        <i class="fa fa-search" style="color: grey;" aria-hidden="true"></i>
                     </a>
                 </div>
                 <div class="hamburger-menu-container">
@@ -150,7 +154,7 @@
                     <div class="log-sign" style="--i: 1.8s">
                     <?php 
                     // session_start(); 
-                    if (!isset($_SESSION['access_token'])){
+                    if (!isset($_SESSION['access_token']) and !isset($_SESSION['Email'])){
                         echo" <a href='http://localhost/login/login/login.php' class='btn transparent'> Log in </a>
                               <a href='#' class='btn solid'> Sign up </a>";
                        
@@ -284,10 +288,109 @@
     <br>
     <br>
     <br>
-    <div style="background-color: #181818; margin-left:30px; margin-right:30px;">
+    <!-- slider -->
+    <div class="container" style="background-color: #181818; margin-left:30px; margin-right:30px;">
     <br>
     <br>
-    <h1 style="margin-left: 60px; color: white;">Top Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <ul id="autoWidth1" class="cs-hidden">
+    <!--1------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/avengers.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--2------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/batman.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--3------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/bb.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--4------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/dunkirk.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--5------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/inception.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--6------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/john-wick.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    </ul>
+    <!-- <h1 style="margin-left: 60px; color: white;">Top Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
 
     <div class="container5">
@@ -385,7 +488,7 @@
           </div>
         </div>
     
-      </div>
+      </div> -->
     </div>
 
     <br>
@@ -396,10 +499,110 @@
     <br>
     <br>
     <br>
-    <div style="background-color: #181818; margin-left:30px; margin-right:30px;">
+    <!-- for tv show -->
+
+    <div class="container" style="background-color: #181818; margin-left:30px; margin-right:30px;">
     <br>
     <br>
-    <h1 style="margin-left: 60px; color: white;">Top TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <ul id="autoWidth" class="cs-hidden">
+    <!--1------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/avengers.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--2------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/batman.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--3------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/bb.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--4------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/dunkirk.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--5------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/inception.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    <!--6------------------------------>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel">MARVEL</p>
+    <!--model-->
+    <img src="homepage-images/john-wick.jpg" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How MaKE him will be ie.</p>
+    </div>
+    
+    </div>
+    </li>
+    </ul>
+    <!-- <h1 style="margin-left: 60px; color: white;">Top TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
 
     <div class="container5">
@@ -497,7 +700,7 @@
           </div>
         </div>
     
-      </div>
+      </div> -->
     </div>
 
     <br>
@@ -535,7 +738,7 @@
     <br>
     <br>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="homepage.js"></script>
+<!--     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->
+    
     </body>
 </html>

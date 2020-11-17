@@ -45,13 +45,18 @@
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
-    echo "Connected successfully";
         $email=$_POST['email'];
         $password1=$_POST['password'];
-        $sql=" select Email_id,password from user where Email_id='$email' and password='$password1  '";
+        $sql=" select user_id, Email_id,password,username from user where Email_id='$email' and password='$password1  '";
+
         $result = $conn->query($sql);
+        $user_info=$result->fetch_row();
+        $_SESSION['Name']=$user_info[3];
+        $_SESSION['Email']=$user_info[1];
+        $_SESSION['id']=$user_info[0];
+
         if($result->num_rows==1){
-            echo"<h1 style='color:white'>successful</h1>";
+            header("location: ../homepage/homepage.php");
          
     }
     else 
