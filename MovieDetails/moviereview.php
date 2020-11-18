@@ -27,7 +27,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
-      $sql="select description,Spoiler_tag,username from reviews where E_id =1 " ;
+      $sql="select  description,Spoiler_tag,username from reviews where E_id =1 limit 6 " ;
         $result = $conn->query($sql) or die($conn->error);
     
         
@@ -43,8 +43,12 @@
 while ($row=$result->fetch_row()) {
   # code...
 
-echo "<div class='review'>
+echo "<div class='review1'>
+    
    <div class='body-review'>
+   <div class='profile' onclick=\"location.href='../profile/profile2.php'\">
+        <a >".$row[2][0]."</a>
+    </div>
       <div class='name-review'>".$row[2]."</div>
       <div class='place-review'>Germany</div>
       <div class='rating'>
@@ -59,9 +63,10 @@ echo "<div class='review'>
 </div>";
 }
 ?>
- 
+<fade></fade>
 
 </div>
+<i class="fa fa-angle-down" style="font-size:34px;color:red;"></i> 
 
 </div>
 

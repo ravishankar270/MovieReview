@@ -95,21 +95,25 @@
     xmlhttp.send();
     }
     </script>
-    <header>
-            <div class="container">
+    <header class="header">
+            <div class="container2">
                 <input type="checkbox" name="" id="check">
                 
                 <div class="logo-container">
-                    <h3 class="logo">Movie <span>Hall</span></h3>
+                    <h3 class="logo1">Movie </h3>
                 </div>
 
                 <div class="search-box">
                     <input class="search-txt" type="text" name="" placeholder=" Type to search">
                     <a class="search-btn" href="#">
-                        <i class="fa fa-search" style="color: white;" aria-hidden="true"></i>
+                        <i class="fa fa-search" style="color: grey;" aria-hidden="true"></i>
                     </a>
                 </div>
-    
+                <div class="hamburger-menu-container">
+                    <div class="hamburger-menu">
+                        <div></div>
+                    </div>
+                </div>
                 <div class="nav-btn">
                     <div class="nav-links">
                         <ul>
@@ -223,20 +227,36 @@
                             </li>
                         </ul>
                     </div>
-    
+                    
                     <div class="log-sign" style="--i: 1.8s">
-                        <a href="#" class="btn transparent"> Log in </a>
-                        <a href="#" class="btn solid"> Sign up </a>
+                    <?php 
+                    // session_start(); 
+                    if (!isset($_SESSION['access_token']) and !isset($_SESSION['Email'])){
+                        echo" <a href='http://localhost/login/login/login.php' class='btn transparent'> Log in </a>
+                              <a href='#' class='btn solid'> Sign up </a>";
+                       
+                    }else{
+                        echo" <a href='http://localhost/login/login/logout.php' class='btn transparent'> Log out </a>
+                             ";
+                        
+                    }
+                    ?>
+
                     </div>
-                </div>
+                
+                
     
-                <div class="hamburger-menu-container">
-                    <div class="hamburger-menu">
-                        <div></div>
-                    </div>
-                </div>
+                
+                <?php
+                if(isset($_SESSION['Name'])){
+                                     echo "<div class='profile' onclick=\"location.href='../profile/profile2.php'\">
+                                     <a >".$_SESSION["Name"][0]."</a>
+                                     </div>"   ;
+                                }
+                ?>
             </div>
         </header>
+
     <div class="forum">
     <div class='question'>
         <h1><?php print_r($_SESSION['question']);?></h1>
