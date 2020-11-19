@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.fa {
+.fa .fa-eye{
     opacity: 0.3;
 
 }

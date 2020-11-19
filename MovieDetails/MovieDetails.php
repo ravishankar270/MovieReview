@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href="movie_review_details.css?v=<?php echo time(); ?>" type="text/css" />   
     <link rel='stylesheet' href="tab.css?v=<?php echo time(); ?>" type="text/css" />    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
 </head>
 <body>
@@ -179,7 +180,7 @@
                     // session_start(); 
                     if (!isset($_SESSION['access_token']) and !isset($_SESSION['Email'])){
                         echo" <a href='http://localhost/login/login/login.php' class='btn transparent'> Log in </a>
-                              <a href='#' class='btn solid'> Sign up </a>";
+                              <a href='../registration/form.html' class='btn solid'> Sign up </a>";
                        
                     }else{
                         echo" <a href='http://localhost/login/login/logout.php' class='btn transparent'> Log out </a>
@@ -250,20 +251,16 @@
                 </div>
                 <div class='review'>
                     <div class="stars">
-                            <i class="fa fa-star-o" style="font-size:24px"></i>
-                            <i class="fa fa-star-o" style="font-size:24px"></i>
-                            <i class="fa fa-star-o" style="font-size:24px"></i>
-                            <i class="fa fa-star-o" style="font-size:24px"></i>
-                            <i class="fa fa-star-o toggle" style="font-size:24px"></i>
-                            <i class="fa fa-star-o toggle" style="font-size:24px"></i>
-                            <i class="fa fa-star-o toggle" style="font-size:24px"></i>
-                            <i class="fa fa-star-o toggle" style="font-size:24px"></i>
-                            <i class="fa fa-star-o toggle" style="font-size:24px"></i>
-                            <i class="fa fa-star-o toggle" style="font-size:24px"></i>
-                    </div>
+  <button class="star" onclick="rate(1)"><i class="fa fa-star"></i></button>
+  <button class="star"onclick="rate(2)"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(3)"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(4)"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(5)"><i class="fa fa-star"></i></button>
+</div>
                     <form class="text" method="POST" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
                                <textarea name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70" required></textarea>
                                <input type="submit" name="post_reviews" value="POST" >
+
                     </form>
                     
                 </div>

@@ -1,3 +1,8 @@
+<?php
+$cookie_name = "user_likes";
+$cookie_value = "John Doe";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -233,7 +238,7 @@
                     // session_start(); 
                     if (!isset($_SESSION['access_token']) and !isset($_SESSION['Email'])){
                         echo" <a href='http://localhost/login/login/login.php' class='btn transparent'> Log in </a>
-                              <a href='#' class='btn solid'> Sign up </a>";
+                              <a href='../registration/form.html' class='btn solid'> Sign up </a>";
                        
                     }else{
                         echo" <a href='http://localhost/login/login/logout.php' class='btn transparent'> Log out </a>

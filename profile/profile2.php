@@ -47,7 +47,6 @@ session_start();
             <div class="header">
                 <div class="">
                     <div class="center">
-                    <?php echo $row['user_id']; ?>
                     </div>
                 </div>
                 <a href="#" class="mail">
@@ -61,7 +60,7 @@ session_start();
                             <i class="fas fa-camera fa-2x"></i>
                         </div>
                     </div>
-                    <h3 class="name"><?php echo $row['Name']; ?></h3>
+                    <h3 class="name"><?php echo $row['username']; ?></h3>
                     <h3 class="sub-name"><?php echo $row['username']; ?></h3>
                 </div>
             </div>
@@ -70,7 +69,7 @@ session_start();
                 <div class="left">
                     <div class="about-container">
                         <h3 class="title">About</h3>
-                        <p class="text"><?php echo $row['Bio']; ?></p>
+                        <p class="text"><?php  ?></p>
                     </div>
                     <div class="icons-container">
                         <a href="#" class="icon">
@@ -88,7 +87,13 @@ session_start();
                     </div>
                     <div class="buttons-wrap">
                         <div class="follow-wrap">
-                            <a href="#" class="follow">Follow</a>
+                            <?php
+                            if($row['username']!==$_SESSION['Name']){
+                                echo '<a href="#" class="follow">Follow</a>';
+                            }else{
+                                echo '<a href="updateform.html" class="follow">Update</a>';
+                            }
+                            ?>
                         </div>
                         <div class="share-wrap">
                             <a href="#" class="share">Share</a>
