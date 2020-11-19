@@ -245,10 +245,10 @@
             
             <div class="tabPanel">
                 <div class="whole">
-                    <div class="watch">
+                    <!-- <div class="watch">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <p>Add to Watchlist</p>
-                </div>
+                </div> -->
                 <div class='review'>
                     <div class="stars">
   <button class="star" onclick="rate(1)"><i class="fa fa-star"></i></button>
@@ -281,14 +281,7 @@
                 
         </div>
 
-<script type="text/javascript">
-    function toggle(){
-        var trailer = document.querySelector('.trailer');
-        // var trailer = document.querySelector('video');
 
-        trailer.classList.toggle('active')
-    }
-</script>
 <script src="tab.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

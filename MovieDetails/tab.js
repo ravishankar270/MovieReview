@@ -32,3 +32,9 @@ function rate(index){
 
 
 
+function toggle(){
+        var trailer = document.querySelector('.trailer');
+        // var trailer = document.querySelector('video');
+
+        trailer.classList.toggle('active')
+    }

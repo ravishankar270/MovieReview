@@ -46,6 +46,22 @@
 }
     </script>
     <div class='fantheory'>
+        <div class="whole">
+                    <!-- <div class="watch">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <p>Add to Watchlist</p>
+                </div> -->
+                
+     
+                    <form class="text1" method="POST" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+                               <textarea name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="8" cols="70" required></textarea>
+                               <input type="submit" name="post_reviews" value="POST" >
+
+                    </form>
+                    
+                
+
+            </div>
         <?php
         while($row = $result->fetch_assoc()){
             
@@ -62,5 +78,6 @@
         }
         ?>
      </div>
+     <script src="tab.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
