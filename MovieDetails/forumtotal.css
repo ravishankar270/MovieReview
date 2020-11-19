@@ -47,22 +47,23 @@
     height: 400px;
     margin: auto;
     padding: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.text1{
-    width: 90%;
-    margin: auto;
-    height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 textarea{
     resize: none;
 
 }
-
+.stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    cursor: pointer;
+}
 input[type="submit"]{
     background-color: #25aae1;
     outline: none;
@@ -77,5 +78,46 @@ input[type="submit"]:hover{
     opacity: 0.8;
 
 }
+.text1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+
+    text-indent: 25px;
+}
+.review1{
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.round{
+width: 50px;
+        height: 50px;
+        text-align: center;
+        padding-top: 13px; 
+        background-color: red;
+        border-radius: 50px;
+        border: 1px solid white;
+        cursor: pointer;
+        text-transform: capitalize;
+}
+.round:hover{
+        opacity: 0.7;
+    }
+
+
+@media (max-width: 920px){
+    .fantheory{
+        width: 100%;
+        justify-content: space-around;
+    }
+  }
 
 
