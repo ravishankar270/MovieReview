@@ -1,11 +1,6 @@
 <?php
-   $Name = $_POST['Name'];
    $username = $_POST['username'];
-   $Email = $_POST['Email'];
-   $Number = $_POST['Number'];
    $password = $_POST['password'];
-   $bio = $_POST['bio'];
-
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
@@ -18,8 +13,11 @@ $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-        $sql="INSERT INTO `user` (`user_id`, `Name`, `username`, `password`, `Phone_no`, `Email_id`, `Bio`) VALUES (NULL,'$_POST[Name]','$_POST[username]','$_POST[password]','$_POST[Number]', '$_POST[Email]','$_POST[bio]')";
+
+        $sql="INSERT INTO `user` (`user_id`, `username`, `password`, `Phone_no`, `Email_id`, `cliend_id`) VALUES (NULL, '$_POST[username]', '$_POST[password]', '', '', '')";
     }
+
+    echo "$_POST[password]";
     $run = mysqli_query( $conn,$sql);
 	if($run == TRUE) {
         echo "Updated";
