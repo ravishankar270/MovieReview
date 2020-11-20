@@ -1,3 +1,8 @@
+<?php
+$cookie_name = "user_likes";
+$cookie_value = "John Doe";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +43,8 @@
     $id=$_SESSION['id'];
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-      }else if($_SERVER['REQUEST_METHOD']=='POST'){
+      }
+      if($_SERVER['REQUEST_METHOD']=='POST'){
                 if(isset($_POST['post']) && $_POST['post']!==""){
                     $desc=$_POST['post'];
                     $desc = strip_tags($desc);
@@ -233,7 +239,7 @@
                     // session_start(); 
                     if (!isset($_SESSION['access_token']) and !isset($_SESSION['Email'])){
                         echo" <a href='http://localhost/login/login/login.php' class='btn transparent'> Log in </a>
-                              <a href='#' class='btn solid'> Sign up </a>";
+                              <a href='../registration/form.html' class='btn solid'> Sign up </a>";
                        
                     }else{
                         echo" <a href='http://localhost/login/login/logout.php' class='btn transparent'> Log out </a>

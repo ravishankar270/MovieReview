@@ -60,8 +60,7 @@
          
     }
     else 
-    {
-            echo "<h2>0 results</h2>";
+    { header("location: ../registration/form.php");
           }
         }
         
@@ -75,6 +74,7 @@
                 <input type="email" name="email" autocomplete="off" required />
                 <label for="email" class="label-email">
                     <span class="content-email">Email</span>
+                    
                 </label>
             </div>
             <div class="input1">

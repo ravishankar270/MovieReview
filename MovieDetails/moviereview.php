@@ -33,7 +33,12 @@
         
         $conn->close();
   ?>
-
+<script type="text/javascript">
+  function more() {
+    console.log("hello")
+    location.href="More_review.php"
+  }
+</script>
 <div class="rev-section">
 
 
@@ -66,7 +71,7 @@ echo "<div class='review1'>
 <fade></fade>
 
 </div>
-<i class="fa fa-angle-down" style="font-size:34px;color:red;"></i> 
+<i class="fa fa-angle-down" onclick="more()" style="font-size:34px;color:red;"></i> 
 
 </div>
 

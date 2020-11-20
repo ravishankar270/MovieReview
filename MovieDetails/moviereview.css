@@ -100,12 +100,10 @@
     position: absolute;
     
     bottom: 10px;
-
-
-  }
-  .fa .fa-angle-down:hover{
     cursor: pointer;
+
   }
+  
   /*profile*/
 .profile {
         margin-top: 8px;

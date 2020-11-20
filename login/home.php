@@ -26,9 +26,7 @@ $name=(string) $data['givenName'];
 $email=(string) $data['email'];
 $client=(string) $data['id'];
 // print_r($_SESSION);  
-$sql="insert into user (user_id,username,password,Phone_no,Email_id,client_id) values (6,'$name', null , null,'$email','$client')";
-print_r($sql);
-mysqli_query($conn,$sql);
+
 header("Location: index.php");
 exit();
 

@@ -1,6 +1,10 @@
 <?php
-   $username = $_POST['username'];
-   $password = $_POST['password'];
+    $data=file_get_contents('php://input');
+    $data=json_decode($data);
+    
+
+   $username = $data[0];
+   $password = $data[1];
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
@@ -14,13 +18,12 @@ $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
 
-        $sql="INSERT INTO `user` (`user_id`, `username`, `password`, `Phone_no`, `Email_id`, `cliend_id`) VALUES (NULL, '$_POST[username]', '$_POST[password]', '', '', '')";
+        $sql="INSERT INTO `user` ( `Email_id`, `password` ) VALUES ( '$username', '$password')";
     }
 
-    
     $run = mysqli_query( $conn,$sql);
 	if($run == TRUE) {
-        echo "Updated";
+        echo "registered";
     }
     else{
         echo "error";
