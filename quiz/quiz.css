@@ -22,6 +22,17 @@ body{
     margin: 40px auto;
     padding: 30px;
     border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+@keyframes fadeInRight{
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 .custom-box::before,
 .custom-box::after{
@@ -92,9 +103,9 @@ float: left;
     margin: 0;
 
 }
-.quiz-box .option-container{
+/* .quiz-box .option-container{
 
-}
+} */
 .quiz-box .option-container .option{
     background-color: #cccccc;
     padding: 13px 15px;
@@ -104,7 +115,69 @@ float: left;
     border-radius: 5px;
     margin-bottom: 10px;
     cursor: pointer; 
-    text-transform: capitalize;   
+    opacity: 1; 
+    text-transform: capitalize; 
+    animation:fadeIn 0.3s ease forwards; 
+    position: relative;
+    overflow: hidden;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.quiz-box .option-container .option.correct::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    background-color:green;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+
+    }
+}
+.quiz-box .option-container .option.correct{
+    color: #ffffff;
+}
+.quiz-box .option-container .option.wrong::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    background-color:red;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+
+    }
+}
+
+.quiz-box .option-container .option.wrong{
+    color: #ffffff;
+}
+.quiz-box .option-container .option.already-answered{
+    pointer-events: none;
 }
 .quiz-box .btn{
     margin: 15px 0;
@@ -151,4 +224,9 @@ float: left;
 .result-box .btn{
     margin-right: 20px;
 
+}
+@media(max-width: 767px){
+    .result-box .btn{
+        margin-bottom: 15px;
+    }
 }
