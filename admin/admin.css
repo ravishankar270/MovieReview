@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: "Lato", sans-serif;
-    height: 100%;
+    
   }
   /* html{
     height: 100%;
@@ -50,7 +50,7 @@ body {
       position: relative;
     }
     .sidebar a {float: left;}
-    div.content {margin-left: 0;}
+    div.tabcontent {margin-left: 0;}
   }
   
   @media screen and (max-width: 400px) {
@@ -91,7 +91,7 @@ body {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    overflow: hidden;
+  
   }
   
   /* Floating column for labels: 25% width */
@@ -120,5 +120,6 @@ body {
     .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
+      
     }
   }
