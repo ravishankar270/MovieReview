@@ -7,11 +7,11 @@ const quiz = [
     {
         q: 'Which month comes right after july',
         options:['may','sep','july','august'],
-        answer:1
+        answer:3
     },
     {
         q: '3 + 4 = 7 ?',
-        options:['9','8','11','10'],
+        options:['True','False'],
         answer:3
     }
 ]
