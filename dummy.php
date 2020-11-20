@@ -1,16 +1,32 @@
-<script type="text/javascript">
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+batman s
+captainAmerica s
+cars s
+conjuring l
+Fast s
+Frozen s
+Iron man 3 s
+shazam s
+<?php
 
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
+$servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname="moviereview";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password,$dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
 
-xhr.open("GET", "https://imdb8.p.rapidapi.com/title/auto-complete?q=game%20of%20thr");
-xhr.setRequestHeader("x-rapidapi-key", "c3462f480dmshd3aa40c58e5f16dp1af210jsn76f6c746fe60");
-xhr.setRequestHeader("x-rapidapi-host", "imdb8.p.rapidapi.com");
-
-xhr.send()
-</script>
+    
+    $data=
+     array('' => , );
+    // Check connection
+    
+        $sql="`";
+        // $sql="select question,user_id,Views from fantheory ORDER BY theory_id DESC";
+        $result = $conn->query($sql) or die($conn->error);
+        
+        $conn->close();
+?>
