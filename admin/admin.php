@@ -17,7 +17,7 @@
             ADMIN
         </div>
     <div class="sidebar">
-  <a class="tablinks" onclick="openCity(event, 'addmovie')" href="#">Add Movie</a>
+  <a class="tablinks" onclick="openCity(event, 'addmovie')" id="defaultOpen" href="#">Add Movie</a>
   <a class="tablinks" onclick="openCity(event, 'addshow')" href="#">Add TV Show</a>
   <a class="tablinks" onclick="openCity(event, 'addquiz')" href="#">Create Quiz</a>
        </div>
@@ -317,7 +317,10 @@
 </div>
 </div>
 
-
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
         
         <script src="" async defer></script>
     </body>
