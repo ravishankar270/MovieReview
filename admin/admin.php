@@ -16,6 +16,7 @@
     <div class="top-nav" style="background-color: #008080; color: white; padding:20px; ">
             ADMIN
         </div>
+     <div class="flex">   
     <div class="sidebar">
   <a class="tablinks" onclick="openCity(event, 'addmovie')" id="defaultOpen" href="#">Add Movie</a>
   <a class="tablinks" onclick="openCity(event, 'addshow')" href="#">Add TV Show</a>
@@ -314,6 +315,7 @@
       <input type="submit" value="Submit">
     </div>
   </form>
+</div>
 </div>
 </div>
 
