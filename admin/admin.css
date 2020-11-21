@@ -7,16 +7,15 @@ body {
     height: 100%;
   } */
 
-  
-  
+
   .sidebar {
     margin: 0;
     padding: 0;
     width: 200px;
     background-color: #f1f1f1;
-    position: fixed;
+    position: sticky;
+    
     height: 100%;
-    overflow: auto;
   }
   
   .sidebar a {
@@ -24,6 +23,7 @@ body {
     color: black;
     padding: 16px;
     text-decoration: none;
+    
   }
    
   .sidebar a.active {
@@ -35,22 +35,37 @@ body {
     background-color: #66b2b2;
     color: white;
   }
+  .flex{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+
+  }
   
   div.tabcontent {
-    margin-left: 200px;
+    width: 70%;
     padding: 1px 16px;
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
+
   }
   
   @media screen and (max-width: 700px) {
+    .flex{
+      flex-direction: column;
+    }
     .sidebar {
       width: 100%;
+      position: static;
       height: auto;
       position: relative;
     }
     .sidebar a {float: left;}
-    div.tabcontent {margin-left: 0;}
+    div.tabcontent {
+      margin: 10px;
+      width: 90%;
+      overflow: unset;}
   }
   
   @media screen and (max-width: 400px) {

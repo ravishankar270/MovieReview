@@ -47,7 +47,7 @@
    ?>
 
     <header class="movie_details">
-        <a href="#" class="logo"><img src="images/logo.png"></a>
+        <a href="#" class="logo"><img src="../Movies_images/Aquaman/Aquaman2.png"></a>
         <div class="toggle"><img src="images/toggle.png"></div>
         </header>
     <div class="banner">
