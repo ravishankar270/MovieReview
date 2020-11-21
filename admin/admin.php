@@ -91,6 +91,15 @@
         <input type="text" id="fname" name="firstname" placeholder="Runtime">
       </div>
     </div>
+    <br>
+    <div class="row">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+    </div>
+<br>
     <div class="row">
       <input type="submit" value="Submit">
     </div>
