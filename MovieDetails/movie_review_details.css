@@ -118,7 +118,7 @@ input[type="submit"]:hover{
     top:100px;
     z-index: 1;
     width:100%;
-    min-height: 100vh;
+    min-height: 600px;
     padding: 0 100px;
     
     background-position: center;
@@ -131,7 +131,7 @@ input[type="submit"]:hover{
 
 .banner .content
 {
-    max-width: 550px;
+    max-width: 500px;
 }
 .banner .content h2
 {
