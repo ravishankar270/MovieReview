@@ -46,12 +46,9 @@
    include('../header.php')
    ?>
 
-    <header class="movie_details">
-        <a href="#" class="logo"><img src="../Movies_images/Aquaman/Aquaman2.png"></a>
-        <div class="toggle"><img src="images/toggle.png"></div>
-        </header>
-    <div class="banner">
-        <div class="content">
+    <div class="banner" style="background-image: url('../Movies_images/Aquaman/Aquaman2.jpg')">
+
+        <div class="content">       
             <h2>Put on a <span>Happy</span> Face</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at facilisis purus. Morbi posuere turpis sit amet nulla posuere scelerisque ut quis justo. Proin id ligula aliquet, pharetra orci vitae, feugiat magna. Fusce sit amet purus magna. Donec consectetur leo quis leo dictum, vitae scelerisque orci congue. Fusce eleifend sed est at semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             <a href="#" class="play" onclick="toggle()"><img src="images/play.png">Watch Trailer</a>

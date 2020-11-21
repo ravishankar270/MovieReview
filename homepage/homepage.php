@@ -156,7 +156,7 @@
     <div class="box1">
     <p class="marvel">AVENGERS ENDGAME</p>
     <!--model-->
-    <img src="../Movies_images/The Nun/The Nun3.jpg" class="model">
+    <img src="../Movies_images/Frozen/Frozenh.jpg" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->

@@ -45,6 +45,7 @@
       <div class="col-75">
         <input type="text" id="lname" name="lastname" placeholder="Director's Name">
       </div>
+
     </div>
     <div class="row">
       <div class="col-25">
@@ -140,7 +141,7 @@
         <label for="subject">Description</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:300px"></textarea>
       </div>
     </div>
     <div class="row">
@@ -164,6 +165,8 @@
       <div class="col-75">
         <input type="text" id="fname" name="firstname" placeholder="Number of seasons..">
       </div>
+      
+      
     </div>
     <div class="row">
       <div class="col-25">

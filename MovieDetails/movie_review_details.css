@@ -21,12 +21,12 @@
     z-index: 1000;
 
 }
-header .logo
+/*header .logo
 {
     max-width: 120px;
     margin-top: 20px;
 
-}
+}*/
 header.toggle{
 
     max-width: 60px;
@@ -34,7 +34,6 @@ header.toggle{
 }
 
 
-header .logo img,
 header .toggle img
 {
     max-width: 100%;
@@ -111,7 +110,7 @@ input[type="submit"]:hover{
     width:100%;
     min-height: 100vh;
     padding: 0 100px;
-    background: url(images/bg.jpg);
+    
     background-position: center;
     background-size: cover;
     display:flex;
@@ -252,11 +251,11 @@ input[type="submit"]:hover{
     {
         padding:20px 50px;
     }
-
+/*
     header .logo
     {
       max-width: 80px;
-    }
+    }*/
     header .toggle
     {
       max-width: 40px;
