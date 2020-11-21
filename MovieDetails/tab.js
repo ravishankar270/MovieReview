@@ -18,6 +18,7 @@ function showPanel(panelIndex,colorCode) {
 showPanel(0,'#f44336');
 
 function rate(index){
+    console.log(tabPanels)
     for(i=0; i<index;i++){
         stars[i].style.opacity=1;
         stars[i].style.color="#FFDF00";
