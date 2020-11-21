@@ -117,6 +117,9 @@
         <div class="tabPanel"><?php 
         include('forumtotal.php');
         ?></div>
+        <div class="tabPanel"><?php 
+        include('quiz.php');
+        ?></div>
                 
         </div>
 
