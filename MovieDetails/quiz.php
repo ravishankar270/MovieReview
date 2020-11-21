@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +10,7 @@
     
   </head>
   <body>
+      
     <div class="home-box custom-box">
         <h3>Instructions:</h3>
         <p>Total number of questions:<span class="total-question"> 5 </span></p>
@@ -75,5 +78,7 @@
     </div>
     <script src="quiz.js"></script>
     <script src="question.js"></script>
+    <script src="tab.js?v=<?php echo time(); ?>"></script>
+
 </body>
 </html>
