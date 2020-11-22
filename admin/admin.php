@@ -16,6 +16,7 @@ include('../connectdb.php');
                   $genre=$conn -> real_escape_string($_POST['genre']);
                   $description=$conn -> real_escape_string(strip_tags($_POST['description']));
                   $Rating=$_POST['rating'];
+                  $trailer=$_POST['trailer'];
                   $runtime=$conn -> real_escape_string($_POST['runtime']);
                   
 
@@ -85,7 +86,7 @@ include('../connectdb.php');
                 //   if(move_uploaded_file($_FILES['files']['tmp_name'], $upload_directory.$TargetPath2)){   
                 //   if(move_uploaded_file($_FILES['files']['tmp_name'], $upload_directory.$TargetPath3)){ 
                 if($upload==1){
-                    $sql="INSERT INTO `entertainment` ( `Director`,`Name`,`genre`,`images`,`images1`,`images2`,`images3`,`rating`,`description`,`admin_id`,`Type` ) VALUES ( '$director','$movie_name','$genre','".$a[0]."','".$a[1]."','".$a[2]."','".$a[3]."',$Rating,'$description',0,'Movie')";
+                    $sql="INSERT INTO `entertainment` ( `Director`,`Name`,`genre`,`images`,`images1`,`images2`,`images3`,`rating`,`description`,`admin_id`,`Type`,`trailer` ) VALUES ( '$director','$movie_name','$genre','".$a[0]."','".$a[1]."','".$a[2]."','".$a[3]."',$Rating,'$description',0,'Movie','$trailer')";
                   $result = $conn->query($sql) or die($conn->error);
                     if($result){
                       echo "Updated";
@@ -183,7 +184,7 @@ include('../connectdb.php');
       </div>
       <div class="col-75">
         <select id="genre" name="genre" required>
-          <option value="Action/Thrille">Action/Thriller</option>
+          <option value="Action/Thriller">Action/Thriller</option>
           <option value="Horror">Horror</option>
           <option value="Comedy">Comedy</option>
           <option value="Sci-Fi">Sci-Fi</option>
@@ -219,6 +220,14 @@ include('../connectdb.php');
       </div>
       <div class="col-75">
         <input type="text" id="runtime" name="runtime" placeholder="Runtime" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="trailer">Trailer Link</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="trailer" name="trailer" placeholder="Trailer Link" required>
       </div>
     </div>
     <br>

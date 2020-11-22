@@ -26,7 +26,14 @@
         if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }else{
-        select=
+        $action="select images,trailer,Name from entertainment where Type='Movie' and genre='Action/Thriller'"; 
+        $Horror="select images,trailer,Name from entertainment where Type='Movie' and genre='Horror'"; 
+        $Comedy="select images,trailer,Name from entertainment where Type='Movie' and genre='Comedy'"; 
+        $Scifi="select images,trailer,Name from entertainment where Type='Movie' and genre='Sci-Fi'"; 
+        $result=$conn->query($action) or die($conn->error);
+        $result1=$conn->query($Horror) or die($conn->error);
+        $result2=$conn->query($Comedy) or die($conn->error);
+        $result3=$conn->query($Scifi) or die($conn->error);
     }
         ?>
          <!-- Nav Bar -->
@@ -58,12 +65,18 @@
     
     <ul id="autoWidth1" class="cs-hidden">
     <!--1------------------------------>
+    <?php 
+    while ( $row=$result->fetch_row()) {
+
+        # code...
+    
+    ?>
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">AVENGERS ENDGAME</p>
+    <p class="marvel"><?php echo $row[2];?></p>
     <!--model-->
-    <img src="all-movies-images/avengers.jpg" class="model">
+    <img src="<?php echo $row[0];?>" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
@@ -71,110 +84,15 @@
     <div class="btn2">
         <a href="#">More Details</a>
           
-        <a href="#">Watch Trailer</a>
+        <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>
         </div>
     
     </div>
     </li>
-    <!--2------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">JOHN WICK</p>
-    <!--model-->
-    <img src="all-movies-images/john-wick.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>
-        </div>
-    
-    </div>
-    </li>
-    <!--3------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">DUNKIRK</p>
-    <!--model-->
-    <img src="all-movies-images/dunkirk.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>
-        </div>
-    
-    </div>
-    </li>
-    <!--4------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">BLADE RUNNER</p>
-    <!--model-->
-    <img src="all-movies-images/blade-runner.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>    </div>
-    
-    </div>
-    </li>
-    <!--5------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">INCEPTION</p>
-    <!--model-->
-    <img src="all-movies-images/inception.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>    </div>
-    
-    </div>
-    </li>
-    <!--6------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">DARK NIGHT</p>
-    <!--model-->
-    <img src="all-movies-images/batman.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>    </div>
-    
-    </div>
-    </li>
-    </ul>
+    <?php
+    }
+?></ul>
     <br>
     </div>
 
@@ -191,12 +109,18 @@
     <br>
     <ul id="autoWidth" class="cs-hidden">
     <!--1------------------------------>
+    <?php 
+    while ( $row=$result1->fetch_row()) {
+
+        # code...
+    
+    ?>
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">THE CONJURING</p>
+    <p class="marvel"><?php echo $row[2];?></p>
     <!--model-->
-    <img src="all-movies-images/conjuring.jpg" class="model">
+    <img src="<?php echo $row[0];?>" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
@@ -204,110 +128,15 @@
     <div class="btn2">
         <a href="#">More Details</a>
           
-        <a href="#">Watch Trailer</a>
+        <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>     
     </div>
     
     </div>
     </li>
+    <?php 
+}?>
     <!--2------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">IT</p>
-    <!--model-->
-    <img src="all-movies-images/IT.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>     </div>
-    
-    </div>
-    </li>
-    <!--3------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">DOCTOR SLEEP</p>
-    <!--model-->
-    <!--details-->
-    <img src="all-movies-images/doc-sleep.jpg" class="model">
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--4------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">INSIDIOUS</p>
-    <!--model-->
-    <img src="all-movies-images/insidious.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--5------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">HUSH</p>
-    <!--model-->
-    <img src="all-movies-images/hush.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--6------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">GRUDGE</p>
-    <!--model-->
-    <img src="all-movies-images/grudge.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>     </div>
-    
-    </div>
-    </li>
     </ul>
     <br>
     </div>
@@ -325,12 +154,18 @@
     <br>
     <ul id="autoWidth2" class="cs-hidden">
     <!--1------------------------------>
+    <?php 
+    while ( $row=$result2->fetch_row()) {
+
+        # code...
+    
+    ?>
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">MARTIAN</p>
+    <p class="marvel"><?php echo $row[2];?></p>
     <!--model-->
-    <img src="all-movies-images/martian.jpg" class="model">
+    <img src="<?php echo $row[0];?>" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
@@ -338,110 +173,17 @@
     <div class="btn2">
         <a href="#">More Details</a>
           
-        <a href="#">Watch Trailer</a>
+        <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>     
     </div>
     
     </div>
     </li>
+    <?php 
+}
+?>
     <!--2------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">PROJECT POWER</p>
-    <!--model-->
-    <img src="all-movies-images/pp.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>     </div>
-    
-    </div>
-    </li>
-    <!--3------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">INTERSTELLAR</p>
-    <!--model-->
-    <img src="all-movies-images/interstellar.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--4------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">ARRIVAL</p>
-    <!--model-->
-    <img src="all-movies-images/arrival.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--5------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">OBLIVION</p>
-    <!--model-->
-    <img src="all-movies-images/oblivion.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--6------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">MORTAL ENGINES</p>
-    <!--model-->
-    <img src="all-movies-images/me.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>     </div>
-    
-    </div>
-    </li>
+  
     </ul>
     <br>
     </div>
@@ -458,12 +200,18 @@
     <br>
     <ul id="autoWidth3" class="cs-hidden">
     <!--1------------------------------>
+    <?php 
+    while ( $row=$result3->fetch_row()) {
+
+        # code...
+    
+    ?>
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">JOHNY ENGLISH 3</p>
+    <p class="marvel"><?php echo $row[2];?></p>
     <!--model-->
-    <img src="all-movies-images/je.jpg" class="model">
+    <img src="<?php echo $row[0];?>" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
@@ -471,110 +219,17 @@
     <div class="btn2">
         <a href="#">More Details</a>
           
-        <a href="#">Watch Trailer</a>
+        <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>     
     </div>
     
     </div>
     </li>
+    <?php
+}
+    ?>
     <!--2------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">TAG</p>
-    <!--model-->
-    <img src="all-movies-images/tag.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>     </div>
-    
-    </div>
-    </li>
-    <!--3------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">INTERN</p>
-    <!--model-->
-    <img src="all-movies-images/intern.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--4------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">MIB INTERNATION</p>
-    <!--model-->
-    <img src="all-movies-images/mib.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--5------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">INSTANT FAMILY</p>
-    <!--model-->
-    <img src="all-movies-images/if.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div> 
-        </div>
-    
-    </div>
-    </li>
-    <!--6------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">DOLITTLE</p>
-    <!--model-->
-    <img src="all-movies-images/dl.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>     </div>
-    
-    </div>
-    </li>
+  
     </ul>
     <br>
     </div>
