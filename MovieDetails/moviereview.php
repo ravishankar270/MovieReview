@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +22,9 @@ include('../connectdb.php');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
-      $sql="select  description,Spoiler_tag,username from reviews where E_id =1 limit 6 " ;
+      $sql="select  description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid']." limit 6 " ;
         $result = $conn->query($sql) or die($conn->error);
-    
+        
         
         $conn->close();
   ?>
@@ -37,12 +38,12 @@ include('../connectdb.php');
 
 
 
-<div class="reviews">
+<div class="reviews-all">
 <?php
 while ($row=$result->fetch_row()) {
   # code...
 
-echo "<div class='review1'>
+echo "<div class='review-all'>
     
    <div class='body-review'>
    <div class='profile' onclick=\"location.href='../profile/profile2.php'\">
@@ -62,12 +63,19 @@ echo "<div class='review1'>
 </div>";
 }
 ?>
+<?php if($result->num_rows==6){?>
 <fade></fade>
+<?php }
+?>
 
 </div>
+<?php if($result->num_rows==6){?>
 <i class="fa fa-angle-down" onclick="more()" style="font-size:34px;color:red;"></i> 
-
+<?php
+}
+?>
 </div>
+
 
 </body>
 </html>

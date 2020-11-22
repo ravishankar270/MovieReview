@@ -63,10 +63,10 @@ body{
 .home-box p span{
     font-weight:500;
 }
-.home-box .btn{
+.home-box .btn-quiz{
     margin-top: 20px;
 }
-.btn{
+.btn-quiz{
     padding: 15px 45px;
     background-color: #009688;
     color: #000000;
@@ -179,7 +179,7 @@ float: left;
 .quiz-box .option-container .option.already-answered{
     pointer-events: none;
 }
-.quiz-box .btn{
+.quiz-box .btn-quiz{
     margin: 15px 0;
 }
 .quiz-box .answers-indicator{
@@ -226,7 +226,7 @@ float: left;
 
 }
 @media(max-width: 767px){
-    .result-box .btn{
+    .result-box .btn-quiz{
         margin-bottom: 15px;
     }
 }

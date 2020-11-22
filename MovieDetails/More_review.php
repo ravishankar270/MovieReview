@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +31,8 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
-      $sql="select  description,Spoiler_tag,username from reviews where E_id =1  " ;
+      if(isset($_SESSION['eid'])){
+      $sql="select  description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid'] ;
         
       $data1="-";
       $data1="-";
@@ -70,7 +74,7 @@
     }
     }
     $result = $conn->query($sql) or die($conn->error);
-    
+    }
         
         $conn->close();
   ?>

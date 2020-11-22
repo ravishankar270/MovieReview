@@ -26,10 +26,10 @@
         if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }else{
-        $action="select images,trailer,Name from entertainment where Type='Movie' and genre='Action/Thriller'"; 
-        $Horror="select images,trailer,Name from entertainment where Type='Movie' and genre='Horror'"; 
-        $Comedy="select images,trailer,Name from entertainment where Type='Movie' and genre='Comedy'"; 
-        $Scifi="select images,trailer,Name from entertainment where Type='Movie' and genre='Sci-Fi'"; 
+        $action="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Action/Thriller'"; 
+        $Horror="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Horror'"; 
+        $Comedy="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Comedy'"; 
+        $Scifi="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Sci-Fi'"; 
         $result=$conn->query($action) or die($conn->error);
         $result1=$conn->query($Horror) or die($conn->error);
         $result2=$conn->query($Comedy) or die($conn->error);
@@ -82,7 +82,7 @@
     <!--logo-character-->
     <!--character-details-->
     <div class="btn2">
-        <a href="#">More Details</a>
+        <a href="../MovieDetails/MovieDetails.php?q=<?php echo $row[3];?>">More Details</a>
           
         <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>
@@ -126,7 +126,7 @@
     <!--logo-character-->
     <!--character-details-->
     <div class="btn2">
-        <a href="#">More Details</a>
+        <a href="../MovieDetails/MovieDetails.php?q=<?php echo $row[3];?>">More Details</a>
           
         <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>     
@@ -171,7 +171,7 @@
     <!--logo-character-->
     <!--character-details-->
     <div class="btn2">
-        <a href="#">More Details</a>
+        <a href="../MovieDetails/MovieDetails.php?q=<?php echo $row[3];?>">More Details</a>
           
         <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>     
@@ -203,8 +203,7 @@
     <?php 
     while ( $row=$result3->fetch_row()) {
 
-        # code...
-    
+
     ?>
   <li class="item-a">
     <!--slider-box-->
@@ -217,7 +216,7 @@
     <!--logo-character-->
     <!--character-details-->
     <div class="btn2">
-        <a href="#">More Details</a>
+        <a href="../MovieDetails/MovieDetails.php?q=<?php echo $row[3];?>">More Details</a>
           
         <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>     
@@ -244,5 +243,6 @@
     <br>
         
         <script src="" async defer></script>
+
     </body>
 </html>

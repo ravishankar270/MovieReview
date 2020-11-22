@@ -14,7 +14,7 @@
     <div class="home-box custom-box">
         <h3>Instructions:</h3>
         <p>Total number of questions:<span class="total-question"> 5 </span></p>
-        <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+        <button type="button" class="btn-quiz" onclick="startQuiz()">Start Quiz</button>
     
     </div>
 
@@ -33,7 +33,7 @@
 
         </div>
         <div class="next-question-btn">
-            <button type="button" class="btn" onclick=next() >Next</button>
+            <button type="button" class="btn-quiz" onclick=next() >Next</button>
         </div>
         <div class="answers-indicator">
             <!-- <div></div>
@@ -72,8 +72,8 @@
                 <td><span class="total-score"></span></td>
             </tr>
         </table>
-        <button type="button" class="btn" onclick="tryAgainQuiz()">Try again</button>
-        <button type="button" class="btn" onclick="goToHome()">Go to Home</button>
+        <button type="button" class="btn-quiz" onclick="tryAgainQuiz()">Try again</button>
+        <button type="button" class="btn-quiz" onclick="goToHome()">Go to Home</button>
 
     </div>
     <script src="quiz.js"></script>

@@ -29,16 +29,16 @@
   
   }
   
-  .reviews{
+  .reviews-all{
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
   }
-  .review1{
+  .review-all{
     flex-basis:33.333333%;
-
+    min-width: 400px;
     margin: 10px;
   }
   
@@ -129,11 +129,11 @@
     }
   
   @media (max-width: 920px){
-    .reviews{
+    .reviews-all{
       width: 80%;
       margin: auto;
     }
-    .review1{
+    .review-all{
       margin-top: 1.5rem;
       flex-basis: 100%;
     }
