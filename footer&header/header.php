@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../header.css?v=<?php echo time();?>">
+<link rel="stylesheet" type="text/css" href="../footer&header/header.css?v=<?php echo time();?>">
 <script src="https://kit.fontawesome.com/3e55b52515.js" crossorigin="anonymous"></script>
 <header class="Navbar">
             <div class="container-Navbar">

@@ -19,13 +19,7 @@
         
         header("location:   http://localhost/login/login/login.php");
     }
-    $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname="moviereview";
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
+    include('../connectdb.php');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
@@ -43,10 +37,10 @@
     }
     ?>
    <?php 
-   include('../header.php')
+   include('../footer&header/header.php')
    ?>
    <?php 
-   include('../slider.php');
+   include('../footer&header/slider.php');
    ?>
 
     <div class="banner">

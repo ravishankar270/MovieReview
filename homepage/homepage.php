@@ -19,7 +19,7 @@
             <!-- Nav Bar -->
 
         <?php 
-        include('../header.php');
+        include('../footer&header/header.php');
         ?>
 
               <!-- Image Carousel -->

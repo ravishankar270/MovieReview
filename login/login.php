@@ -32,19 +32,11 @@
    <?php 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         
-    
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname="moviereview";
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
-    
-    // Check connection
-    if ($conn->connect_error) {
+        include('../connectdb.php');
+        if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
+        else{
         $email=$_POST['email'];
         $password1=$_POST['password'];
         $sql=" select user_id, Email_id,password,username from user where Email_id='$email' and password='$password1  '";
@@ -62,6 +54,7 @@
     else 
     { header("location: ../registration/form.php");
           }
+      }
         }
         
     ?>

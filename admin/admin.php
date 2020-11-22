@@ -1,15 +1,12 @@
 <?php session_start();?>
 
 <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname="moviereview";
+include('../connectdb.php');
+
         $error="";
         
     
     // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }else if($_SERVER['REQUEST_METHOD']=='POST'){

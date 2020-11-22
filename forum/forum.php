@@ -22,13 +22,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
         header("url: ..login/login.php");
     }
     
-    $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname="moviereview";
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
+    include('../connectdb.php');
     if(isset($_GET['q'])){
 
      $array =explode("," ,$_GET['q']);
