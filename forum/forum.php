@@ -43,8 +43,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
     $id=$_SESSION['id'];
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-      }
-      if($_SERVER['REQUEST_METHOD']=='POST'){
+      }else if($_SERVER['REQUEST_METHOD']=='POST'){
                 if(isset($_POST['post']) && $_POST['post']!==""){
                     $desc=$_POST['post'];
                     $desc = strip_tags($desc);

@@ -115,7 +115,7 @@ input[type="submit"]:hover{
 .banner
 {
     position: absolute;
-    top:100px;
+    top:80px;
     z-index: 1;
     width:100%;
     min-height: 600px;

@@ -1,11 +1,4 @@
-batman s
-captainAmerica s
-cars s
-conjuring l
-Fast s
-Frozen s
-Iron man 3 s
-shazam s
+
 <?php
 
 $servername = "localhost";
@@ -17,16 +10,24 @@ $servername = "localhost";
     $conn = new mysqli($servername, $username, $password,$dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-      }
+      }else {
 
     
-    $data=
-     array('' => , );
     // Check connection
     
-        $sql="`";
-        // $sql="select question,user_id,Views from fantheory ORDER BY theory_id DESC";
+        $sql= "select images from entertainment ";
+        // $sql="";
         $result = $conn->query($sql) or die($conn->error);
+        if($result){
+            while ($row=$result->fetch_row()) {
+                echo '<img src="data:image;base64,'.base64_encode($row[0]).'" alt="image" style="width:500px;height:500px;"/>';
+            }
+             
+        }else{
+                echo "some";
+                # code...
+            }
+    }
         
         $conn->close();
 ?>
