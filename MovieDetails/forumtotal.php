@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +25,7 @@ include('../connectdb.php');
     
     // Check connection
     
-        $sql="select * from `fan theory`";
+        $sql="select * from `fan theory` where E_id=".$_SESSION['eid'];
         // $sql="select question,user_id,Views from fantheory ORDER BY theory_id DESC";
         $result = $conn->query($sql) or die($conn->error);
         

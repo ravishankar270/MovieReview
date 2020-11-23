@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2020 at 10:57 AM
+-- Generation Time: Nov 23, 2020 at 08:43 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.32
 
@@ -114,16 +114,9 @@ CREATE TABLE `fan theory` (
   `question` varchar(1000) NOT NULL,
   `user_id` int(11) NOT NULL,
   `Views` bigint(255) NOT NULL DEFAULT 0,
-  `username` varchar(255) DEFAULT NULL
+  `username` varchar(255) DEFAULT NULL,
+  `E_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `fan theory`
---
-
-INSERT INTO `fan theory` (`theory_id`, `question`, `user_id`, `Views`, `username`) VALUES
-(7, 'what is that?', 1, 0, 'ravishankar'),
-(8, 'how is that?', 2, 0, 'Shankar');
 
 -- --------------------------------------------------------
 
@@ -181,7 +174,23 @@ INSERT INTO `reviews` (`review_id`, `description`, `review_likes`, `Spoiler_tag`
 (12, 'kkk', 0, 'yes', 2, 1, 'Shankar'),
 (13, 'kkk', 0, 'yes', 2, 1, 'Shankar'),
 (14, 'kkk', 0, 'yes', 2, 1, 'Shankar'),
-(15, 'kkk', 0, 'yes', 2, 1, 'Shankar');
+(15, 'kkk', 0, 'yes', 2, 1, 'Shankar'),
+(27, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(28, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(30, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(31, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(32, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(33, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(34, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(35, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(36, 'hello', 0, 'yes', 2, 31, 'Shankar'),
+(37, 'k', 0, 'yes', 2, 31, 'Shankar'),
+(38, 'kkk', 0, 'yes', 2, 31, 'Shankar'),
+(39, 'Hekko', 0, 'yes', 2, 35, 'Shankar'),
+(40, 'echo', 0, 'yes', 2, 35, 'Shankar'),
+(41, 'hello', 0, 'yes', 2, 38, 'Shankar'),
+(42, 'kkekek', 0, 'yes', 2, 38, 'Shankar'),
+(43, 'jjj', 0, 'yes', 2, 38, 'Shankar');
 
 -- --------------------------------------------------------
 
@@ -207,16 +216,18 @@ CREATE TABLE `user` (
   `password` varchar(255) DEFAULT NULL,
   `Phone_no` float NOT NULL,
   `Email_id` varchar(255) NOT NULL,
-  `cliend_id` varchar(500) NOT NULL
+  `cliend_id` varchar(500) NOT NULL,
+  `image` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `password`, `Phone_no`, `Email_id`, `cliend_id`) VALUES
-(1, 'ravishankar', '123', 1233460, 'harrypotter27082000@gmail.com', ''),
-(2, 'Shankar', '123', 8291070000, 'r@gmail.com', '');
+INSERT INTO `user` (`user_id`, `username`, `password`, `Phone_no`, `Email_id`, `cliend_id`, `image`) VALUES
+(1, 'ravishankar', '123', 1233460, 'harrypotter27082000@gmail.com', '', ''),
+(2, 'Shankar', '123', 8291070000, 'r@gmail.com', '', ''),
+(32, 'Ravi', NULL, 0, 'ronweasley27082000@gmail.com', '115120693196236245408', '');
 
 -- --------------------------------------------------------
 
@@ -228,6 +239,15 @@ CREATE TABLE `watch_list` (
   `user_id` int(11) NOT NULL,
   `E_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `watch_list`
+--
+
+INSERT INTO `watch_list` (`user_id`, `E_id`) VALUES
+(32, 36),
+(32, 39),
+(32, 42);
 
 --
 -- Indexes for dumped tables
@@ -260,7 +280,8 @@ ALTER TABLE `entertainment`
 ALTER TABLE `fan theory`
   ADD PRIMARY KEY (`theory_id`),
   ADD KEY `fan theory_fk0` (`user_id`),
-  ADD KEY `username` (`username`);
+  ADD KEY `username` (`username`),
+  ADD KEY `E_id` (`E_id`);
 
 --
 -- Indexes for table `movie`
@@ -314,7 +335,7 @@ ALTER TABLE `watch_list`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `entertainment`
@@ -332,13 +353,13 @@ ALTER TABLE `fan theory`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Constraints for dumped tables
@@ -362,7 +383,8 @@ ALTER TABLE `entertainment`
 --
 ALTER TABLE `fan theory`
   ADD CONSTRAINT `fan theory_fk0` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD CONSTRAINT `fan theory_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`);
+  ADD CONSTRAINT `fan theory_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`),
+  ADD CONSTRAINT `fan theory_ibfk_2` FOREIGN KEY (`E_id`) REFERENCES `entertainment` (`E_id`);
 
 --
 -- Constraints for table `movie`
