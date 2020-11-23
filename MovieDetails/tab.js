@@ -15,7 +15,7 @@ function showPanel(panelIndex,colorCode) {
     });
     tabPanels[panelIndex].style.display="block";
 }
-showPanel(0,'#f44336');
+showPanel(0,'#25aae1');
 
 function rate(index){
     console.log(tabPanels)

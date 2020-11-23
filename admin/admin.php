@@ -270,7 +270,7 @@ include('../connectdb.php');
 <div id="addshow" class="tabcontent">
     <br>
 <div class="container">
-  <form action="action_page.php">
+  <form action="">
     <div class="row">
       <div class="col-25">
         <label for="fname">Name of the TV Show</label>

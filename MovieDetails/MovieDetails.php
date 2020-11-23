@@ -232,9 +232,9 @@
           <div class="vertical">
     
             <div class="buttonContainer">
-                <button onclick="showPanel(0,'#f44336')">Reviews</button>
-                <button onclick="showPanel(1,'#4caf50')">Fan Theory</button>
-                <button onclick="showPanel(2,'#2196f3')">Quiz</button>
+                <button onclick="showPanel(0,'#25aae1')">Reviews</button>
+                <button onclick="showPanel(1,'#25aae1')">Fan Theory</button>
+                <button onclick="showPanel(2,'#25aae1')">Quiz</button>
               
             </div>
           </div>
