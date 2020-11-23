@@ -33,8 +33,7 @@ $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                 $iquery = mysqli_query($con, $updatequery);
 
                 if($iquery){
-                    $_SESSION['msg'] = "password has been successfully updated";
-                    header('location:login.php');
+                    echo "Password changed successfully..Please go back to login page";
                 }
                 else{
 
@@ -49,7 +48,7 @@ $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
         }
 
         else {
-            echo "userid not found";
+            echo "user not found";
         }
         
 

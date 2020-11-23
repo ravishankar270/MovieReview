@@ -84,14 +84,6 @@
                     <label for='rememberme'>Remember me</label>
                 </div>
 
-<p><?php
-    if(isset($_SESSION['msg'])){
-        echo $_SESSION['msg'];
-    }
-    else{
-        echo "error";
-    }
-?>
                 <a href="forgot.php">Forget Password?</a>
                 
             </div>
