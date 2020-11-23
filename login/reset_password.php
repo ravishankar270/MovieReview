@@ -19,7 +19,7 @@
 
 <div class="box">
         <form class='form' action="reset.php" method="post" >
-            <h1>Recover Your Account</h1>
+            <h1>Reset Your Password</h1>
             <!-- <div class="input1">
                 <input type="email" id="email" name="email" autocomplete="off" required />
                 <label for="email" class="label-email">

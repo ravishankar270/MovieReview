@@ -26,12 +26,12 @@ $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
                 $userdata = mysqli_fetch_array($query);
                 $username = $userdata['username'];
-                $user_id = $userdata['user_id'];
+                $Email_id = $userdata['Email_id'];
                 
                 
                 $subject = "Reset Password";
                 $body = "Hi, $username, Click here to reset your password
-                         http://localhost/login/login/reset_password.php?user_id=$user_id ";
+                         http://localhost/login/login/reset_password.php?Email_id=$Email_id ";
                 $sender_email = "From: movieratingwebsite@gmail.com";
                 
                 if(mail($to_email, $subject, $body, $sender_email)) {

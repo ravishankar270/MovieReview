@@ -84,7 +84,15 @@
                     <label for='rememberme'>Remember me</label>
                 </div>
 
-                <a href="#">Forget Password?</a>
+<p><?php
+    if(isset($_SESSION['msg'])){
+        echo $_SESSION['msg'];
+    }
+    else{
+        echo "error";
+    }
+?>
+                <a href="forgot.php">Forget Password?</a>
                 
             </div>
             <div class="google" >
