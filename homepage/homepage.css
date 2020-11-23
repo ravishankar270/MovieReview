@@ -43,23 +43,23 @@
 
 
     .imagecon:nth-child(1){
-        background-image: url('../homepage-images/joker.jpg');
+        background-image: url('homepage-images/joker.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
     
     .imagecon:nth-child(2){
-        background-image: url('../homepage-images/parasite.jpg');
+        background-image: url('homepage-images/parasite1.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
     .imagecon:nth-child(3){
-        background-image: url('../homepage-images/007.jpg');
+        background-image: url('homepage-images/007.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
     .imagecon:nth-child(4){
-        background-image: url('../homepage-images/widow.jpg');
+        background-image: url('homepage-images/widow.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }

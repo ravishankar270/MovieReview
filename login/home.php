@@ -33,14 +33,13 @@ $_SESSION['email']=$data['email'];
 $_SESSION['gender']=$data['gender'];
 $_SESSION['LastName']=$data['familyName'];
 $_SESSION['Name']=$data['givenName'];
-$_SESSION['id']=$row[0][0];
+$_SESSION['id']=$row[0];
 $_SESSION['access_token']=$token;
 header("Location: index.php");
 
 }
-else{
-// print_r($_SESSION);  
-    header('location : ../registration/form.php')
+else{  
+header('Location: ../registration/form.php');
 }
 exit();
 

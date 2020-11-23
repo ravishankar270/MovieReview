@@ -32,7 +32,7 @@
 
 
     .imagecon:nth-child(1){
-        background-image: url('..homepage/homepage-images/joker.jpg');
+        background-image: url('');
         background-repeat: no-repeat;
         background-size: cover;
     }

@@ -113,3 +113,12 @@
         } 
     });  
   });
+  $(document).ready(function() {
+    $('#autoWidth2').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth1').removeClass('cS-hidden');
+        } 
+    });  
+  });

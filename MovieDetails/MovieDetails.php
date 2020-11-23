@@ -11,9 +11,18 @@
       die("Connection failed: " . $conn->connect_error);
     }else if(isset($_GET['q'])){
       $_SESSION['eid']=intval($_GET['q']);
-      $res="select Name,images1,images2,images3 from entertainment where E_id=".$_SESSION['eid'];
+      $res="select Name,images1,images2,images3,trailer from entertainment where E_id=".$_SESSION['eid'];
+      $res1="select E_id from watch_list where E_id=".$_SESSION['eid'];
       $result=$conn->query($res) or die($conn->error());
+      $result1=$conn->query($res1) or die($conn->error());
       $row=$result->fetch_row();
+      $color='black';
+      $size=30;
+      if($result1->num_rows===1){
+        $color='red';
+        $size=40;
+
+      }
     }
     
     ?>
@@ -172,7 +181,11 @@
     </script>
    <?php 
    include('../footer&header/header.php')
+
    ?>
+
+        <i onclick="watchlist()"  id="w" class="fas fa-heart watchlist1" style="font-size:<?php echo $size?>px;cursor: pointer;transition: 0.3s all;color: <?php echo $color  ?>" aria-hidden="true"></i>
+      
    <div class="slider">
             <div class="sliderchild">
                 <div class="imagecon">
@@ -191,11 +204,12 @@
    
 
     <div class="banner">
+      
 
         <div class="content">       
             <h2>Put on a <span>Happy</span> Face</h2>
             
-            <a href="#" class="play" onclick="toggle()"><img src="images/play.png">Watch Trailer</a>
+            <a href="<?php echo $row[4]; ?>" class="play" ><img src="images/play.png">Watch Trailer</a>
             <div class="slide"></div>
             
             <ul class="sci">
@@ -275,16 +289,49 @@
   $scores.load("moviereview.php #details_review");
 
 </script> -->
-<script type="text/javascript" language="javascript">
-$(document).ready(function() {
-      if(reloadok===1){ 
-      $('#details_review').load('moviereview.php #details_review', function() {
-           /// can add another function here
-      });
-   }});
- //// End of Wait till page is loaded
-</script>
+<script type="text/javascript">
+
+  function watchlist() {
+    var w=document.getElementById('w')
+    if(w.style.color!=='red'){
     
+
+        
+        var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(xmlhttp.responseText)
+                if (xmlhttp.responseText==='ok'){
+                  w.style.color='red';
+                  w.style.fontSize='40px';
+                }
+             
+
+      }
+    };
+    xmlhttp.open("GET","watchinsert.php",true);
+   
+    xmlhttp.send();
+  }else{
+    var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(xmlhttp.responseText)
+                if (xmlhttp.responseText==='ok'){
+                  w.style.color='black';
+                  w.style.fontSize='30px';
+                }
+             
+
+      }
+    };
+    xmlhttp.open("GET","watchinsert.php?q="+"remove",true);
+   
+    xmlhttp.send();
+  }
+
+  }
+</script>
 </script>
 </body>
 </html>

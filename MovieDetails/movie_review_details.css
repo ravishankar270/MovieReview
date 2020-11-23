@@ -115,6 +115,10 @@ input[type="submit"]:hover{
 .watch p{
     margin:5px;
 }
+.watchlist1{
+    position: absolute;
+    right: 30px;
+}
 .banner
 {
     position: absolute;
@@ -123,7 +127,7 @@ input[type="submit"]:hover{
     width:100%;
     min-height: 600px;
     padding: 0 100px;
-    
+   
     background-position: center;
     background-size: cover;
     display:flex;

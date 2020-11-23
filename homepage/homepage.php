@@ -1,4 +1,15 @@
 <?php session_start();?>
+<?php
+        include('../connectdb.php');
+        if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }else{
+        $action="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Action/Thriller'"; 
+        $watch="select images,trailer,Name,E_id from entertainment where Type='Movie' and E_id in (select E_id from watch_list )";  
+        $result=$conn->query($action) or die($conn->error);
+        $result1=$conn->query($watch);
+    }
+        ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,17 +24,10 @@
         <script type="text/javascript" src="JQuery3.3.1.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="lightslider.js?v=<?php echo time();?>"></script>
         <script src="homepage.js?v=<?php echo time();?>"></script>
+        
     </head>
     <body>
-<?php
-        include('../connectdb.php');
-        if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }else{
-        $action="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Action/Thriller'";  
-        $result=$conn->query($action) or die($conn->error);
-    }
-        ?>
+
             <!-- Nav Bar -->
 
         <?php 
@@ -332,8 +336,54 @@
 
     <br>
     <br>
+    <!-- watchlist -->
+    <?php if($result1->num_rows!=0){ ?>
+    <div class="container" style="background-color: #181818; margin-left:30px; margin-right:30px;">
+    <br>
+    <br>
+    <br>
+    <h1 style="margin-left: 60px; color: white;"> Your Watchlist    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <br>
+    
+    
+    <ul id="autoWidth2" class="cs-hidden">
+    <!--1------------------------------>
+  <?php 
+    while ( $row=$result1->fetch_row()) {
+
+        # code...
+    
+    ?>
+  <li class="item-a">
+    <!--slider-box-->
+    <div class="box1">
+    <p class="marvel"><?php echo $row[2];?></p>
+    <!--model-->
+    <img src="<?php echo $row[0];?>" class="model">
+    <!--details-->
+    <div class="details">
+    <!--logo-character-->
+    <!--character-details-->
+    <div class="btn2">
+        <a href="../MovieDetails/MovieDetails.php?q=<?php echo $row[3];?>">More Details</a>
+          
+        <a href="<?php echo $row[1];?>">Watch Trailer</a>
+      </div>
+        </div>
+    
+    </div>
+    </li>
+    <?php
+    }
+?>
+    </ul>
+    <br>
+    </div>
+
+  <?php }else{ ?>
     
     <div style="background-color: #181818; margin-left:30px; margin-right:30px;">
+
         <br>
         <br>
         <br>
@@ -341,7 +391,7 @@
         <br>
         <br>
         <br>
-        <h2 style="text-align: center; margin:auto;"><i class="fa fa-plus" style="color: #69bde7" aria-hidden="true"></i></h2>
+        <h2 style="text-align: center; margin:auto;"><i onclick="watchlist()" class="fa fa-plus" style="color: #69bde7;cursor: pointer;" aria-hidden="true"></i></h2>
         <br>
         <?php
         if (!isset($_SESSION['access_token']) and !isset($_SESSION['Name'])){
@@ -362,9 +412,14 @@
         <br>
         <br>
     </div>
+  <?php } ?>
     <br>
     <br>
-
+<script type="text/javascript">
+  function watchlist() {
+    location.href="../all-movies/all-movies.php"
+  }
+</script>
 
 
 <!--     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->

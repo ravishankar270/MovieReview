@@ -95,7 +95,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
     }
     </script>
     <?php
-    include('../header.php'); ?>
+    include('../footer&header/header.php'); ?>
 
     <div class="forum">
     <div class='question'>

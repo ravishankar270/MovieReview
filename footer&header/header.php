@@ -26,9 +26,9 @@
                                 <a href="#">  Home  </a>
                             </li>
                             <li class="nav-link" style="--i: .85s">
-                                <a href="#">  Menu  <i class="fas fa-caret-down"></i></a>
+                                <a href="../all-movies/all-movies.php">  Movies  </i></a>
                                 <div class="dropdown">
-                                    <ul>
+                                    <!-- <ul>
                                         <li class="dropdown-link">
                                             <a href="#">Link 1</a>
                                         </li>
@@ -73,62 +73,16 @@
                                             <a href="#">Link 4</a>
                                         </li>
                                         <div class="arrow"></div>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </li>
                             <li class="nav-link" style="--i: 1.1s">
-                                <a href="#">  Services  <i class="fas fa-caret-down"></i></a>
-                                <div class="dropdown">
-                                    <ul>
-                                        <li class="dropdown-link">
-                                            <a href="#">Link 1</a>
-                                        </li>
-                                        <li class="dropdown-link">
-                                            <a href="#">Link 2</a>
-                                        </li>
-                                        <li class="dropdown-link">
-                                            <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
-                                            <div class="dropdown second">
-                                                <ul>
-                                                    <li class="dropdown-link">
-                                                        <a href="#">Link 1</a>
-                                                    </li>
-                                                    <li class="dropdown-link">
-                                                        <a href="#">Link 2</a>
-                                                    </li>
-                                                    <li class="dropdown-link">
-                                                        <a href="#">Link 3</a>
-                                                    </li>
-                                                    <li class="dropdown-link">
-                                                        <a href="#">More<i class="fas fa-caret-down"></i></a>
-                                                        <div class="dropdown second">
-                                                            <ul>
-                                                                <li class="dropdown-link">
-                                                                    <a href="#">Link 1</a>
-                                                                </li>
-                                                                <li class="dropdown-link">
-                                                                    <a href="#">Link 2</a>
-                                                                </li>
-                                                                <li class="dropdown-link">
-                                                                    <a href="#">Link 3</a>
-                                                                </li>
-                                                                <div class="arrow"></div>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                    <div class="arrow"></div>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown-link">
-                                            <a href="#">Link 4</a>
-                                        </li>
-                                        <div class="arrow"></div>
-                                    </ul>
-                                </div>
+                                <a href="#">TVShows</a>
+                               
+                                        
                             </li>
                             <li class="nav-link" style="--i: 1.35s">
-                                <a href="#">  About  </a>
+                                <a href="../watchlist/watchlist.php">  Watchlist  </a>
                             </li>
                         </ul>
                     </div>

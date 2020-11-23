@@ -80,7 +80,7 @@
             <input type="submit" name="login" value="Login" />
             <div class="help">
                 <div>
-                    <input type="checkbox" name="rememberme" value="Remember me" />
+                    <input type="checkbox"  name="rememberme" value="Remember me" />
                     <label for='rememberme'>Remember me</label>
                 </div>
 
