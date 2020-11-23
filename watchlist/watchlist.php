@@ -201,6 +201,7 @@
       <div class="news-card__details-wrapper">
         <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio, pariatur&hellip;</p>
         <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="#" class="news-card__remove">Remove <i class="fa fa-times" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
@@ -213,6 +214,7 @@
       <div class="news-card__details-wrapper">
         <p class="news-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati ex natus nulla rem sequi laborum quod fugit&hellip;</p>
         <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="#" class="news-card__remove">Remove <i class="fa fa-times" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
@@ -225,6 +227,7 @@
       <div class="news-card__details-wrapper">
         <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae&hellip;</p>
         <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="#" class="news-card__remove">Remove <i class="fa fa-times" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
@@ -237,6 +240,7 @@
       <div class="news-card__details-wrapper">
         <p class="news-card__excerpt">Lorem ipsum dolor sit amet!</p>
         <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="#" class="news-card__remove">Remove <i class="fa fa-times" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
@@ -249,6 +253,7 @@
       <div class="news-card__details-wrapper">
         <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio&hellip;</p>
         <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="#" class="news-card__remove">Remove <i class="fa fa-times" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
@@ -261,6 +266,7 @@
       <div class="news-card__details-wrapper">
         <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia.</p>
         <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="#" class="news-card__remove">Remove <i class="fa fa-times" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
