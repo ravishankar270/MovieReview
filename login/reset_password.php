@@ -45,7 +45,7 @@
                 </label>
             </div>
             <!-- <div id='submit'></div> -->
-            <input type="submit" id="submit" name="submit" value="Send Mail" />
+            <input type="submit" id="submit" name="submit" value="Reset Password" />
             </form>
         </div>
 </body>
