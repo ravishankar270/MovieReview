@@ -8,9 +8,9 @@
                     <h3 class="logo-Navbar">Movie </h3>
                 </div>
 
-                <div class="search-box">
-                    <input class="search-txt" type="text" name="" placeholder=" Type to search">
-                    <a class="search-btn" href="#">
+                <div class="search-box-Navbar">
+                    <input class="search-txt-Navbar" type="text" name="" placeholder=" Type to search">
+                    <a class="search-btn-Navbar" href="#">
                         <i class="fa fa-search" style="color: grey;" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -19,7 +19,7 @@
                         <div></div>
                     </div>
                 </div>
-                <div class="nav-btn">
+                <div class="nav-btn-Navbar">
                     <div class="nav-links">
                         <ul>
                             <li class="nav-link" style="--i: .6s">
@@ -137,11 +137,11 @@
                     <?php 
                     // session_start(); 
                     if (!isset($_SESSION['access_token']) and !isset($_SESSION['Email'])){
-                        echo" <a href='http://localhost/login/login/login.php' class='btn transparent'> Log in </a>
-                              <a href='../registration/form.php' class='btn solid'> Sign up </a>";
+                        echo" <a href='http://localhost/login/login/login.php' class='btn-Navbar transparent'> Log in </a>
+                              <a href='../registration/form.php' class='btn-Navbar solid'> Sign up </a>";
                        
                     }else{
-                        echo" <a href='http://localhost/login/login/logout.php' class='btn transparent'> Log out </a>
+                        echo" <a href='http://localhost/login/login/logout.php' class='btn-Navbar transparent'> Log out </a>
                              ";
                         
                     }

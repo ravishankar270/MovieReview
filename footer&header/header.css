@@ -54,7 +54,7 @@ ul{
         position: relative;
     }
 
-    .search-box{
+    .search-box-Navbar{
         padding: 2px;
         height: 80%;
         width: 300px;
@@ -69,10 +69,10 @@ ul{
 
 
     }
-.search-box:hover{
+.search-box-Navbar:hover{
     box-shadow: 12px 10px 12px rgba(0,0,0,0.5);
 }
-    .search-btn{
+    .search-btn-Navbar{
         color: white;
         float: right;
         width: 20%;
@@ -84,7 +84,7 @@ ul{
 
     }
 
-    .search-txt{
+    .search-txt-Navbar{
         /* padding-top: 10px; */
         /* padding-left: 90px; */
         /* top: 50%;
@@ -106,7 +106,7 @@ ul{
         align-items: center;
     }
     
-    .nav-btn{
+    .nav-btn-Navbar{
         flex: 3;
         display: flex;
     }
@@ -136,7 +136,7 @@ ul{
         font-weight: 300;
     }
     
-    .btn{
+    .btn-Navbar{
         display: inline-block;
         padding: .5rem 1.3rem;
         font-size: .8rem;
@@ -148,12 +148,12 @@ ul{
         text-transform: uppercase;
     }
     
-    .btn.solid, .btn.transparent:hover{
+    .btn-Navbar.solid, .btn-Navbar.transparent:hover{
         background-color: #fff;
         color: #69bde7;
     }
     
-    .btn.transparent, .btn.solid:hover{
+    .btn-Navbar.transparent, .btn-Navbar.solid:hover{
         background-color: transparent;
         color: #fff;
     }
@@ -363,7 +363,7 @@ ul{
             
         }
     
-        .nav-btn{
+        .nav-btn-Navbar{
             position: fixed;
             height: calc(100vh - 3rem);
             top: 3rem;
@@ -379,12 +379,12 @@ ul{
             transition: .65s;
         }
     
-        #check:checked ~ .nav-btn{
+        #check:checked ~ .nav-btn-Navbar{
             transform: translateX(0);
         }
     
-        #check:checked ~ .nav-btn .nav-link,
-        #check:checked ~ .nav-btn .log-sign{
+        #check:checked ~ .nav-btn-Navbar .nav-link,
+        #check:checked ~ .nav-btn-Navbar .log-sign{
             animation: animation .5s ease forwards var(--i);
         }
     

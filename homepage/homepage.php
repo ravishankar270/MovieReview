@@ -15,7 +15,15 @@
         <script src="homepage.js?v=<?php echo time();?>"></script>
     </head>
     <body>
-
+<?php
+        include('../connectdb.php');
+        if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }else{
+        $action="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Action/Thriller'";  
+        $result=$conn->query($action) or die($conn->error);
+    }
+        ?>
             <!-- Nav Bar -->
 
         <?php 
@@ -151,122 +159,34 @@
     
     <ul id="autoWidth1" class="cs-hidden">
     <!--1------------------------------>
+  <?php 
+    while ( $row=$result->fetch_row()) {
+
+        # code...
+    
+    ?>
   <li class="item-a">
     <!--slider-box-->
     <div class="box1">
-    <p class="marvel">AVENGERS ENDGAME</p>
+    <p class="marvel"><?php echo $row[2];?></p>
     <!--model-->
-    <img src="../Movies_images/Frozen/Frozenh.jpg" class="model">
+    <img src="<?php echo $row[0];?>" class="model">
     <!--details-->
     <div class="details">
     <!--logo-character-->
     <!--character-details-->
     <div class="btn2">
-        <a href="#">More Details</a>
+        <a href="../MovieDetails/MovieDetails.php?q=<?php echo $row[3];?>">More Details</a>
           
-        <a href="#">Watch Trailer</a>
+        <a href="<?php echo $row[1];?>">Watch Trailer</a>
       </div>
         </div>
     
     </div>
     </li>
-    <!--2------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">JOHN WICK</p>
-    <!--model-->
-    <img src="homepage-images/john-wick.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>
-        </div>
-    
-    </div>
-    </li>
-    <!--3------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">DUNKIRK</p>
-    <!--model-->
-    <img src="homepage-images/dunkirk.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>
-        </div>
-    
-    </div>
-    </li>
-    <!--4------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">BLADE RUNNER</p>
-    <!--model-->
-    <img src="homepage-images/blade-runner.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>    </div>
-    
-    </div>
-    </li>
-    <!--5------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">INCEPTION</p>
-    <!--model-->
-    <img src="homepage-images/inception.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>    </div>
-    
-    </div>
-    </li>
-    <!--6------------------------------>
-  <li class="item-a">
-    <!--slider-box-->
-    <div class="box1">
-    <p class="marvel">DARK NIGHT</p>
-    <!--model-->
-    <img src="homepage-images/batman.jpg" class="model">
-    <!--details-->
-    <div class="details">
-    <!--logo-character-->
-    <!--character-details-->
-    <div class="btn2">
-        <a href="#">More Details</a>
-          
-        <a href="#">Watch Trailer</a>
-      </div>    </div>
-    
-    </div>
-    </li>
+    <?php
+    }
+?>
     </ul>
     <br>
     </div>
@@ -444,8 +364,7 @@
     </div>
     <br>
     <br>
-    <?php 
-        include('footer.html'); ?>
+
 
 
 <!--     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->
