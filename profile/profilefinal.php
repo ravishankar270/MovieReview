@@ -55,13 +55,16 @@
             <div class="main-bd">
                 <div class="left-side">
                     <div class="profile-side"> 
-                        <p class="mobile-no">
+                    <p class="user-id"><i
+                        class="fa fa-id-card">
+                    </i>User ID: <?php echo $row['user_id'];?> </p> 
+                        <!-- <p class="mobile-no">
                             <i class="fa fa-phone"> 
 
-                            </i>+23470xxxxx5464</p>
+                            </i><?php echo $row['Phone_no']; ?></p> -->
                     <p class="user-mail"><i
                         class="fa fa-envelope">
-                    </i>Brightisaac8@gmail.com </p> 
+                    </i><?php echo $row['Email_id']; ?> </p> 
                 
                 <div class="user-bio"> 
                     <h1>BIO</h1>
