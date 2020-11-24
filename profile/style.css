@@ -149,12 +149,12 @@ body {
    
 .profile-side{
 
-    width: 300px;
+    width: 310px;
     background: #fff;
     box-shadow: 0px 3px 5px rgba(0,0,0,.2);
     padding: 90px 3px 20px; 
     font-family: 'Bree Serif', serif;
-    margin-left:10px;
+    margin-left:0px;
     z-index: 99;
 
 }
@@ -162,9 +162,11 @@ body {
 .profile-side p {
     margin-bottom:7px;
     color: #333;
-    font-size: 14px;
+    font-size: 20px;
     
     }
+
+
     
 .profile-side p i {
     
@@ -213,7 +215,9 @@ button.chatbtn:hover, button.createbtn:hover
         margin-right: 5px;
     }
 
-
+.user-bio .h1{
+    font-size:16px;
+}
 .user-rating { 
     
     display: flex;
@@ -237,20 +241,20 @@ button.chatbtn:hover, button.createbtn:hover
 }
 .rate
 { 
-    padding-top:6px;
+    padding-top:10px;
     
 }
  
     
 .rate i
 {
-    font-size: .9rem; 
+    font-size: 1.8rem; 
     color: #e40046;
 
 }
 
 .right-side{
-    margin-top: -350px;
+    margin-top: -424px;
     margin-left: 312px;
 }
  
