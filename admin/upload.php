@@ -1,28 +1,25 @@
 <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname="moviereview";
-        
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
+        include('../connectdb.php');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }else if($_SERVER['REQUEST_METHOD']=='POST'){
                 if(isset($_POST['submit']) ){
-                  $movie_name=$_POST['Moviename'];
-                  $director=$_POST['Director'];
-                  $genre=$_POST['genre'];
-                  $description=$_POST['description'];
+                  $movie_name=$conn-> real_escape_string(strip_tags($_POST['Name']));
+                  $director=$conn -> real_escape_string(strip_tags($_POST['Director']));
+                  $genre=$conn -> real_escape_string($_POST['genre']);
+                  $description=$conn -> real_escape_string(strip_tags($_POST['description']));
                   $Rating=$_POST['rating'];
-                  $runtime=$_POST['runtime'];
+                  $season=intval($_POST['season']);
+                  $episodes=intval($_POST['episode']);
                   
 
                  $a= array( );
 
                   $upload=0;
-
+                  $dir="../TVShow_images/" .$movie_name;
+                  if(!file_exists($dir)){
+                     mkdir($dir, 0755, true);
+                  }
                   for($i=0; $i<count($_FILES["image"]["name"]); $i++)
                   {
 
@@ -33,30 +30,30 @@
                     if($check !== false) {
                       $upload = 1;
                     } else {
+                      $error='File is not an image';
                       $upload = 0;
                       break;
                     }
-                    $target_file="../Movies_images/" .$movie_name."/".$fileName;
+                    $target_file=$dir."/".$fileName;
 
                     if (file_exists($target_file)) {
-                      echo "Sorry, file already exists.";
+                      $error="Sorry, file already exists.";
                       $upload = 0;
                       break;
                     }
 
                    
 
-                  if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], "../Movies_images/" .$movie_name."/".$fileName))
+                  if (move_uploaded_file($_FILES["image"]["tmp_name"][$i], $target_file))
                   {
-                    array_push($a,"../Movies_images/" .$movie_name."/".$fileName);
+                    array_push($a,$target_file);
 
 
-                    echo "The image {$_FILES['image']['name'][$i]} was successfully uploaded and added to the gallery<br />";
 
                   }
                   else
                   {
-                   echo "There was an error uploading the file {$_FILES['image']['name'][$i]}, please try again!<br />";
+                   echo "<script>alert('There was an error uploading the file {$_FILES['image']['name'][$i]}, please try again!')</script><br />";
                   }
               } // clo
                  
@@ -82,9 +79,20 @@
                 //   if(move_uploaded_file($_FILES['files']['tmp_name'], $upload_directory.$TargetPath2)){   
                 //   if(move_uploaded_file($_FILES['files']['tmp_name'], $upload_directory.$TargetPath3)){ 
                 if($upload==1){
-                    $sql="INSERT INTO `entertainment` ( `Director`,`Name`,`genre`,`images`,`images1`,`images2`,`images3`,`rating`,`description`,`admin_id`,`Type` ) VALUES ( '$director','$movie_name','$genre','".$a[0]."','".$a[1]."','".$a[2]."','".$a[3]."',$Rating,'$description',0,'Movie')";
+                    $sql="INSERT INTO `entertainment` ( `Director`,`Name`,`genre`,`images`,`images1`,`images2`,`images3`,`rating`,`description`,`admin_id`,`Type`) VALUES ( '$director','$movie_name','$genre','".$a[0]."','".$a[1]."','".$a[2]."','".$a[3]."',$Rating,'$description',0,'TVShow')";
+
                   $result = $conn->query($sql) or die($conn->error);
-                    if($result){
+                  $sql2="select E_id from entertainment where Name=$movie_name";
+                  $result1 = $conn->query($sql2) or die($conn->error);
+                  if($result1){
+                  $row=$result1->fetch_row();
+
+                
+
+                  $sql1="INSERT INTO `tv_shows` ( `no_of_seasons`,`no_of_episodes`,`E_id`) VALUES ( $season,$episodes,".$row[0].")";
+                  $result2 = $conn->query($sql1) or die($conn->error);
+
+                    if($result and $result2){
                       echo "Updated";
 
                     }else{
@@ -92,6 +100,10 @@
                     }
                     unset($_POST);
                     }
+                    else {
+                      echo "not ok";
+                    }
+                  }
                 //     // Write Mysql Query Here to insert this $QueryInsertFile   .                   
                 //   }
                 //   }
@@ -103,13 +115,7 @@
                 //       echo "File is not an image.";
                 //       $uploadOk = 0;
                 //     }
-                  }
-                
-                  
-
-                  
-
-                  
+                  }  
                     
     }
  

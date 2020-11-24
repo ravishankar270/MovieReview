@@ -270,79 +270,103 @@ include('../connectdb.php');
 <div id="addshow" class="tabcontent">
     <br>
 <div class="container">
-  <form action="">
+  <form method="post" action="upload.php">
     <div class="row">
       <div class="col-25">
-        <label for="fname">Name of the TV Show</label>
+        <label for="Name">Name of the TV Show</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Show's name..">
+        <input type="text" id="Name" name="Name" placeholder="Show's name..">
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Director</label>
+        <label for="Director">Director</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Director's Name">
+        <input type="text" id="Director" name="Director" placeholder="Director's Name">
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="country">Genre</label>
+        <label for="genre">Genre</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Action/Thriller</option>
-          <option value="canada">Horror</option>
-          <option value="usa">Comedy</option>
-          <option value="usa">Sci-Fi</option>
-          <option value="usa">Award Winning</option>
+        <select id="genre" name="genre">
+          <option value="Action/Thriller">Action/Thriller</option>
+          <option value="Horror">Horror</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Award Winning">Award Winning</option>
         </select>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="subject">Description</label>
+        <label for="description">Description</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:300px"></textarea>
+        <textarea id="description" name="description" placeholder="Write something.." style="height:300px"></textarea>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="country">Rating</label>
+        <label for="rating">Rating</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">5 star</option>
-          <option value="canada">4 star</option>
-          <option value="usa">3 star</option>
-          <option value="usa">2 star</option>
-          <option value="usa">1 star</option>
+        <select id="rating" name="rating">
+          <option value="5">5 star</option>
+          <option value="4">4 star</option>
+          <option value="3">3 star</option>
+          <option value="2">2 star</option>
+          <option value="1">1 star</option>
         </select>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="fname">Number of seasons</label>
+        <label for="season">Number of seasons</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Number of seasons..">
+        <input type="text" id="season" name="season" placeholder="Number of seasons..">
       </div>
       
       
     </div>
     <div class="row">
-      <div class="col-25">
-        <label for="fname">Number of episodes per season</label>
+      <div class="crating
+        <label for="episode">Number of episodes per season</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Number of episodes..">
+        <input type="text" id="episode" name="episode" placeholder="Number of episodes..">
       </div>
     </div>
+    <div class="row" style="margin: 10px 0px 10px;">
+    <label for="image[]">Select image to upload:</label>
+  <input type="file" name="image[]" id="image[]" required>
+  <span class="error"><?php echo $error; ?></span>
+
+    </div>
+    <div class="row" style="margin: 10px 0px 10px;">
+  <label for="image[]">Select image to upload:</label>
+  <input type="file" name="image[]" id="image[]" required>
+  <span class="error"><?php echo $error; ?></span>
+
+    </div>
+    <div class="row" style="margin: 10px 0px 10px;">
+    <label for="image[]">Select image to upload:</label>
+  <input type="file" name="image[]" id="image[]" required>
+  <span class="error"><?php echo $error; ?></span>
+
+    </div>
+    <div class="row" style="margin: 10px 0px 10px;">
+    <label for="image[]">Select image to upload:</label>
+  <input type="file" name="image[]" id="image[]" required>
+  <span class="error"><?php echo $error; ?></span>
+
+    </div>
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit" name="='submit'" value="Submit">
     </div>
   </form>
 </div>
