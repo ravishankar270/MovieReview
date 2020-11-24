@@ -7,16 +7,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <?php
+
+    define('DB_SERVER', 'localhost');
+    define('DB_USERNAME', 'root');
+    define('DB_PASSWORD', '');
+    define('DB_NAME', 'moviereview');
+    
+    // Try connecting to the Database
+    $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        if($conn->connect_error){
+            echo "$conn->connect_error";
+            die("Connection Failed : ". $conn->connect_error);
+        } else {
+            
+        $sql="SELECT * from user where user_id=34";
+        $result = mysqli_query( $conn,$sql);
+        $resultcheck = mysqli_num_rows($result) > 0;
+
+        if($resultcheck)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+            ?>
         <div class="container">
             <div class="profile-header"> 
                 <div class="profile-img">
                     <img src="img/pic.jpeg" width="200" alt="">
                 </div>
         <div class="profile-nav-info"> 
-                <h3 class="user-name">Bright Code</h3>
+                <h3 class="user-name"><?php echo $row['username']; ?></h3>
             <div class="address"> 
-            <p class="state">New York,</p>
-            <span class="country">USA.</span>
+            <p class="state">Mumbai,</p>
+            <span class="country">India.</span>
             </div>
         </div>
         <br>
@@ -49,7 +72,7 @@
                     <i class="fa fa-comment"></i> Chat
                 </button>
                 <button class="createbtn">
-                    <i class="fa fa-plus"></i>Create
+                    <i class="fa fa-refresh"></i>Update
                 </button>
                 </div>
                 <div class="user-rating">
@@ -118,7 +141,14 @@
 </div>
 
 </div>
-
+    <?php   
+}
+}
+else{
+    echo "error";
+}
+}
+?>
 <script src="tab.js"></script>
 
 
