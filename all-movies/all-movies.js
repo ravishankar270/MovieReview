@@ -22,7 +22,7 @@ $(document).ready(function() {
         autoWidth:true,
         loop:true,
         onSliderLoad: function() {
-            $('#autoWidth1').removeClass('cS-hidden');
+            $('#autoWidth2').removeClass('cS-hidden');
         } 
     });  
   });
@@ -31,7 +31,7 @@ $(document).ready(function() {
         autoWidth:true,
         loop:true,
         onSliderLoad: function() {
-            $('#autoWidth1').removeClass('cS-hidden');
+            $('#autoWidth3').removeClass('cS-hidden');
         } 
     });  
   });
