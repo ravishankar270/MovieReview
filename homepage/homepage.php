@@ -342,7 +342,7 @@
     <br>
     <br>
     <br>
-    <h1 style="margin-left: 60px; color: white;"> Your Watchlist    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <h1 style="margin-left: 60px; color: white;"> Your Watchlist    <i onclick="location.href='../watchlist/watchlist.php'" class="fa fa-angle-right" style="color: #69bde7;cursor: pointer;" aria-hidden="true"></i></h1>
     <br>
     
     

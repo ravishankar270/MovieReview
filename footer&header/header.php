@@ -5,7 +5,7 @@
                 <input type="checkbox" name="" id="check">
                 
                 <div class="logo-container">
-                    <h3 class="logo-Navbar">Movie </h3>
+                    <h3 class="logo-Navbar"><a style="text-decoration: none;color: white;cursor: pointer;" href="../homepage/homepage.php">Movie</a> </h3>
                 </div>
 
                 <div class="search-box-Navbar">
@@ -23,7 +23,7 @@
                     <div class="nav-links">
                         <ul>
                             <li class="nav-link" style="--i: .6s">
-                                <a href="#">  Home  </a>
+                                <a href="../homepage/homepage.php">  Home  </a>
                             </li>
                             <li class="nav-link" style="--i: .85s">
                                 <a href="../all-movies/all-movies.php">  Movies  </i></a>
