@@ -156,6 +156,7 @@ body {
     font-family: 'Bree Serif', serif;
     margin-left:0px;
     z-index: 99;
+    height: 420px;
     
 
 }
@@ -223,7 +224,9 @@ button.chatbtn:hover, button.createbtn:hover
     
     display: flex;
 }
-    
+.user-rating .rating{
+    margin-top: 0px;
+}
 .user-rating h3 {
     
     font-size: 2.5rem;
@@ -255,7 +258,7 @@ button.chatbtn:hover, button.createbtn:hover
 }
 
 .right-side{
-    margin-top: -455px;
+    margin-top: -418px;
     margin-left: 312px;
 }
  
