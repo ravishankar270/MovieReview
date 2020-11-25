@@ -14,6 +14,9 @@
     </head>
     <body>
         <?php
+        if(!isset($_SESSION['id'])){
+          header("location: ../login/login.php");
+        }
         include('../connectdb.php');
         if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
