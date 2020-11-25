@@ -415,6 +415,10 @@
   <?php } ?>
     <br>
     <br>
+    <?php 
+        include('footer.html');
+        ?>
+    
 <script type="text/javascript">
   function watchlist() {
     location.href="../all-movies/all-movies.php"
