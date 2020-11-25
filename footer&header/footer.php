@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="../footer&header/footer.css">
+<link rel="stylesheet" href="../footer&header/footer.css?v=<?php echo time();?>">
 
 
 <body>

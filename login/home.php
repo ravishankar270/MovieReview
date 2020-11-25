@@ -22,7 +22,7 @@ $data=$google_service->userinfo_v2_me->get();
 $name=(string) $data['givenName'];
 $email=(string) $data['email'];
 $client=(string) $data['id'];
-$query="select user_id from user where Email_id='".$email."'";
+$query="select user_id,username from user where Email_id='".$email."'";
 
 $res=$conn->query($query) or die($conn->error);
 $row=$res->fetch_row();
@@ -32,7 +32,7 @@ if($res->num_rows==1){
 $_SESSION['email']=$data['email'];
 $_SESSION['gender']=$data['gender'];
 $_SESSION['LastName']=$data['familyName'];
-$_SESSION['Name']=$data['givenName'];
+$_SESSION['Name']=$row[1];
 $_SESSION['id']=$row[0];
 $_SESSION['access_token']=$token;
 header("Location: index.php");

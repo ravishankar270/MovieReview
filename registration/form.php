@@ -65,7 +65,7 @@
                 console.log(xmlhttp.responseText)
                if(xmlhttp.responseText==='registered'){
                 console.log('hello')
-                location.href='complete.php'
+                location.href='index.php'
                }
 
         }

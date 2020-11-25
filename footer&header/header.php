@@ -91,11 +91,11 @@
                     <?php 
                     // session_start(); 
                     if (!isset($_SESSION['id'])){
-                        echo" <a href='http://localhost/login/login/login.php' class='btn-Navbar transparent'> Log in </a>
+                        echo" <a href='../login/login.php' class='btn-Navbar transparent'> Log in </a>
                               <a href='../registration/form.php' class='btn-Navbar solid'> Sign up </a>";
                        
                     }else{
-                        echo" <a href='http://localhost/login/login/logout.php' class='btn-Navbar transparent'> Log out </a>
+                        echo" <a href='../login/logout.php' class='btn-Navbar transparent'> Log out </a>
                              ";
                         
                     }
