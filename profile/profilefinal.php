@@ -61,13 +61,13 @@ session_start();
             <div class="main-bd">
                 <div class="left-side">
                     <div class="profile-side"> 
-                    <p class="user-id"><i
+                    <!-- <p class="user-id"><i
                         class="fa fa-id-card">
-                    </i>User ID: <?php echo $row['user_id'];?> </p> 
-                        <!-- <p class="mobile-no">
+                    </i>User ID: <?php echo $row['user_id'];?> </p>  -->
+                        <p class="mobile-no">
                             <i class="fa fa-phone"> 
 
-                            </i><?php echo $row['Phone_no']; ?></p> -->
+                            </i><?php echo $row['Phone_no']; ?></p>
                     <p class="user-mail"><i
                         class="fa fa-envelope">
                     </i><?php echo $row['Email_id']; ?> </p> 
