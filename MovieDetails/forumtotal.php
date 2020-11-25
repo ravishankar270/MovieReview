@@ -36,8 +36,37 @@ include('../connectdb.php');
             var data=[ele.id,question]
             
             var json=JSON.stringify(data)
-            window.location.href="http://localhost/login/forum/forum.php?q="+data;
+            window.location.href="../forum/forum.php?q="+data;
 }
+    </script>
+    <script type="text/javascript">
+function finsert(){
+        description=document.getElementById('description1').value;
+        
+       
+        if(description!==""){
+          console.log(description)
+        const data=[description]
+        const json=JSON.stringify(data)
+        
+        var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+             alert(this.responseText)
+              console.log(this.responseText)
+              document.getElementById('description').style.innerHTML=""
+              location.reload()
+             
+
+      }
+    };
+    xmlhttp.open("GET","foruminsert.php?q="+json,true);
+   
+    xmlhttp.send();
+  }
+    return false
+    }      
+
     </script>
     <div class='fantheory'>
         <div class="whole">
@@ -47,11 +76,11 @@ include('../connectdb.php');
                 </div> -->
                 <div class='review1'>
       
-                    <form class="text1" method="POST" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
-                               <textarea name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="8" cols="70" required></textarea>
-                               <input type="submit" name="post_reviews" value="POST" >
+                    <div class="text1">
+                               <textarea id='description1' name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="8" cols="70" required></textarea>
+                               <input type="submit" name="post_reviews" onclick="finsert()" value="POST" >
 
-                    </form>
+                    </div>
                     
                 </div>
 
