@@ -17,6 +17,11 @@ $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
+        $query="select user_id,Name from user where Email_id='".$_SESSION['email']."'";
+$r=$conn->query($query);
+if($r->num_rows==1){
+    header('location: ../login/login.php');
+}
 
         $sql="INSERT INTO `user` ( `Email_id`, `password` ) VALUES ( '$username', '$password')";
     }

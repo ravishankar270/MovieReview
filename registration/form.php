@@ -41,8 +41,8 @@
 
     include('google.php');
     
-    if(isset($_SESSION['access_token'])){
-        header('Location: index.php');
+    if(isset($_SESSION['id'])){
+        header('Location: ../homepage/homepage.php');
         exit();
     }
     $auth=$google_client->createAuthUrl();

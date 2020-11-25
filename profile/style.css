@@ -169,7 +169,9 @@ body {
     }
 
 
-    
+ .tabPanel{
+    overflow: scroll;
+ }   
 .profile-side p i {
     
     color:#e40046 ;

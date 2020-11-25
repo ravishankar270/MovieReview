@@ -4,10 +4,13 @@
         if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }else{
-        $action="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Action/Thriller'"; 
-        $watch="select images,trailer,Name,E_id from entertainment where Type='Movie' and E_id in (select E_id from watch_list )";  
+        $action="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Action/Thriller'";
+        if(isset($_SESSION['id'])){ 
+        $watch="select images,trailer,Name,E_id from entertainment where Type='Movie' and E_id in (select E_id from watch_list where user_id=".$_SESSION['id']." )";  
+    $result1=$conn->query($watch);
+}
         $result=$conn->query($action) or die($conn->error);
-        $result1=$conn->query($watch);
+        
     }
         ?>
 <!DOCTYPE html>
@@ -337,7 +340,7 @@
     <br>
     <br>
     <!-- watchlist -->
-    <?php if($result1->num_rows!=0){ ?>
+    <?php if(isset($_SESSION['id']) && $result1->num_rows!=0){ ?>
     <div class="container" style="background-color: #181818; margin-left:30px; margin-right:30px;">
     <br>
     <br>
@@ -416,7 +419,7 @@
     <br>
     <br>
     <?php 
-        include('../footer&header/footer.php11');
+        include('../footer&header/footer.php');
         ?>
     
 <script type="text/javascript">

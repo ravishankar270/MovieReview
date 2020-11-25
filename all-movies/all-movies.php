@@ -241,6 +241,9 @@
     <br>
     <br>
     <br>
+    <?php
+include('../footer&header/footer.php');
+    ?>
         
         <script src="" async defer></script>
 

@@ -102,7 +102,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
         <h1><?php print_r($_SESSION['question']);?></h1>
         <form class="create-post" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>' method='POST'>
         <textarea class="post" name="post" required></textarea>
-        <input type="submit" class='submit' name="create" value="POST" focus/>
+        <input type="submit" class='fsubmit' name="create" value="POST" focus/>
         </form>
 
 
@@ -126,6 +126,9 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
     ?>
     </div>
     </div>
+    <?php 
+include('../footer&header/footer.php')
+    ?>
     <script>
     if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );

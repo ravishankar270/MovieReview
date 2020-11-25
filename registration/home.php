@@ -18,10 +18,24 @@ $name=(string) $data['givenName'];
 $email=(string) $data['email'];
 $client=(string) $data['id'];
 
-$sql="insert into user (username,Email_id,cliend_id) values ('$name','$email','$client')";
-print_r($sql);
-mysqli_query($conn,$sql);
+$query="select user_id,Name from user where Email_id='".$email."'";
+$r=$conn->query($query);
+if($r->num_rows==1){
+	header('location: ../login/login.php');
+}
+$_SESSION['email']=$data['email'];
+$_SESSION['gender']=$data['gender'];
+$_SESSION['LastName']=$data['familyName'];
+
+$_SESSION['access_token']=$token;
+$sql="insert into user (Name,Email_id,cliend_id) values ('$name','$email','$client')";
+
+$result=mysqli_query($conn,$sql);
+if($result){
 header("Location: index.php");
+}else{
+	echo $sql;
+}
 exit();
 
 

@@ -20,25 +20,19 @@ session_start();
     if(!isset($_SESSION['id'])){
         header('location: ../login/login.php');
     }
-    define('DB_SERVER', 'localhost');
-    define('DB_USERNAME', 'root');
-    define('DB_PASSWORD', '');
-    define('DB_NAME', 'moviereview');
-    
+    include('../connectdb.php');
     // Try connecting to the Database
-    $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-        if($conn->connect_error){
-            echo "$conn->connect_error";
-            die("Connection Failed : ". $conn->connect_error);
-        } else {
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }else {
             
         $sql="SELECT * from user where user_id=".$_SESSION['id'];
-        $result = mysqli_query( $conn,$sql);
-        $resultcheck = mysqli_num_rows($result) == 1;
-
-        if($resultcheck)
+        $result = $conn->query($sql) or die($conn->error);
+        
+        echo $_SESSION['id'];
+        if($result->num_rows==1)
         {
-            while($row = mysqli_fetch_assoc($result))
+            while($row = $result->fetch_assoc())
             {
             ?>
         <div class="container">
@@ -72,7 +66,7 @@ session_start();
                         <p class="mobile-no">
                             <i class="fa fa-phone"> 
 
-                            </i><?php echo $row['Phone_no']; ?></p>
+                            </i></p>
                     <p class="user-mail"><i
                         class="fa fa-envelope">
                     </i><?php echo $row['Email_id']; ?> </p> 
@@ -85,7 +79,7 @@ session_start();
                 <button class="chatbtn">
                     <i class="fa fa-comment"></i> Chat
                 </button>
-                <button onclick="window.location.href='../profile/updateform.html' " class="createbtn">
+                <button onclick="window.location.href='../profile/updateform.php' " class="createbtn">
                     <i class="fa fa-refresh"></i>Update
                 </button>
                 

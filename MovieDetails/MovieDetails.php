@@ -11,7 +11,7 @@
       die("Connection failed: " . $conn->connect_error);
     }else if(isset($_GET['q'])){
       $_SESSION['eid']=intval($_GET['q']);
-      $res="select Name,images1,images2,images3,trailer from entertainment where E_id=".$_SESSION['eid'];
+      $res="select Name,images1,images2,images3,trailer,Director,genre,description from entertainment where E_id=".$_SESSION['eid'];
       $res1="select E_id from watch_list where E_id=".$_SESSION['eid'];
       $result=$conn->query($res) or die($conn->error());
       $result1=$conn->query($res1) or die($conn->error());
@@ -257,13 +257,13 @@
     <h2>Information  <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h2>
     <h3>Director</h3>
     
-    <p>someone</p>
+    <p><?php echo $row[5]; ?></p>
     <h3>Runtime</h3>
     <p>Lorem ipsum dolor sit ame.</p>
     <h3>PGA</h3>
     <p>something</p>
     <h3>Genre</h3>
-    <p>Sci-fi/Animation</p>
+    <p><?php echo $row[6]; ?></p>
     <h3>Release Date</h3>
     <p>something</p>
 
@@ -272,8 +272,7 @@
   <div class="main"  style="background-color: #181818; color: #f2f2f2;">
     <h2>Description  <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h2>
     
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <p><?php echo $row[7]; ?></p>
     <br>
     </div>
 </div>
