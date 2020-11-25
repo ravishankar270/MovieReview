@@ -394,7 +394,7 @@
         <h2 style="text-align: center; margin:auto;"><i onclick="watchlist()" class="fa fa-plus" style="color: #69bde7;cursor: pointer;" aria-hidden="true"></i></h2>
         <br>
         <?php
-        if (!isset($_SESSION['access_token']) and !isset($_SESSION['Name'])){
+        if (!isset($_SESSION['id']) ){
         echo "<h2 style='margin: auto; text-align: center; color:white;'>Sign in to access your Watchlist</h2>";
         }
         ?>
@@ -403,7 +403,7 @@
         <br>
         <?php 
         // session_start();
-         if (!isset($_SESSION['access_token']) and !isset($_SESSION['Name'])){
+         if (!isset($_SESSION['id'])){
         echo "<h3 class='btn-3'style='margin:auto; text-align:center;'>
             <a href='#' class='btn3'>Sign in</a>
         </h3>";

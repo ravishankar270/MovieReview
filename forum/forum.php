@@ -18,7 +18,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
     <?php
     session_start();
     
-    if (!isset($_SESSION['access_token'])){
+    if (!isset($_SESSION['id'])){
         header("url: ..login/login.php");
     }
     

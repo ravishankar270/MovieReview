@@ -13,26 +13,19 @@ session_start();
   <link rel='stylesheet' href="More_review.css?v=<?php echo time(); ?>" type="text/css" /> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
   
-
+  <script type="text/javascript" src="tab.js?v=<?php echo time();?>"></script>
   <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
 
 </head>
 <body>
   <?php
   
-    
-    $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname="moviereview";
-    
-    // Create connection
-    $conn = new mysqli($servername, $username, $password,$dbname);
+    include('../connectdb.php');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
       if(isset($_SESSION['eid'])){
-      $sql="select  description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid'] ;
+      $sql="select rating, description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid'] ;
         
       $data1="-";
       $data1="-";
@@ -44,10 +37,10 @@ session_start();
       if(isset($_GET['Reviews'])){
       if($_GET['Reviews']==='Latest'){
 
-    $sql="select  description,Spoiler_tag,username from reviews where E_id =1 order by review_id desc  " ;
+    $sql="select  rating,description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid']." order by review_id desc  " ;
        
        }else{
-    $sql="select  description,Spoiler_tag,username from reviews where E_id =1   " ;
+    $sql="select  rating,description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid'] ;
       }
 
     }
@@ -55,28 +48,44 @@ session_start();
 
     if($_GET['Spoiler']==='Yes'){
 
-    $sql="select  description,Spoiler_tag,username from reviews where E_id =1 and Spoiler_tag='yes'  " ;
+    $sql="select  rating,description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid']." and Spoiler_tag='yes'  " ;
        
        }else{
-    $sql="select  description,Spoiler_tag,username from reviews where E_id =1 and Spoiler_tag='No'  " ;
+    $sql="select  rating,description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid']." and Spoiler_tag='No'  " ;
       }
       
     }
      if(isset($_GET['Likes'])){
     if($_GET['Likes']==='Highest to Lowest'){
 
-    $sql="select  description,Spoiler_tag,username from reviews where E_id =1 order by review_likes desc  " ;
+    $sql="select  rating,description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid']." order by rating desc" ;
        
        }else{
-    $sql="select  description,Spoiler_tag,username from reviews where E_id =1 order by review_likes   " ;
+    $sql="select  rating,description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid']." order by rating" ;
       }
       
     }
     }
     $result = $conn->query($sql) or die($conn->error);
+    $q="select sum(rating),count(review_id) from reviews where E_id=".$_SESSION['eid']." and rating>=3";
+    $q1="select sum(rating),count(review_id) from reviews where E_id=".$_SESSION['eid']." and rating<3";
+    $result1 = $conn->query($q) or die($conn->error);
+    $result2 = $conn->query($q1) or die($conn->error);
+    $row=$result1->fetch_row();
+    $row1=$result2->fetch_row();
+    if($row[0]<$row[1]){
+    $rate=floor(($row[0]/$row[1])*100);
+  }else{
+    $rate=100;
     }
-        
+    if($row1[0]<$row1[1]){
+    $bad=floor(($row1[0]/$row1[1])*100);
+  }else{
+    $bad=0;
+    }
+
         $conn->close();
+  }
   ?>
 <script type="text/javascript">
   function more() {
@@ -84,7 +93,7 @@ session_start();
     location.href="More_review.php"
   }
 </script>
-
+<?php include('../footer&header/header.php'); ?>
 <div class="rev-section">
   <div class="dummy"></div>
 <div class="filters">
@@ -138,9 +147,28 @@ session_start();
             </div>
 
 </div>
-
+<hr>
 
 <div class="reviews">
+  <div class="rotten">
+    <div class="tomato">
+      <div class='flex'>
+      <div class="tooltip"><i class='fas fa-grin-alt' style='font-size:48px;color:red' tooltip='good'></i>
+  <span class="tooltiptext">Good</span>
+</div >
+<p><?php echo $rate; ?>%</p>
+</div>
+<div class='flex'>
+<div class="tooltip"><i class='fas fa-meh-rolling-eyes' style='font-size:48px;color:red' tooltip='bad  '></i>
+  <span class="tooltiptext">bad</span>
+</div>
+<p><?php echo $bad; ?>%</p>
+</div>
+      
+      
+  </div>
+
+  </div>
 <?php
 while ($row=$result->fetch_row()) {
   # code...
@@ -160,7 +188,7 @@ echo "<div class='review1'>
          <i class='fas fa-star'></i>
          <i class='fas fa-star-half'></i>
       </div>
-      <div class='desc-review'>".$row[0]."</div>
+      <div class='desc-review'>".$row[1]."</div>
    </div>
 </div>";
 }

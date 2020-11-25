@@ -90,7 +90,7 @@
                     <div class="log-sign" style="--i: 1.8s">
                     <?php 
                     // session_start(); 
-                    if (!isset($_SESSION['access_token']) and !isset($_SESSION['Email'])){
+                    if (!isset($_SESSION['id'])){
                         echo" <a href='http://localhost/login/login/login.php' class='btn-Navbar transparent'> Log in </a>
                               <a href='../registration/form.php' class='btn-Navbar solid'> Sign up </a>";
                        
@@ -107,7 +107,7 @@
     
                 
                 <?php
-                if(isset($_SESSION['Name'])){
+                if(isset($_SESSION['id'])){
                                      echo "<div class='profile-header' onclick=\"location.href='../profile/profile2.php'\">
                                      <a >".$_SESSION["Name"][0]."</a>
                                      </div>"   ;

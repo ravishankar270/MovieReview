@@ -1,9 +1,9 @@
 <?php session_start();
 ?>
 <?php
-    if (!isset($_SESSION['access_token']) and !isset($_SESSION['Name'])){
+    if (!isset($_SESSION['id'])){
         
-        header("location:   http://localhost/login/login/login.php");
+        header("location:   ../login/login.php");
     }
 
     include('../connectdb.php');
