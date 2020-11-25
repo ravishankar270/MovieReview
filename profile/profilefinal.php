@@ -11,6 +11,11 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
+<!-- <?php 
+        // include('../footer&header/header.php');
+        ?> -->
+
     <?php
     if(!isset($_SESSION['id'])){
         header('location: ../login/login.php');
@@ -80,9 +85,10 @@ session_start();
                 <button class="chatbtn">
                     <i class="fa fa-comment"></i> Chat
                 </button>
-                <button class="createbtn">
+                <button onclick="window.location.href='../profile/updateform.html' " class="createbtn">
                     <i class="fa fa-refresh"></i>Update
                 </button>
+                
                 </div>
                 <div class="user-rating">
                 <h3 class="rating">4.5</h3> 
