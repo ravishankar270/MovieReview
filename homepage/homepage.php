@@ -416,7 +416,7 @@
     <br>
     <br>
     <?php 
-        include('footer.html');
+        include('../footer&header/footer.html');
         ?>
     
 <script type="text/javascript">
