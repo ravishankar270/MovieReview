@@ -53,15 +53,18 @@
 /* Sidebar/left column */
 .side {
   flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* Main column */
 .main {
   flex: 70%;
   background-color: white;
-  padding: 20px;
+  padding: 30px;
+}
+
+p{
+  color: #adadb2;
 }
 
 
@@ -254,23 +257,31 @@
 
         <div class="row">
   <div class="side"  style="background-color: #282828; color: #f2f2f2;">
-    <h2>Information  <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h2>
-    <h3>Director</h3>
+    <h2>Information  <i class="fa fa-angle-right" style="color: #69bde7; padding-bottom:13px" aria-hidden="true"></i></h2>  
+    <h3>Director:</h3>
     
     <p><?php echo $row[5]; ?></p>
     <h3>Runtime</h3>
+
+    <p>someone</p>
+    <h3>Runtime:</h3>
     <p>Lorem ipsum dolor sit ame.</p>
-    <h3>PGA</h3>
+    <h3>PGA:</h3>
     <p>something</p>
+
     <h3>Genre</h3>
     <p><?php echo $row[6]; ?></p>
     <h3>Release Date</h3>
+
+    <h3>Genre:</h3>
+    <p>Sci-fi/Animation</p>
+    <h3>Release Date:</h3>
     <p>something</p>
 
     
   </div>
   <div class="main"  style="background-color: #181818; color: #f2f2f2;">
-    <h2>Description  <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h2>
+    <h2>Description  <i class="fa fa-angle-right" style="color: #69bde7; padding-bottom:13px" aria-hidden="true"></i></h2>
     
     <p><?php echo $row[7]; ?></p>
     <br>
@@ -282,8 +293,8 @@
         <div class="tabContainer">
           <div class="vertical">
     
-            <div class="buttonContainer">
-                <button onclick="showPanel(0,'#25aae1')">Reviews</button>
+            <div class="buttonContainer"  style="background-color:  #69bde7;">
+                <button onclick="showPanel(0,'#25aae1')" >Reviews</button>
                 <button onclick="showPanel(1,'#25aae1')">Fan Theory</button>
                 <button onclick="showPanel(2,'#25aae1')">Quiz</button>
               
@@ -297,17 +308,17 @@
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <p>Add to Watchlist</p>
                 </div> -->
-                <div class='review'  style="background-color: #585858;" >
+                <div class='review'  style="background-color: #383838;" >
                     <div class="stars">
-  <button class="star" onclick="rate(1)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
-  <button class="star"onclick="rate(2)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(3)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(4)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(5)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(1)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
+  <button class="star"onclick="rate(2)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(3)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(4)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(5)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
 </div>
-                    <div class="text" style="background-color: #585858;">
+                    <div class="text" style="background-color: #383838;">
                                <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70" required></textarea>
-                               <input type="submit" onclick="insert()" name="post_reviews" value="POST" >
+                               <input type="submit" style="background-color:  #69bde7;" onclick="insert()" name="post_reviews" value="POST" >
 
                     </div>
                     

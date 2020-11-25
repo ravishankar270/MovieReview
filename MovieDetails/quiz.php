@@ -79,7 +79,7 @@
 
     </div>
     <script src="quiz.js"></script>
-    <script src="question.js"></script>
+    <script src="../quiz/question.js"></script>
     <script src="tab.js?v=<?php echo time(); ?>"></script>
 
 </body>

@@ -111,7 +111,7 @@ session_start();
                 <ul>
                 <li onclick="showPanel(0,'#25aae1')" class="user-post ">POSTS</li>
                 <li onclick="showPanel(1,'#25aae1')" class="user-review">REVIEW</li>
-                <li onclick="showPanel(2,'#25aae1')" class="user-setting">SETTING</li>
+                <li onclick="showPanel(2,'#25aae1')" class="user-setting">Fan Theory</li>
                 </ul>
             </div>
             </div>
@@ -120,8 +120,8 @@ session_start();
             <div class="tabPanel">
                 <div class="profile-body">
                     <div class="profile-poststab">
-                        <h1>POST</h1>
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                        <h2>No Post to Show</h2>
+
                     </div>
             </div>
             </div>
@@ -187,8 +187,8 @@ session_start();
             <div class="tabPanel">
                 <div class="profile-body">
                     <div class="profile-poststab">
-                        <h1>Setting</h1>
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                   
+                        <h2>No Fan Theory to Show</h2>
                     </div>
             </div>
             </div>
