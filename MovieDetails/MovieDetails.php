@@ -39,6 +39,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <style type="text/css">
+
+    body{
+      background-color: #181818;
+    }
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
     .slider
     {
         height: 600px;
@@ -207,7 +233,7 @@
       
 
         <div class="content">       
-            <h2>Put on a <span>Happy</span> Face</h2>
+            <!-- <h2>Put on a <span>Happy</span> Face</h2> -->
             
             <a href="<?php echo $row[4]; ?>" class="play" ><img src="images/play.png">Watch Trailer</a>
             <div class="slide"></div>
@@ -225,6 +251,32 @@
             frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img src="images/close.png" class="close" onclick="toggle()"> 
         </div>
+
+        <div class="row">
+  <div class="side"  style="background-color: #282828; color: #f2f2f2;">
+    <h2>Information  <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h2>
+    <h3>Director</h3>
+    
+    <p>someone</p>
+    <h3>Runtime</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <h3>PGA</h3>
+    <p>something</p>
+    <h3>Genre</h3>
+    <p>Sci-fi/Animation</p>
+    <h3>Release Date</h3>
+    <p>something</p>
+
+    
+  </div>
+  <div class="main"  style="background-color: #181818; color: #f2f2f2;">
+    <h2>Description  <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h2>
+    
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    </div>
+</div>
         
 
 
@@ -241,20 +293,20 @@
             
             
             <div class="tabPanel">
-                <div class="whole">
+                <div class="whole" >
                     <!-- <div class="watch">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <p>Add to Watchlist</p>
                 </div> -->
-                <div class='review' >
+                <div class='review'  style="background-color: #585858;" >
                     <div class="stars">
-  <button class="star" onclick="rate(1)"><i class="fa fa-star"></i></button>
-  <button class="star"onclick="rate(2)"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(3)"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(4)"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(5)"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(1)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
+  <button class="star"onclick="rate(2)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(3)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(4)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(5)" style="background-color: #585858;"><i class="fa fa-star"></i></button>
 </div>
-                    <div class="text">
+                    <div class="text" style="background-color: #585858;">
                                <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70" required></textarea>
                                <input type="submit" onclick="insert()" name="post_reviews" value="POST" >
 
@@ -275,6 +327,9 @@
         <div class="tabPanel"><?php 
         include('forumtotal.php');
         ?></div>
+        <br>
+        <br>
+        <br>
         <div class="tabPanel"><?php 
         include('quiz.php');
         ?></div>
