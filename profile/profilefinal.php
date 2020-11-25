@@ -1,14 +1,20 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <?php
-
+    if(!isset($_SESSION['id'])){
+        header('location: ../login/login.php');
+    }
     define('DB_SERVER', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
@@ -21,9 +27,9 @@
             die("Connection Failed : ". $conn->connect_error);
         } else {
             
-        $sql="SELECT * from user where user_id=34";
+        $sql="SELECT * from user where user_id=".$_SESSION['id'];
         $result = mysqli_query( $conn,$sql);
-        $resultcheck = mysqli_num_rows($result) > 0;
+        $resultcheck = mysqli_num_rows($result) == 1;
 
         if($resultcheck)
         {
