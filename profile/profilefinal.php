@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <title>Profile Page</title>
     <link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="../MovieDetails/moviereview.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -129,8 +129,58 @@ session_start();
             <div class="tabPanel">
                 <div class="profile-body">
                     <div class="profile-poststab">
-                        <h1>Review</h1>
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                    <div class="rev-section">
+
+<div class="reviews">
+
+<div class="review">
+   
+   <div class="body-review">
+   <div class="name-review">Parasite</div>
+
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-half-o"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+   
+   <div class="body-review">
+   <div class="name-review">Avenger</div>
+
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+<div class="review">
+  
+   <div class="body-review">
+      <div class="name-review">Joker</div>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-half-o"></i>
+      </div>
+      <div class="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+   </div>
+</div>
+
+</div>
+
+</div>
                     </div>
             </div>
             </div>
