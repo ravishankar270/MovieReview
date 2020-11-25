@@ -194,7 +194,7 @@ session_start();
                 <div class="profile-body">
                     <div class="profile-poststab">
                    
-
+                        <h2>No Fan Theory to Show</h2>
                     </div>
             </div>
             </div>
