@@ -193,13 +193,8 @@ session_start();
             <div class="tabPanel">
                 <div class="profile-body">
                     <div class="profile-poststab">
-                    <div class="card2">
-                <img src="../all-movies/all-movies-images/iron-man2.jpg" alt="" style="width:25%">
-                <div class="container2">
-                <h4><b>Jane Doe</b></h4> 
-                <p>Interior Designer</p> 
-                 </div>
-                </div>
+                   
+                    
                     </div>
             </div>
             </div>
