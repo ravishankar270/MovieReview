@@ -7,6 +7,10 @@
    $email = $data[0];
    $username=$data[2];
    $password = $data[1];
+   $pass = password_hash($password, PASSWORD_BCRYPT);
+
+   echo "$pass";
+
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
