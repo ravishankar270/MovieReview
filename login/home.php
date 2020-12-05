@@ -33,6 +33,7 @@ $_SESSION['email']=$data['email'];
 $_SESSION['gender']=$data['gender'];
 $_SESSION['LastName']=$data['familyName'];
 $_SESSION['Name']=$row[1];
+
 $_SESSION['id']=$row[0];
 $_SESSION['access_token']=$token;
 header("Location: index.php");

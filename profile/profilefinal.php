@@ -16,6 +16,7 @@ session_start();
         // include('../footer&header/header.php');
         ?> -->
 
+
     <?php
     if(!isset($_SESSION['id'])){
         header('location: ../login/login.php');
@@ -29,7 +30,6 @@ session_start();
         $sql="SELECT * from user where user_id=".$_SESSION['id'];
         $result = $conn->query($sql) or die($conn->error);
         
-        echo $_SESSION['id'];
         if($result->num_rows==1)
         {
             while($row = $result->fetch_assoc())
@@ -38,7 +38,7 @@ session_start();
         <div class="container">
             <div class="profile-header"> 
                 <div class="profile-img">
-                    <img src="img/pic.jpeg" width="200" alt="">
+                    <img src="<?php echo 'data:image;base64,'.base64_encode($row['image']); ?>" width="200" alt="image">
                 </div>
         <div class="profile-nav-info"> 
                 <h3 class="user-name"><?php echo $row['username']; ?></h3>
@@ -73,7 +73,7 @@ session_start();
                 
                 <div class="user-bio"> 
                     <h1>BIO</h1>
-                    <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit atque dolor quidem, ullam, voluptate molestias! Lorem ipsumdolor sit amet.</p>
+                    <p class="bio"><?php echo $row['bio'] ?></p>
                 </div>
                 <div class="profile-btn"> 
                 <button class="chatbtn">

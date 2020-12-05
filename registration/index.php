@@ -4,7 +4,7 @@ session_start();
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }else {
-      	$query="select user_id,Name from user where Email_id='".$_SESSION['email']."'";
+      	$query="select user_id,username from user where Email_id='".$_SESSION['email']."'";
 
 $res=$conn->query($query) or die($conn->error);
 

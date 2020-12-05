@@ -1,3 +1,25 @@
+<?php 
+session_start();
+    include('../connectdb.php');
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }else {
+      	$query="select user_id from user where Email_id='".$_SESSION['email']."'";
+
+$res=$conn->query($query) or die($conn->error);
+
+
+if($res->num_rows==1){
+	$row=$res->fetch_row();
+$_SESSION['id']=$row[0];
+
+}else{
+	echo $query;
+}
+
+      }
+
+?>
 <!-- <!DOCTYPE html>
 <html>
   <head>
@@ -37,25 +59,11 @@
 <body>
 
 
-<?php
-
-    include('google.php');
-    
-    if(isset($_SESSION['id'])){
-        header('Location: ../homepage/homepage.php');
-        exit();
-    }
-    $auth=$google_client->createAuthUrl();
-
-
-     
-        ?>
     
    
        <script type="text/javascript">
          function check(e){
-            if(e.password.value===e.cpassword.value){
-              var json=[e.email.value,e.password.value,e.username.value]
+              var json=[e.username.value]
               console.log(json)
               const data=JSON.stringify(json)
               console.log(data)
@@ -63,25 +71,19 @@
            xmlhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
                 console.log(xmlhttp.responseText)
-                if(xmlhttp.responseText!=='already'){
-               if(xmlhttp.responseText==='registered'){
-                console.log('hello')
-                location.href='index.php'
+               if(xmlhttp.responseText==='done'){
+                console.log(xmlhttp.responseText)
+                location.href='../homepage/homepage.php'
+               }else{
+               	document.getElementById('error').innerHTML='already exists'
                }
-             }else{
-              document.getElementById('error').innerHTML='Already exists'
-
-             }
 
         }
       }
-      xmlhttp.open("post","register.php");
+      xmlhttp.open("post","username.php");
      xmlhttp.setRequestHeader("Content-type", "application/json");
       xmlhttp.send(data);
-      }else{
-        document.getElementById('correct').innerHTML="passwords do not match"
-      }
-       
+     
         
         
 
@@ -97,47 +99,17 @@
 
     <div class="box">
         <form class='form' onsubmit ="return check(this)" >
-            <h1>Sign Up</h1>
-            <div class="input1">
-                <input type="email" name="email" autocomplete="off" required />
-                <label for="email" class="label-email">
-                    <span class="content-email">Email</span>
-                </label>
-            </div>
+            <h1>Enter Username to continue</h1>
+            
             <div class="input1">
                 <input type="text" name="username" autocomplete="off" required />
                 <label for="username" class="label-email">
                     <span class="content-email">Username</span>
                 </label>
             </div>
-            <div id='error'></div>
-            <div class="input1">
-                <input type="password" name="password" required />
-                <label for="password" class="label-email">
-                    <span class="content-email">Password</span>
-                </label>
-            </div>
-            <div class="input1">
-                <input type="password" name="cpassword"  required />
-                <label for="password" class="label-email">
-                    <span class="content-email">Confirm Password</span>
-                </label>
-            </div>
-            <div id='correct'></div>
+            <div id="error"></div>
             <input type="submit" name="login" value="Sign Up" />
-            <div class="help">
-                <div>
-                    <label for='rememberme'>OR</label>
-                </div>
 
-                
-            </div>
-            <div class="google" >
-                <div class="logoG">
-                <i class='fab fa-google-plus-g' style='font-size:24px;color:red'></i>
-            </div>
-                <div class="text" onClick="window.location='<?php echo $auth; ?>'">Google</div>
-            </div>
             
             
             

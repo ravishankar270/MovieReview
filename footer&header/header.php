@@ -77,7 +77,7 @@
                                 </div>
                             </li>
                             <li class="nav-link" style="--i: 1.1s">
-                                <a href="#">TVShows</a>
+                                <a href="../all-shows/all-shows.php">TVShows</a>
                                
                                         
                             </li>
@@ -109,7 +109,7 @@
                 <?php
                 if(isset($_SESSION['id'])){
                                      echo "<div class='profile-header' onclick=\"location.href='../profile/profilefinal.php'\">
-                                     <a >".$_SESSION["Name"][0]."</a>
+                                     <a >".$_SESSION['Name'][0]."</a>
                                      </div>"   ;
                                 }
                 ?>

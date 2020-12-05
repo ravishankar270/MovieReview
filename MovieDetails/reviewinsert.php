@@ -6,7 +6,11 @@
         die("Connection failed: " . $conn->connect_error);
       }else {
                     $data=json_decode($_GET['q']);
+                    if($_SESSION['Name']=='N'){
+                    $name='Null';
+                }else{
                     $name=$_SESSION['Name'];
+                }
                     $id=$_SESSION['id'];
                     $eid=intval($_SESSION['eid']);
                     $desc = strip_tags(strval($data[0]));

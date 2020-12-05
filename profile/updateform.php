@@ -1,4 +1,25 @@
 <?php session_start();?>
+<?php
+include('../connectdb.php');
+
+        
+    
+    // Create connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }else{
+        $sql1="select username,Phone_no,Email_id,bio from user where user_id=".$_SESSION['id'];
+                  $result1 = $conn->query($sql1) or die($conn->error);
+                  if($result1->num_rows==1){
+                    $row=$result1->fetch_row();
+
+                  }
+                  
+
+      }
+
+
+?>
 
 <?php
 include('../connectdb.php');
@@ -18,7 +39,7 @@ include('../connectdb.php');
                   $phone=intval($_POST['Phone']);
                   $file=addslashes(file_get_contents($_FILES['image']['tmp_name']));
                   
-    $sql="update user set username='$username',Phone_no=$phone,Email_id='$email', image='$file',bio='$bio' where user_id=".$_SESSION['id'];
+    $sql="update user set Phone_no=$phone, image='$file',bio='$bio' where user_id=".$_SESSION['id'];
                   $result = $conn->query($sql) or die($conn->error);
                     if($result){
                     header('location: profilefinal.php');
@@ -77,7 +98,7 @@ include('../footer&header/header.php');
         <label for="Username">Username</label>
       </div>
       <div class="col-75">
-        <input type="text" class="text" id="Username" name="Username" placeholder="Movie's name.." required>
+        <input type="text" class="text" id="Username"  name="Username" value="<?php echo $_SESSION['Name']; ?>" required disabled>
       </div>
     </div>
     <div class="row">
@@ -85,7 +106,7 @@ include('../footer&header/header.php');
         <label for="Phone">Phone Number</label>
       </div>
       <div class="col-75">
-        <input type="Phone" class="Phone" id="Phone" name="Phone" placeholder="Phone Number" required>
+        <input type="Phone" class="Phone"  id="Phone" name="Phone" value="<?php echo $row[1]; ?>" placeholder="Phone Number" required>
       </div>
 
     </div>
@@ -94,7 +115,7 @@ include('../footer&header/header.php');
         <label for="email">Email</label>
       </div>
       <div class="col-75">
-        <input type="Email" class="Email" name="email" placeholder="Email">
+        <input type="Email" class="Email" value="<?php echo $row[2]; ?>" name="email" placeholder="Email" disabled>
       </div>
     </div>
     <div class="row">
@@ -102,7 +123,7 @@ include('../footer&header/header.php');
         <label for="bio">bio</label>
       </div>
       <div class="col-75">
-        <textarea id="bio" name="bio" placeholder="Write something.." style="height:200px" required></textarea>
+        <textarea id="bio" name="bio" value="" placeholder="Write something.." style="height:200px" required><?php echo $row[3]; ?></textarea>
       </div>
     </div>
       

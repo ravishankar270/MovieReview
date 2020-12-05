@@ -12,12 +12,12 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel='stylesheet' href="all-movies.css?v=<?php echo time(); ?>" type="text/css" />
+        <link rel='stylesheet' href="all-shows.css?v=<?php echo time(); ?>" type="text/css" />
           <link rel='stylesheet' href="lightslider.css?v=<?php echo time(); ?>" type="text/css" />
         <script src="https://kit.fontawesome.com/3e55b52515.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="JQuery3.3.1.js?v=<?php echo time();?>"></script>
         <script type="text/javascript" src="lightslider.js?v=<?php echo time();?>"></script>
-        <script src="all-movies.js?v=<?php echo time();?>"></script>
+        <script src="all-shows.js?v=<?php echo time();?>"></script>
 
     </head>
     <body>
@@ -44,7 +44,7 @@
         
         <div class="back-img">
   <div class="title">
-    <h1 style="font-size: 3.7vw;">“Because we all need to believe in movies,<br> sometimes.”</h1>
+    <h1 style="font-size:4vw;">"The novel is more of a whisper,<br> whereas the stage is a shout."<br> ~Robert Holman</h1>
     <!-- <p>Scroll for more!</p> -->
   </div>
 </div>
@@ -59,7 +59,7 @@
     <br>
     <br>
     <br>
-    <h1 style="margin-left: 40px; color: white;">Action Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <h1 style="margin-left: 40px; color: white;">Action TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
     
     
@@ -105,7 +105,7 @@
     <br>
     <br>
     <br>
-    <h1 style="margin-left: 40px; color: white;">Horror Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <h1 style="margin-left: 40px; color: white;">Horror TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
     <ul id="autoWidth" class="cs-hidden">
     <!--1------------------------------>
@@ -150,7 +150,7 @@
     <br>
     <br>
     <br>
-    <h1 style="margin-left: 40px; color: white;">Sci-Fi Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <h1 style="margin-left: 40px; color: white;">Sci-Fi TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
     <ul id="autoWidth2" class="cs-hidden">
     <!--1------------------------------>
@@ -196,7 +196,7 @@
     <br>
     <br>
     <br>
-    <h1 style="margin-left: 40px; color: white;">Comedy Movies    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <h1 style="margin-left: 40px; color: white;">Comedy TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
     <ul id="autoWidth3" class="cs-hidden">
     <!--1------------------------------>
@@ -241,9 +241,6 @@
     <br>
     <br>
     <br>
-    <?php
-include('../footer&header/footer.php');
-    ?>
         
         <script src="" async defer></script>
 
