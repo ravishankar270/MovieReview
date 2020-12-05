@@ -5,6 +5,10 @@
 
    $username = $data[0];
    $password = $data[1];
+   $pass = password_hash($password, PASSWORD_BCRYPT);
+
+   echo "$pass";
+
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
