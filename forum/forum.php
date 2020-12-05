@@ -30,11 +30,11 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
      $a=intval($array[0]);
      $sql="select comment_id,comments,likes,dislikes,theory_id from comments where theory_id =$a order by comment_id DESC" ;
      $result = $conn->query($sql) or die($conn->error);
-     $_SESSION['id']=$a;
+     $_SESSION['fid']=$a;
      $_SESSION['question']=$array[1];
      
     }
-    $id=$_SESSION['id'];
+    $id=$_SESSION['fid'];
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }else if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -79,11 +79,15 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
             if (this.readyState == 4 && this.status == 200) {
                 console.log(xmlhttp.responseText)
                 if (ele.name==='like'){
-                document.getElementById(id).innerHTML=xmlhttp.responseText;
+                       if(xmlhttp.responseText!==0){
+                    document.getElementById(id).innerHTML=xmlhttp.responseText;
+                }
                 document.getElementById(id).style.color="blue"
                 }else{
                     id="d"+String(id)
+                    if(xmlhttp.responseText>0){
                     document.getElementById(id).innerHTML=xmlhttp.responseText;
+                }
                     document.getElementById(id).style.color="blue"
             }
 

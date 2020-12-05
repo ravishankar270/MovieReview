@@ -26,10 +26,10 @@
         if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }else{
-        $action="select images,trailer,Name,E_id from entertainment where Type='' and genre='Action/Thriller'"; 
-        $Horror="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Horror'"; 
-        $Comedy="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Comedy'"; 
-        $Scifi="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Sci-Fi'"; 
+        $action="select images,trailer,Name,E_id from entertainment where Type='TVShow' and genre='Action/Thriller'"; 
+        $Horror="select images,trailer,Name,E_id from entertainment where Type='TVShow' and genre='Horror'"; 
+        $Comedy="select images,trailer,Name,E_id from entertainment where Type='TVShow' and genre='Comedy'"; 
+        $Scifi="select images,trailer,Name,E_id from entertainment where Type='TVShow' and genre='Sci-Fi'"; 
         $result=$conn->query($action) or die($conn->error);
         $result1=$conn->query($Horror) or die($conn->error);
         $result2=$conn->query($Comedy) or die($conn->error);

@@ -26,7 +26,6 @@ session_start();
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }else {
-            
         $sql="SELECT * from user where user_id=".$_SESSION['id'];
         $result = $conn->query($sql) or die($conn->error);
         
