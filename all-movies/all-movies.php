@@ -44,7 +44,7 @@
         
         <div class="back-img">
   <div class="title">
-    <h1>“Because we all need to believe in movies,<br> sometimes.”</h1>
+    <h1 style="font-size: 3.7vw;">“Because we all need to believe in movies,<br> sometimes.”</h1>
     <!-- <p>Scroll for more!</p> -->
   </div>
 </div>

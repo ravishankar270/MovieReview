@@ -41,7 +41,7 @@ body{
   .title h1 {
     text-transform: uppercase;
     margin: 0;
-    font-size: 3rem;
+    /* font-size: 3rem; */
     white-space: nowrap;
   }
 

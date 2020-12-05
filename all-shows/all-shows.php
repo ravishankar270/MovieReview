@@ -44,7 +44,7 @@
         
         <div class="back-img">
   <div class="title">
-    <h1>"The novel is more of a whisper,<br> whereas the stage is a shout."<br> ~Robert Holman</h1>
+    <h1 style="font-size:4vw;">"The novel is more of a whisper,<br> whereas the stage is a shout."<br> ~Robert Holman</h1>
     <!-- <p>Scroll for more!</p> -->
   </div>
 </div>
