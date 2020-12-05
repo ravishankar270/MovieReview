@@ -77,7 +77,7 @@
                                 </div>
                             </li>
                             <li class="nav-link" style="--i: 1.1s">
-                                <a href="#">TVShows</a>
+                                <a href="../all-shows/all-shows.php">TVShows</a>
                                
                                         
                             </li>
