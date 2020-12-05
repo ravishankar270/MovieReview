@@ -192,7 +192,7 @@ p{
          xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
              
-              console.log(this.responseText)
+              alert(this.responseText)
               document.getElementById('description').style.innerHTML=""
               location.reload()
              
@@ -208,11 +208,12 @@ p{
 
     </script>
    <?php 
-   include('../footer&header/header.php')
+   include('../footer&header/header.php');
 
    ?>
 
         <i onclick="watchlist()"  id="w" class="fas fa-heart watchlist1" style="font-size:<?php echo $size?>px;cursor: pointer;transition: 0.3s all;color: <?php echo $color  ?>" aria-hidden="true"></i>
+        <div class="enclose">
       
    <div class="slider">
             <div class="sliderchild">
@@ -336,11 +337,16 @@ p{
         <div class="tabPanel"><?php 
         include('quiz.php');
         ?></div>
-                
+               <?php 
+   include('../footer&header/footer.php');
+
+   ?> 
         </div>
+
+      </div>
         
 
-
+ 
 <script src="tab.js?v=<?php echo time(); ?>"></script>
 <!-- <script type="text/javascript">
   var $scores = $("#details_review");

@@ -109,7 +109,7 @@
                 <?php
                 if(isset($_SESSION['id'])){
                                      echo "<div class='profile-header' onclick=\"location.href='../profile/profilefinal.php'\">
-                                     <a >".$_SESSION["Name"][0]."</a>
+                                     <a >".$_SESSION['Name'][0]."</a>
                                      </div>"   ;
                                 }
                 ?>

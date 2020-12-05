@@ -5,8 +5,6 @@
     
 
    $email = $data[0];
-   $username=$data[2];
-   $password = $data[1];
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
@@ -19,31 +17,26 @@ $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-        if(isset($_SESSION['id'])){
-        $query="select user_id,Name from user where Email_id='".$_SESSION['email']."'";
-$r=mysqli_query($conn,$query);
-if(mysqli_num_rows($r)==1){
-    header('location: ../login/login.php');
-}
-}
-$check="select username from user where username='".$username."'";
+        $check="select username from user where username='".$email."'";
         $ru = mysqli_query($conn,$check);
         if(mysqli_num_rows($ru)==0){
-    $sql="INSERT INTO `user` ( `Email_id`, `password`,`username` ) VALUES ( '$email', '$password','$username')";
+            $sql="UPDATE user SET username='$email' WHERE user_id=".$_SESSION['id'];
     
 
     $run = mysqli_query($conn,$sql);
-	if($run) {
-
-        $_SESSION['email']=$email;
-        echo "registered";
-    }
-    else{
-        echo "error";
-    }	
+    if($ru){
+        $_SESSION['Name']=$email;
+    echo "done";
 }else{
-    echo "already";
+    echo "not";
 }
+
+        }else{
+            echo "already exists";
+        }
+
+    
+	
 }
 	
 ?>

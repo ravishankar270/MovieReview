@@ -32,7 +32,7 @@ $sql="insert into user (Name,Email_id,cliend_id) values ('$name','$email','$clie
 
 $result=mysqli_query($conn,$sql);
 if($result){
-header("Location: index.php");
+header("Location: index1.php");
 }else{
 	echo $sql;
 }

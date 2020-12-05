@@ -39,15 +39,19 @@
         else{
         $email=$_POST['email'];
         $password1=$_POST['password'];
-        $sql=" select user_id, Email_id,password,username from user where Email_id='$email' and password='$password1  '";
+        $sql=" select user_id, Email_id,password,username from user where Email_id='$email' and password='$password1'";
 
         $result = $conn->query($sql);
         $user_info=$result->fetch_row();
-        $_SESSION['Name']=$user_info[3];
-        $_SESSION['Email']=$user_info[1];
-        $_SESSION['id']=$user_info[0];
+        
+        
 
         if($result->num_rows==1){
+            $_SESSION['Name']=$user_info[3];
+
+     
+        $_SESSION['Email']=$user_info[1];
+        $_SESSION['id']=$user_info[0];
             header("location: ../homepage/homepage.php");
          
     }
