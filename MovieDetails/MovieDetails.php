@@ -170,6 +170,24 @@ p{
             margin-left: -400%;
         }
     }
+    /* .btn1{
+          text-align: center;
+      }
+       */
+      .btn1 a{
+        text-align: center;
+        text-decoration: none;
+        background: #585858;
+        color: #f2f2f2;
+        padding: 7px 10px;
+        border-radius: 3px;
+        display: inline-flex;
+        transition: 0.2s;
+      }
+      .btn1 a:hover{
+        transform: scale(0.9);
+        background-color: #69bde7;
+      }
 </style>
 
 
@@ -212,7 +230,7 @@ p{
 
    ?>
 
-        <i onclick="watchlist()"  id="w" class="fas fa-heart watchlist1" style="font-size:<?php echo $size?>px;cursor: pointer;transition: 0.3s all;color: <?php echo $color  ?>" aria-hidden="true"></i>
+        <!-- <i onclick="watchlist()"  id="w" class="fas fa-heart watchlist1" style="font-size:<?php echo $size?>px;cursor: pointer;transition: 0.3s all;color: <?php echo $color  ?>" aria-hidden="true"></i> -->
         <div class="enclose">
       
    <div class="slider">
@@ -279,6 +297,9 @@ p{
     
     <p><?php echo $row[7]; ?></p>
     <br>
+    <div class="btn1">
+        <a onclick="watchlist()" id="w" href="#">Add to Watchlist</a>
+    </div>
     </div>
 </div>
         
