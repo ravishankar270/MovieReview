@@ -109,22 +109,15 @@ session_start();
 
             <div class="nav">
                 <ul>
-                <li onclick="showPanel(0,'#25aae1')" class="user-post ">POSTS</li>
-                <li onclick="showPanel(1,'#25aae1')" class="user-review">REVIEW</li>
-                <li onclick="showPanel(2,'#25aae1')" class="user-setting">Fan Theory</li>
+                <li onclick="showPanel(0,'#25aae1')" class="user-post ">YOUR REVIEWS</li>
+                <li onclick="showPanel(1,'#25aae1')" class="user-review">FAN THEORY</li>
+                <li onclick="showPanel(2,'#25aae1')" class="user-setting">UPDATE PROFILE</li>
                 </ul>
             </div>
             </div>
        
 
-            <div class="tabPanel">
-                <div class="profile-body">
-                    <div class="profile-poststab">
-                        <h2>No Post to Show</h2>
-
-                    </div>
-            </div>
-            </div>
+      
 
             <div class="tabPanel">
                 <div class="profile-body">
@@ -187,12 +180,26 @@ session_start();
             <div class="tabPanel">
                 <div class="profile-body">
                     <div class="profile-poststab">
-                   
-                        <h2>No Fan Theory to Show</h2>
+                    <div class="cardf">
+                        <h2><?php echo $row['Email_id']; ?></h2>
+                        <div class="containerf">
+                        <h4><b>John Doe</b></h4> 
+                        <p>Architect & Engineer</p> 
+                        </div>
+                    </div>
                     </div>
             </div>
             </div>
+            <div class="tabPanel">
+                <div class="profile-body">
+                    <div class="profile-poststab">
+                    <button onclick="window.location.href='../profile/updateform.php' " class="createbtn">
+                    <i class="fa fa-refresh"></i>Update
+                </button>
 
+                    </div>
+            </div>
+            </div>
 
 </div>
 </div>
