@@ -270,7 +270,7 @@ include('../connectdb.php');
 <div id="addshow" class="tabcontent">
     <br>
 <div class="container">
-  <form method="post" action="upload.php">
+  <form method="POST" action="upload.php" enctype="multipart/form-data">
     <div class="row">
       <div class="col-25">
         <label for="Name">Name of the TV Show</label>
@@ -334,7 +334,7 @@ include('../connectdb.php');
       
     </div>
     <div class="row">
-      <div class="crating
+      <div class="crating">
         <label for="episode">Number of episodes per season</label>
       </div>
       <div class="col-75">
@@ -366,7 +366,7 @@ include('../connectdb.php');
 
     </div>
     <div class="row">
-      <input type="submit" name="='submit'" value="Submit">
+      <input type="submit" name="submit" value="submit">
     </div>
   </form>
 </div>

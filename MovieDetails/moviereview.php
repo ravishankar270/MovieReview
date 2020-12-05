@@ -70,7 +70,7 @@ echo "<div class='review-all'>
 
 </div>
 <?php if($result->num_rows==6){?>
-<i class="fa fa-angle-down" onclick="more()" style="font-size:34px;color:red;"></i> 
+<i class="fa fa-angle-down" onclick="more()" style="font-size:34px;color:red;cursor: pointer;"></i> 
 <?php
 }
 ?>

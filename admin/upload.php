@@ -11,7 +11,6 @@
                   $Rating=$_POST['rating'];
                   $season=intval($_POST['season']);
                   $episodes=intval($_POST['episode']);
-                  
 
                  $a= array( );
 
@@ -82,27 +81,9 @@
                     $sql="INSERT INTO `entertainment` ( `Director`,`Name`,`genre`,`images`,`images1`,`images2`,`images3`,`rating`,`description`,`admin_id`,`Type`) VALUES ( '$director','$movie_name','$genre','".$a[0]."','".$a[1]."','".$a[2]."','".$a[3]."',$Rating,'$description',0,'TVShow')";
 
                   $result = $conn->query($sql) or die($conn->error);
-                  $sql2="select E_id from entertainment where Name=$movie_name";
-                  $result1 = $conn->query($sql2) or die($conn->error);
-                  if($result1){
-                  $row=$result1->fetch_row();
-
-                
-
-                  $sql1="INSERT INTO `tv_shows` ( `no_of_seasons`,`no_of_episodes`,`E_id`) VALUES ( $season,$episodes,".$row[0].")";
-                  $result2 = $conn->query($sql1) or die($conn->error);
-
-                    if($result and $result2){
-                      echo "Updated";
-
-                    }else{
-                      echo "No";
-                    }
-                    unset($_POST);
-                    }
-                    else {
-                      echo "not ok";
-                    }
+                  if($result){
+                    header('location: admin.php');
+                  }
                   }
                 //     // Write Mysql Query Here to insert this $QueryInsertFile   .                   
                 //   }

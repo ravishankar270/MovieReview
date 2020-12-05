@@ -41,7 +41,6 @@
     <style type="text/css">
 
     body{
-      background-color: #181818;
     }
 
 .row {  
@@ -264,8 +263,6 @@ p{
     <h3>Runtime</h3>
 
     <p>someone</p>
-    <h3>Runtime:</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
     <h3>PGA:</h3>
     <p>something</p>
 
@@ -273,10 +270,6 @@ p{
     <p><?php echo $row[6]; ?></p>
     <h3>Release Date</h3>
 
-    <h3>Genre:</h3>
-    <p>Sci-fi/Animation</p>
-    <h3>Release Date:</h3>
-    <p>something</p>
 
     
   </div>
@@ -308,15 +301,15 @@ p{
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <p>Add to Watchlist</p>
                 </div> -->
-                <div class='review'  style="background-color: #383838;" >
+                <div class='review'  style="" >
                     <div class="stars">
-  <button class="star" onclick="rate(1)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
-  <button class="star"onclick="rate(2)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(3)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(4)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(5)" style="background-color: #383838;"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(1)" style=""><i class="fa fa-star"></i></button>
+  <button class="star"onclick="rate(2)" style=""><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(3)" style=""><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(4)" style=""><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(5)" style=""><i class="fa fa-star"></i></button>
 </div>
-                    <div class="text" style="background-color: #383838;">
+                    <div class="text" style="">
                                <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70" required></textarea>
                                <input type="submit" style="background-color:  #69bde7;" onclick="insert()" name="post_reviews" value="POST" >
 
@@ -345,6 +338,7 @@ p{
         ?></div>
                 
         </div>
+        
 
 
 <script src="tab.js?v=<?php echo time(); ?>"></script>
