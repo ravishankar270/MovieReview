@@ -21,7 +21,7 @@
         if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }else{
-        $action="select images1,Name,E_id,description from entertainment where Type='Movie' and E_id in (select E_id from watch_list where user_id=".$_SESSION['id'].")";  
+        $action="select images1,Name,E_id,description from entertainment where E_id in (select E_id from watch_list where user_id=".$_SESSION['id'].")";  
         $result=$conn->query($action) or die($conn->error);
     }
         

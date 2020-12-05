@@ -17,10 +17,12 @@
       $result1=$conn->query($res1) or die($conn->error());
       $row=$result->fetch_row();
       $color='black';
+      $text='Add to watchlist'
       $size=30;
       if($result1->num_rows===1){
         $color='red';
         $size=40;
+        $text='Added'
 
       }
     }
@@ -299,7 +301,7 @@ p{
     <p><?php echo $row[7]; ?></p>
     <br>
     <div class="btn1">
-        <a onclick="watchlist()" id="w" href="#">Add to Watchlist</a>
+        <a onclick="return watchlist()" id="w" style="font-size:<?php echo $size; ?>px;cursor: pointer;transition: 0.3s;color: <?php echo $color; ?>"><?php echo $text;?></a>
     </div>
     </div>
 </div>
@@ -335,7 +337,7 @@ p{
 <input type="number"id='stars' name="rating" style="display: none;" value=1 > 
   
                     <div class="text" style="">
-                               <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70" required></textarea>
+                               <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="50" required></textarea>
                                <input type="submit" style="background-color:  #69bde7;" onclick="insert()" name="post_reviews" value="POST" >
 
                     </div>
@@ -392,6 +394,7 @@ p{
                 console.log(xmlhttp.responseText)
                 if (xmlhttp.responseText==='ok'){
                   w.style.color='red';
+                  w.innerHTML='Added'
                   w.style.fontSize='40px';
                 }
              

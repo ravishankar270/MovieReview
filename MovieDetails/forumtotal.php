@@ -78,7 +78,7 @@ function finsert(){
       
                     <div class="text1">
                                <textarea id='description1' name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="8" cols="70" required></textarea>
-                               <input type="submit" name="post_reviews" onclick="finsert()" value="POST" >
+                               <input type="submit" name="post_reviews" style="width: 100px;" onclick="finsert()" value="POST" >
 
                     </div>
                     
