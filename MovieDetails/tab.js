@@ -22,6 +22,7 @@ function rate(index){
     for(i=0; i<index;i++){
         stars[i].style.opacity=1;
         stars[i].style.color="#FFDF00";
+
         
     }
     for (i=index; i<=5;i++){
@@ -29,6 +30,7 @@ function rate(index){
         stars[i].style.color="";
 
     }
+    document.getElementByID('stars').value=index+1;
 }
 
 

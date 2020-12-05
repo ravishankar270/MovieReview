@@ -181,11 +181,12 @@ p{
     <script type="text/javascript">
   function insert(){
         description=document.getElementById('description').value;
+        rating=document.getElementById('stars').value;
         var reloadok=0
-       
+    
         if(description!==""){
           console.log(description)
-        const data=[description]
+        const data=[description,rating]
         const json=JSON.stringify(data)
         
         var xmlhttp = new XMLHttpRequest();
@@ -303,13 +304,15 @@ p{
                     <p>Add to Watchlist</p>
                 </div> -->
                 <div class='review'  style="" >
-                    <div class="stars">
+                    <div class="stars" id="requiredDiv">
   <button class="star" onclick="rate(1)" style=""><i class="fa fa-star"></i></button>
   <button class="star"onclick="rate(2)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(3)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(4)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(5)" style=""><i class="fa fa-star"></i></button>
 </div>
+<input type="number"id='stars' name="rating" style="display: none;" value=1 > 
+  
                     <div class="text" style="">
                                <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="70" required></textarea>
                                <input type="submit" style="background-color:  #69bde7;" onclick="insert()" name="post_reviews" value="POST" >
