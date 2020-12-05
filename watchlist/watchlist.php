@@ -68,6 +68,10 @@ while($row=$result->fetch_row()){
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
   <?php
 }
 ?>
@@ -75,6 +79,9 @@ while($row=$result->fetch_row()){
  
 
 </div>
+<br>
+<br>
+<br>
 
         
         
