@@ -43,7 +43,6 @@
             <div class="sliderchild">
                 <div class="imagecon">
                     <a href="#">JOKER</a>
-                    <a href="#" class="trailer">Watch Trailer</a>
                 </div>
                 <div class="imagecon">
                     <a href="#">PARASITE</a>
@@ -54,9 +53,9 @@
                 <div class="imagecon">
                     <a href="#">BLACK WIDOW</a>
                 </div>  
-                <!-- <div class="imagecon">
-                    <a href="#">JOKER</a>
-                </div> -->
+                <div class="imagecon">
+                    <a href="#">BLACK PANTHER</a>
+                </div>
             </div>  
         </div>
         <br>

@@ -63,6 +63,12 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .imagecon:nth-child(5){
+      background-image: url('homepage-images/panther.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+   
      
 
      @keyframes slider{
