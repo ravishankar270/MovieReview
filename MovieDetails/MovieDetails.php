@@ -17,12 +17,12 @@
       $result1=$conn->query($res1) or die($conn->error());
       $row=$result->fetch_row();
       $color='black';
-      $text='Add to watchlist'
+      $text='Add to watchlist';
       $size=30;
       if($result1->num_rows===1){
         $color='red';
         $size=40;
-        $text='Added'
+        $text='Added';
 
       }
     }
