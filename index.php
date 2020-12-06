@@ -1,3 +1,3 @@
 <?php
-include('homepage/homepage.php');
+header('location: homepage/homepage.php');
 ?>
