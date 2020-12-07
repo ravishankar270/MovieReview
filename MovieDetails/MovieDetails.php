@@ -12,7 +12,7 @@
     }else if(isset($_GET['q'])){
       $_SESSION['eid']=intval($_GET['q']);
       $res="select Name,images1,images2,images3,trailer,Director,genre,description from entertainment where E_id=".$_SESSION['eid'];
-      $res1="select E_id from watch_list where E_id=".$_SESSION['eid'];
+      $res1="select E_id from watch_list where E_id=".$_SESSION['eid']." and user_id=".$_SESSION['id'];
       $result=$conn->query($res) or die($conn->error());
       $result1=$conn->query($res1) or die($conn->error());
       $row=$result->fetch_row();
@@ -41,9 +41,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <style type="text/css">
-
-    body{
-    }
 
 .row {  
   display: flex;
@@ -107,6 +104,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
     }
     
     .imagecon:nth-child(2){
@@ -115,6 +113,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
     }
     .imagecon:nth-child(3){
       <?php if($row){ ?>
@@ -122,13 +121,14 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
     }
     .imagecon:nth-child(4){
       <?php if($row){ ?>
         background-image: url('<?php echo $row[1]; ?>');
       <?php } ?>
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover center;
     }
      .imagecon:nth-child(5){
       <?php if($row){ ?>
@@ -136,6 +136,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
     } 
 
      @keyframes slider{
@@ -233,8 +234,8 @@ p{
 
    ?>
 
-        <!-- <i onclick="watchlist()"  id="w" class="fas fa-heart watchlist1" style="font-size:<?php echo $size?>px;cursor: pointer;transition: 0.3s all;color: <?php echo $color  ?>" aria-hidden="true"></i> -->
-        <div class="enclose">
+        <!-- <i onclick="watchlist()"  id="w" class="fas fa-heart watchlist1" style="font-size:<?php  $size?>px;cursor: pointer;transition: 0.3s all;color: <?php$color  ?>" aria-hidden="true"></i> -->
+        
       
    <div class="slider">
             <div class="sliderchild">
@@ -369,7 +370,7 @@ p{
    ?> 
         </div>
 
-      </div>
+      
         
 
  

@@ -211,7 +211,7 @@
     <br>
     <br>
     <br>
-    <h1 style="margin-left: 60px; color: white;">Top TV Shows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
+    <h1 style="margin-left: 60px; color: white;">Top TVShows    <i class="fa fa-angle-right" style="color: #69bde7;" aria-hidden="true"></i></h1>
     <br>
     <ul id="autoWidth" class="cs-hidden">
     <!--1------------------------------>

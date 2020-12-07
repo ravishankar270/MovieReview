@@ -46,27 +46,32 @@
         background-image: url('homepage-images/joker.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
     }
     
     .imagecon:nth-child(2){
         background-image: url('homepage-images/parasite1.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+                background-position: center center;
     }
     .imagecon:nth-child(3){
         background-image: url('homepage-images/007.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
     }
     .imagecon:nth-child(4){
         background-image: url('homepage-images/widow.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+                background-position: center center;
     }
     .imagecon:nth-child(5){
       background-image: url('homepage-images/panther.jpg');
       background-repeat: no-repeat;
       background-size: cover;
+              background-position: center center;
   }
    
      

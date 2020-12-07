@@ -84,6 +84,15 @@
                             <li class="nav-link" style="--i: 1.35s">
                                 <a href="../watchlist/watchlist.php">  Watchlist  </a>
                             </li>
+                            <li class="nav-link pro"  >
+                                <?php
+                                if(isset($_SESSION['id'])){
+                                     echo "<div class='profile-header' onclick=\"location.href='../profile/profilefinal.php'\">
+                                     <a >".$_SESSION['Name'][0]."</a>
+                                     </div>"   ;
+                                }
+                                ?>
+                            </li>
                         </ul>
                     </div>
                     

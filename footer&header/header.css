@@ -347,6 +347,9 @@ ul{
             transform: translateY(0px);
         }
     }
+    .pro{
+        display: none;
+    }
     
     @media (max-width: 920px){
         .google{
@@ -360,7 +363,10 @@ ul{
             display: block;
         }
         .Navbar{
-            
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
         }
     
         .nav-btn-Navbar{
@@ -387,6 +393,16 @@ ul{
         #check:checked ~ .nav-btn-Navbar .log-sign{
             animation: animation .5s ease forwards var(--i);
         }
+        .search-box-Navbar{
+            width: 190px;   
+
+        }
+        .pro{
+            display: block;
+        }
+        .profile-header{
+            display: none;
+        }
     
         .nav-links{
             flex: initial;
@@ -401,6 +417,9 @@ ul{
             width: 100%;
             opacity: 0;
             transform: translateY(15px);
+        }
+        .container-Navbar{
+            width: 100%;
         }
     
         .nav-link > a{

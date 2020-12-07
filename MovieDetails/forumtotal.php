@@ -69,16 +69,16 @@ function finsert(){
 
     </script>
     <div class='fantheory'>
-        <div class="whole">
+       <div class="whole" >
                     <!-- <div class="watch">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <p>Add to Watchlist</p>
                 </div> -->
-                <div class='review1'>
-      
-                    <div class="text1">
-                               <textarea id='description1' name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="8" cols="70" required></textarea>
-                               <input type="submit" name="post_reviews" style="width: 100px;" onclick="finsert()" value="POST" >
+                <div class='review'  style="" >
+  
+                    <div class="text" style="">
+                               <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="50" required></textarea>
+                               <input type="submit" style="background-color:  #69bde7;" onclick="insert()" name="post_reviews" value="POST" >
 
                     </div>
                     
@@ -92,8 +92,7 @@ function finsert(){
             <div class='round'><p>".$row['username'][0]."</p></div>
             <div class='content1'>
             <div><p>".$row['question']."</p></div>
-            <div class='views'>
-            <i class='fa fa-eye' aria-hidden='true'></i><p>".$row['Views']."<p></div>
+
             </div>
             </div>";
             
