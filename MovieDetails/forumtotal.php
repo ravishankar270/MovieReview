@@ -43,7 +43,7 @@ include('../connectdb.php');
 function finsert(){
   
         description=document.getElementById('description1').value;
-        console.log(description)
+        
         
        
         if(description!==""){
@@ -71,16 +71,16 @@ function finsert(){
 
     </script>
     <div class='fantheory'>
-       <div class="whole" >
+       <div class="whole">
                     <!-- <div class="watch">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <p>Add to Watchlist</p>
                 </div> -->
-                <div class='review'  style="" >
+                <div class='review1'  style="" >
   
-                    <div class="text" style="">
+                    <div class="text1" style="">
                                <textarea id="description1" name="description" placeholder="fan theory" style="text-indent: 20px;"  rows="4" cols="50" required></textarea>
-                <input type="submit" style="background-color:  #69bde7;" onclick="finsert()" name="post_reviews" value="POST">
+                <input type="submit"  onclick="finsert()" name="post_reviews" value="POST">
 
                     </div>
                     
@@ -94,7 +94,6 @@ function finsert(){
             <div class='round'><p>".$row['username'][0]."</p></div>
             <div class='content1'>
             <div><p>".$row['question']."</p></div>
-
             </div>
             </div>";
             
