@@ -400,9 +400,7 @@ ul{
         .pro{
             display: block;
         }
-        .profile-header{
-            display: none;
-        }
+        
     
         .nav-links{
             flex: initial;
@@ -419,7 +417,9 @@ ul{
             transform: translateY(15px);
         }
         .container-Navbar{
-            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
     
         .nav-link > a{

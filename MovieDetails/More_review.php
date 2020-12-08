@@ -177,9 +177,9 @@ echo "<div class='review1'>
     
    <div class='body-review'>
    <div class='profile' onclick=\"location.href='../profile/profile2.php'\">
-        <a >".$row[2][0]."</a>
+        <a >".$row[3][0]."</a>
     </div>
-      <div class='name-review'>".$row[2]."</div>
+      <div class='name-review'>".$row[3]."</div>
       <div class='place-review'>Germany</div>
       <div class='rating'>
          <i class='fas fa-star'></i>

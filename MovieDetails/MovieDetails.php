@@ -13,8 +13,8 @@
       $_SESSION['eid']=intval($_GET['q']);
       $res="select Name,images1,images2,images3,trailer,Director,genre,description from entertainment where E_id=".$_SESSION['eid'];
 $res1="select E_id from watch_list where E_id in (select E_id from watch_list where user_id=".$_SESSION['id'].")";
-      $result=$conn->query($res) or die($conn->error());
-      $result1=$conn->query($res1) or die($conn->error());
+      $result=$conn->query($res) or die($conn->error);
+      $result1=$conn->query($res1) or die($conn->error);
       $row=$result->fetch_row();
       $color='black';
       $text='Add to watchlist';
@@ -214,7 +214,6 @@ p{
          xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
              
-              alert(this.responseText)
               document.getElementById('description').style.innerHTML=""
               location.reload()
              

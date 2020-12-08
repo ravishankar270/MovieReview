@@ -41,7 +41,9 @@ include('../connectdb.php');
     </script>
     <script type="text/javascript">
 function finsert(){
+  
         description=document.getElementById('description1').value;
+        console.log(description)
         
        
         if(description!==""){
@@ -52,9 +54,9 @@ function finsert(){
         var xmlhttp = new XMLHttpRequest();
          xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-             alert(this.responseText)
+            
               console.log(this.responseText)
-              document.getElementById('description').style.innerHTML=""
+              document.getElementById('description1').style.innerHTML=""
               location.reload()
              
 
@@ -77,8 +79,8 @@ function finsert(){
                 <div class='review'  style="" >
   
                     <div class="text" style="">
-                               <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="50" required></textarea>
-                               <input type="submit" style="background-color:  #69bde7;" onclick="insert()" name="post_reviews" value="POST" >
+                               <textarea id="description1" name="description" placeholder="fan theory" style="text-indent: 20px;"  rows="4" cols="50" required></textarea>
+                <input type="submit" style="background-color:  #69bde7;" onclick="finsert()" name="post_reviews" value="POST">
 
                     </div>
                     

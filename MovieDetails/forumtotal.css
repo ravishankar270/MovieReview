@@ -3,7 +3,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     resize: none;
-    width: 100%;
+    width: 80%;
 }
 .fantheory{
     display: flex;
@@ -16,15 +16,17 @@
 }
 .subset{
     width: 100%;
-    min-height:80px ;
+    min-height:80px;
     display: flex;
     justify-content: space-;
     align-items: center;
+    border-radius:60px; 
     background-color: antiquewhite;
-    border-bottom: 1px solid black;
     font-family: 'Roboto Mono', monospace;
     background-color: #1f2833;
     color: white;
+    margin: 3px;
+    cursor: pointer;
 }
 .subset:hover{
     background-color: beige; 
@@ -34,8 +36,12 @@
 .content1{
     display: flex;
     width: 70%;
+    margin-left:20px; 
     align-items: center;
     justify-content: flex-start;
+}
+.content:hover{
+    color: black;
 }
 .fa .fa-eye{
     opacity: 0.3;
@@ -70,6 +76,9 @@ input[type="submit"]:hover{
     opacity: 0.8;
 
 }
+textarea{
+    width: 80%;
+}
 .text1{
     display: flex;
     justify-content: space-around;
@@ -90,10 +99,11 @@ input[type="submit"]:hover{
     align-items: center;
 }
 .round{
-width: 50px;
+        width: 50px;
         height: 50px;
         text-align: center;
         padding-top: 13px; 
+        margin-left:10px; 
         background-color: red;
         border-radius: 50px;
         padding: 10px;

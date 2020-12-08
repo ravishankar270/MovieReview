@@ -9,9 +9,7 @@ body{
     margin: auto;
     color: #25aae1;
 }
-.profile-header{
-    width: 50px;
-}
+
 .forum{
     width: 70% ;
     min-height: calc(100vh - 99px - 226px);
@@ -85,6 +83,12 @@ body{
 
 
 @media (max-width: 920px){
+    .desc{
+        width: 100%;
+    }
+    textarea{
+        width:100%;
+    }
 
 
 }
