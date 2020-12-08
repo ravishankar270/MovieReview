@@ -104,7 +104,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
+        background-position: center;
     }
     
     .imagecon:nth-child(2){
@@ -113,7 +113,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
+        background-position: center;
     }
     .imagecon:nth-child(3){
       <?php if($row){ ?>
@@ -121,7 +121,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
+        background-position: center;
     }
     .imagecon:nth-child(4){
       <?php if($row){ ?>
@@ -129,7 +129,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
+        background-position: center;
     }
      .imagecon:nth-child(5){
       <?php if($row){ ?>
@@ -137,7 +137,7 @@ p{
       <?php } ?>
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
+        background-position: center;
     } 
 
      @keyframes slider{
