@@ -369,7 +369,7 @@ p{
    include('../footer&header/footer.php');
 
    ?> 
-        </div>
+      
 
       
         
