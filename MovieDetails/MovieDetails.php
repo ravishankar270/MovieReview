@@ -12,7 +12,7 @@
     }else if(isset($_GET['q'])){
       $_SESSION['eid']=intval($_GET['q']);
       $res="select Name,images1,images2,images3,trailer,Director,genre,description from entertainment where E_id=".$_SESSION['eid'];
-$res1="select E_id from watch_list where E_id=".$_SESSION['eid'];
+$res1="select E_id from watch_list where E_id in (select E_id from watch_list where user_id=".$_SESSION['id'].")";
       $result=$conn->query($res) or die($conn->error);
       $result1=$conn->query($res1) or die($conn->error);
       $row=$result->fetch_row();
@@ -128,7 +128,8 @@ p{
         background-image: url('<?php echo $row[1]; ?>');
       <?php } ?>
         background-repeat: no-repeat;
-        background-size: cover center;
+        background-size: cover;
+        background-position: center center;
     }
      .imagecon:nth-child(5){
       <?php if($row){ ?>
