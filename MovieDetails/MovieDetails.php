@@ -3,7 +3,7 @@
 <?php
     if (!isset($_SESSION['id'])){
         
-        header("location:   ../login/login.php");
+        header("location:../login/login.php");
     }
 
     include('../connectdb.php');
@@ -18,7 +18,7 @@ $res1="select E_id from watch_list where E_id in (select E_id from watch_list wh
       $result1=$conn->query($res1) or die($conn->error());
 
       $row=$result->fetch_row();
-      
+
       $color='black';
       $text='Add to watchlist';
       $size=30;
