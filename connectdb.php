@@ -5,7 +5,7 @@
   //       $password = "";
   //       $dbname="moviereview";
         
-        remote sql
+        // remote sql
         $servername = "remotemysql.com";
         $username = "buU5l6jIDM";
         $password = "v2BL9f8Kwy";
