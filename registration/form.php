@@ -39,13 +39,13 @@
 
 <?php
 
-    include('google.php');
+    // include('google.php');
     
     if(isset($_SESSION['id'])){
         header('Location: ../homepage/homepage.php');
         exit();
     }
-    $auth=$google_client->createAuthUrl();
+    // $auth=$google_client->createAuthUrl();
 
 
      
@@ -62,7 +62,7 @@
               var xmlhttp = new XMLHttpRequest();
            xmlhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
-                console.log(xmlhttp.responseText)
+                alert(xmlhttp.responseText)
                 if(xmlhttp.responseText!=='already'){
                if(xmlhttp.responseText==='registered'){
                 console.log('hello')

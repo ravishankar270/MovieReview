@@ -22,7 +22,7 @@ include('../connectdb.php');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
-      $sql="select  description,Spoiler_tag,username from reviews where E_id =".$_SESSION['eid']." limit 6 " ;
+      $sql="select  description,Spoiler_tag,username,rating from reviews where E_id =".$_SESSION['eid']." limit 6 " ;
         $result = $conn->query($sql) or die($conn->error);
         
         
@@ -42,25 +42,32 @@ include('../connectdb.php');
 <?php
 while ($row=$result->fetch_row()) {
   # code...
-
-echo "<div class='review-all'>
+?>
+<div class='review-all'>
     
    <div class='body-review'>
-   <div class='profile' onclick=\"location.href='../profile/profile2.php'\">
-        <a >".$row[2][0]."</a>
+   <div class='profile' onclick="location.href='../profile/profile2.php'">
+        <a ><?php echo $row[2][0];?></a>
     </div>
-      <div class='name-review'>".$row[2]."</div>
-      <div class='place-review'>Germany</div>
+      <div class='name-review'><?php echo $row[2]; ?></div>
+      <div class='place-review'><?php echo $row[1]; ?></div>
       <div class='rating'>
+        
+        <?php
+        $i=$row[3];
+        if($i==0){
+          $i=1;
+        }
+         while($i!=0){?>
          <i class='fas fa-star'></i>
-         <i class='fas fa-star'></i>
-         <i class='fas fa-star'></i>
-         <i class='fas fa-star'></i>
-         <i class='fas fa-star-half'></i>
+       <?php
+       $i-=1; 
+        } ?>
       </div>
-      <div class='desc-review'>".$row[0]."</div>
+      <div class='desc-review'><?php echo $row[0]; ?></div>
    </div>
-</div>";
+</div>
+<?php
 }
 ?>
 <?php if($result->num_rows==6){?>

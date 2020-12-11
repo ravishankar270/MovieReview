@@ -206,7 +206,8 @@ p{
     <script type="text/javascript">
   function insert(){
         description=document.getElementById('description').value;
-        rating=document.getElementById('stars').value;
+        rating=document.getElementById('starz').value;
+        alert(rating)
         var reloadok=0
     
         if(description!==""){
@@ -332,13 +333,13 @@ p{
                 </div> -->
                 <div class='review'  style="" >
                     <div class="stars" id="requiredDiv">
-  <button class="star" onclick="rate(1)" style=""><i class="fa fa-star"></i></button>
-  <button class="star"onclick="rate(2)" style=""><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(0)" style=""><i class="fa fa-star"></i></button>
+  <button class="star"onclick="rate(1)" style=""><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(2)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(3)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(4)" style=""><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(5)" style=""><i class="fa fa-star"></i></button>
 </div>
-<input type="number"id='stars' name="rating" style="display: none;" value=1 > 
+<input type="number" id='starz' name="rating" style="display:none;" value=  1  > 
   
                     <div class="text" style="">
                                <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="50" required></textarea>

@@ -93,6 +93,36 @@ session_start();
     location.href="More_review.php"
   }
 </script>
+<script type="text/javascript">
+  function insert(){
+        description=document.getElementById('description').value;
+        rating=document.getElementById('starz').value;
+        alert(rating)
+        var reloadok=0
+    
+        if(description!==""){
+          console.log(description)
+        const data=[description,rating]
+        const json=JSON.stringify(data)
+        
+        var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+             
+              document.getElementById('description').style.innerHTML=""
+              location.reload()
+             
+
+      }
+    };
+    xmlhttp.open("GET","reviewinsert.php?q="+json,true);
+   
+    xmlhttp.send();
+  }
+    return false
+    }      
+
+    </script>
 <?php include('../footer&header/header.php'); ?>
 <div class="rev-section">
   <div class="dummy"></div>
@@ -130,15 +160,16 @@ session_start();
                 </div> -->
                 <div class='review'>
                     <div class="stars">
-  <button class="star" onclick="rate(1)"><i class="fa fa-star"></i></button>
-  <button class="star"onclick="rate(2)"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(0)"><i class="fa fa-star"></i></button>
+  <button class="star"onclick="rate(1)"><i class="fa fa-star"></i></button>
+  <button class="star" onclick="rate(2)"><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(3)"><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(4)"><i class="fa fa-star"></i></button>
-  <button class="star" onclick="rate(5)"><i class="fa fa-star"></i></button>
 </div>
+<input type="number" id='starz' name="rating" style="display:none;" value=  1  > 
                     <form class="text" method="POST" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
-                               <textarea name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="40" required></textarea>
-                               <input type="submit" name="post_reviews" value="POST" >
+                               <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="40" required></textarea>
+                               <input type="submit" onclick="insert()" name="post_reviews" value="POST" >
 
                     </form>
                     
@@ -172,30 +203,36 @@ session_start();
 <?php
 while ($row=$result->fetch_row()) {
   # code...
-
-echo "<div class='review1'>
+?>
+<div class='review1'>
     
    <div class='body-review'>
-   <div class='profile' onclick=\"location.href='../profile/profile2.php'\">
-        <a >".$row[3][0]."</a>
+   <div class='profile' onclick="location.href='../profile/profile2.php'">
+        <a ><?php echo $row[3][0]; ?></a>
     </div>
-      <div class='name-review'>".$row[3]."</div>
-      <div class='place-review'>Germany</div>
+      <div class='name-review'><?php echo $row[3]; ?></div>
+      <div class='place-review'><?php echo $row[2]; ?></div>
       <div class='rating'>
+<?php
+        $i=$row[3];
+        if($i==0){
+          $i=1;
+        }
+         while($i!=0){?>
          <i class='fas fa-star'></i>
-         <i class='fas fa-star'></i>
-         <i class='fas fa-star'></i>
-         <i class='fas fa-star'></i>
-         <i class='fas fa-star-half'></i>
+       <?php
+       $i-=1; 
+        } ?>
       </div>
-      <div class='desc-review'>".$row[1]."</div>
+      <div class='desc-review' style="font-size: 20px;"><?php echo $row[1]; ?></div>
    </div>
-</div>";
+</div>
+<?php
 }
 ?>
 
 
 </div>
-
+<script type="text/javascript" src="tab1.js"></script>
 </body>
 </html>

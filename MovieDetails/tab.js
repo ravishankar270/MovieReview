@@ -18,19 +18,19 @@ function showPanel(panelIndex,colorCode) {
 showPanel(0,'#25aae1');
 
 function rate(index){
-    console.log(tabPanels)
-    for(i=0; i<index;i++){
+    for(i=0; i<=index;i++){
         stars[i].style.opacity=1;
         stars[i].style.color="#FFDF00";
 
         
     }
-    for (i=index; i<=5;i++){
+    for (i=index+1; i<=4;i++){
         stars[i].style.opacity=0.2;
         stars[i].style.color="";
 
     }
-    document.getElementByID('stars').value=index+1;
+    document.getElementById('starz').value=index+1;
+    console.log(document.getElementById('starz').value)
 }
 
 

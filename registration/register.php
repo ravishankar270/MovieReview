@@ -5,11 +5,10 @@
     
 
    $email = $data[0];
-   $username=$data[2];
+   $usernam=$data[2];
    $password = $data[1];
    $pass = password_hash($password, PASSWORD_BCRYPT);
 
-   echo "$pass";
 
 
 include('../connectdb.php');
@@ -17,17 +16,16 @@ include('../connectdb.php');
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-        if(isset($_SESSION['id'])){
-        $query="select user_id,Name from user where Email_id='".$_SESSION['email']."'";
+        $query="select user_id,Name from user where Email_id='".$email."'";
 $r=$conn->query($query);
-if($r->num_rows()==1){
+if($r->num_rows==1){
     header('location: ../login/login.php');
-}
-}
+}else{
+
 $check="select username from user where username='".$username."'";
         $ru = $conn->query($check);
-        if($r->num_rows==0){
-    $sql="INSERT INTO `user` ( `Email_id`, `password`,`username` ) VALUES ( '$email', '$password','$username')";
+        if($ru->num_rows==0){
+    $sql="INSERT INTO `user` ( `Email_id`, `password`,`username` ) VALUES ( '$email', '$pass','$usernam')";
     
 
     $run = $conn->query($sql);
@@ -37,10 +35,11 @@ $check="select username from user where username='".$username."'";
         echo "registered";
     }
     else{
-        echo "error";
+        print_r($sql);
     }	
 }else{
     echo "already";
+}
 }
 }
 	

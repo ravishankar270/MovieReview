@@ -40,7 +40,7 @@ include('../footer&header/header.php');
     <h1>NOTHING HERE</h1>
     <a style="cursor: pointer;" href="../all-movies/all-movies.php">ADD</a>
 <?php }else{ ?>
-    <h1>YOUR WATCHLIST</h1>
+    <h1>WATCHLIST</h1>
 <?php } ?>
     <!-- <p>Scroll for more!</p> -->
   </div>

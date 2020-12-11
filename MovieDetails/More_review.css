@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: times new roman;
   }
   
   .rotten{
@@ -59,7 +60,7 @@
     overflow-y: auto;
     flex-direction: column;
     position: fixed;
-    top:65px;
+    top:42px;
     left: 0;
 
 
@@ -76,6 +77,7 @@
 }
 textarea{
     resize: none;
+    width: 80%;
 
 }
 .stars{
@@ -211,7 +213,8 @@ border-radius:20px;
   }
   .desc-review{
     line-height: 1.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    text-align: center;
     color: rgb(150, 150, 150);
   }
   

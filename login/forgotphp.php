@@ -2,29 +2,21 @@
    
 //    $email = $_POST['email'];
 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'moviereview');
-
-
-
-// Try connecting to the Database
-$con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if($con->connect_error){
+include('../connectdb.php');
+    if($conn->connect_error){
 		echo "$con->connect_error";
-		die("Connection Failed : ". $con->connect_error);
+		die("Connection Failed : ". $conn->connect_error);
 	} else {
 
         if(isset($_POST['submit'])){
-            $to_email = mysqli_real_escape_string($con,$_POST['email']);
+            $to_email = mysqli_real_escape_string($conn,$_POST['email']);
             $emailquery = "select * from `user` where `Email_id`='$to_email' ";
-            $query = mysqli_query($con,$emailquery);
-            $emailcount = mysqli_num_rows($query);
+            $query = $conn->query($emailquery);
+            $emailcount = $query->num_rows;
 
             if($emailcount){
 
-                $userdata = mysqli_fetch_array($query);
+                $userdata = $query->fetch_assoc();
                 $username = $userdata['username'];
                 $Email_id = $userdata['Email_id'];
                 

@@ -6,7 +6,7 @@
     }else{
         $action="select images,trailer,Name,E_id from entertainment where Type='Movie' and genre='Action/Thriller'";
         if(isset($_SESSION['id'])){ 
-        $watch="select images,trailer,Name,E_id from entertainment where Type='Movie' and E_id in (select E_id from watch_list where user_id=".$_SESSION['id']." )";  
+        $watch="select images,trailer,Name,E_id from entertainment where E_id in (select E_id from watch_list where user_id=".$_SESSION['id']." )";  
     $result1=$conn->query($watch);
 }
         $result=$conn->query($action) or die($conn->error);
