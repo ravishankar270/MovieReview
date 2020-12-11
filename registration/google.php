@@ -1,5 +1,5 @@
 <?php
-require_once('googleapis/vendor/autoload.php');
+require_once('../googleapis/vendor/autoload.php');
     session_start();
     $google_client=new Google_client();
     $google_client->setClientId("16817687725-0vn2hhn7m3pdfuk7mcukjmgutb5mj88s.apps.googleusercontent.com");

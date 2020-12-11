@@ -13,10 +13,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href="all-shows.css?v=<?php echo time(); ?>" type="text/css" />
-          <link rel='stylesheet' href="lightslider.css?v=<?php echo time(); ?>" type="text/css" />
+          <link rel='stylesheet' href="../lightslider.css?v=<?php echo time(); ?>" type="text/css" />
         <script src="https://kit.fontawesome.com/3e55b52515.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="JQuery3.3.1.js?v=<?php echo time();?>"></script>
-        <script type="text/javascript" src="lightslider.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="../JQuery3.3.1.js?v=<?php echo time();?>"></script>
+        <script type="text/javascript" src="../lightslider.js?v=<?php echo time();?>"></script>
         <script src="all-shows.js?v=<?php echo time();?>"></script>
 
     </head>
