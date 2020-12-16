@@ -407,7 +407,7 @@
         // session_start();
          if (!isset($_SESSION['id'])){
         echo "<h3 class='btn-3'style='margin:auto; text-align:center;'>
-            <a href='#' class='btn3'>Sign in</a>
+            <a href='../login/login.php' class='btn3'>Sign in</a>
         </h3>";
         }
         ?>
