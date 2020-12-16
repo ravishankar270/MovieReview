@@ -32,6 +32,13 @@ function rate(index){
     document.getElementById('starz').value=index+1;
     console.log(document.getElementById('starz').value)
 }
+function clear(){
+    for (i=0; i<=4;i++){
+        stars[i].style.opacity=0.2;
+        stars[i].style.color="";
+
+    }
+}
 
 
 

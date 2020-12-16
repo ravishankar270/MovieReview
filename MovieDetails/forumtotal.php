@@ -54,10 +54,10 @@ function finsert(){
         var xmlhttp = new XMLHttpRequest();
          xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-            
-              console.log(this.responseText)
-              document.getElementById('description1').style.innerHTML=""
-              location.reload()
+                
+              document.getElementById('description1').value="";
+              document.getElementById('add').innerHTML+=xmlhttp.responseText
+              
              
 
       }
@@ -87,6 +87,7 @@ function finsert(){
                 </div>
 
             </div>
+        <div id="add" style="width: 100%;">
         <?php
         while($row = $result->fetch_assoc()){
             
@@ -100,6 +101,7 @@ function finsert(){
 
         }
         ?>
+    </div>
      </div>
      <script src="tab.js?v=<?php echo time(); ?>"></script>
 </body>

@@ -39,13 +39,13 @@
 
 <?php
 
-    // include('google.php');
+    include('google.php');
     
     if(isset($_SESSION['id'])){
         header('Location: ../homepage/homepage.php');
         exit();
     }
-    // $auth=$google_client->createAuthUrl();
+    $auth=$google_client->createAuthUrl();
 
 
      

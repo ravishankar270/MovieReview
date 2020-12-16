@@ -22,7 +22,8 @@ include('../connectdb.php');
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
       }
-      $sql="select  description,Spoiler_tag,username,rating from reviews where E_id =".$_SESSION['eid']." limit 6 " ;
+      $ad=$_SESSION['eid'];
+      $sql="select  description,Spoiler_tag,username,rating from reviews where E_id =$ad ORDER BY review_id desc limit 6 " ;
         $result = $conn->query($sql) or die($conn->error);
         
         
@@ -38,7 +39,7 @@ include('../connectdb.php');
 
 
 
-<div class="reviews-all">
+<div id="addition" class="reviews-all">
 <?php
 while ($row=$result->fetch_row()) {
   # code...
@@ -54,7 +55,7 @@ while ($row=$result->fetch_row()) {
       <div class='rating'>
         
         <?php
-        $i=$row[3];
+        $i=intval($row[3]);
         if($i==0){
           $i=1;
         }

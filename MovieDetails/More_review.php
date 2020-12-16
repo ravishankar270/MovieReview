@@ -214,7 +214,7 @@ while ($row=$result->fetch_row()) {
       <div class='place-review'><?php echo $row[2]; ?></div>
       <div class='rating'>
 <?php
-        $i=$row[3];
+        $i=$row[0];
         if($i==0){
           $i=1;
         }

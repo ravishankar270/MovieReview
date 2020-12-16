@@ -18,7 +18,7 @@ include('../connectdb.php');
                   $Rating=$_POST['rating'];
                   $trailer=$_POST['trailer'];
                   $runtime=$conn -> real_escape_string($_POST['runtime']);
-                  $aid=$_SESSION['adminid'];
+                  
 
                  $a= array( );
 
@@ -86,7 +86,7 @@ include('../connectdb.php');
                 //   if(move_uploaded_file($_FILES['files']['tmp_name'], $upload_directory.$TargetPath2)){   
                 //   if(move_uploaded_file($_FILES['files']['tmp_name'], $upload_directory.$TargetPath3)){ 
                 if($upload==1){
-                    $sql="INSERT INTO `entertainment` ( `Director`,`Name`,`genre`,`images`,`images1`,`images2`,`images3`,`rating`,`description`,`admin_id`,`Type`,`trailer` ) VALUES ( '$director','$movie_name','$genre','".$a[0]."','".$a[1]."','".$a[2]."','".$a[3]."',$Rating,'$description',$aid,'Movie','$trailer')";
+                    $sql="INSERT INTO `entertainment` ( `Director`,`Name`,`genre`,`images`,`images1`,`images2`,`images3`,`rating`,`description`,`admin_id`,`Type`,`trailer` ) VALUES ( '$director','$movie_name','$genre','".$a[0]."','".$a[1]."','".$a[2]."','".$a[3]."',$Rating,'$description',0,'Movie','$trailer')";
                   $result = $conn->query($sql) or die($conn->error);
                     if($result){
                       echo "Updated";

@@ -19,22 +19,22 @@
 
 <?php
 
-// require_once('../googleapis/vendor/autoload.php');
+require_once('../googleapis/vendor/autoload.php');
 
-//     $google_client=new Google_client();
-//     $google_client->setClientId("16817687725-0vn2hhn7m3pdfuk7mcukjmgutb5mj88s.apps.googleusercontent.com");
-//     $google_client->setClientSecret('fmkbIn_UKTwgKKIn8uH-R3CX');
-//     $google_client->setRedirectUri('http://localhost/login/login/home.php');
+    $google_client=new Google_client();
+    $google_client->setClientId("16817687725-0vn2hhn7m3pdfuk7mcukjmgutb5mj88s.apps.googleusercontent.com");
+    $google_client->setClientSecret('fmkbIn_UKTwgKKIn8uH-R3CX');
+    $google_client->setRedirectUri('http://localhost/login/login/home.php');
     
-//     $google_client->addScope('email');
-//     $google_client->addScope('profile');
+    $google_client->addScope('email');
+    $google_client->addScope('profile');
     
     
     if(isset($_SESSION['id'])){
         header('Location: index.php');
         exit();
     }
-    // $auth=$google_client->createAuthUrl();
+    $auth=$google_client->createAuthUrl();
 
 
      
@@ -49,6 +49,7 @@
     }else{
         $email=$_POST['email'];
         $password1=$_POST['password'];
+        
         $sql1="select admin_id,admin_email,admin_password from admin where admin_email='$email' and admin_password='$password1'";
         $result1 = $conn->query($sql1);
         $user_info1=$result1->fetch_row();

@@ -42,7 +42,7 @@ $res1="select E_id from watch_list where E_id in (select E_id from watch_list wh
     <link rel='stylesheet' href="movie_review_details.css?v=<?php echo time(); ?>" type="text/css" />   
     <link rel='stylesheet' href="tab.css?v=<?php echo time(); ?>" type="text/css" />    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+   
     <style type="text/css">
 
 .row {  
@@ -205,12 +205,15 @@ p{
     
     <script type="text/javascript">
   function insert(){
-        description=document.getElementById('description').value;
-        rating=document.getElementById('starz').value;
-        alert(rating)
+        var description=document.getElementById('description').value;
+        var rating=document.getElementById('starz').value;
+        var rat=document.getElementById('star1').style.opacity;
+        console.log(rat)
+        var rat1=document.getElementById('tooltiptext');
+       
         var reloadok=0
     
-        if(description!==""){
+        if(description!=="" && rat!=0.2){
           console.log(description)
         const data=[description,rating]
         const json=JSON.stringify(data)
@@ -219,16 +222,22 @@ p{
          xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
              
-              document.getElementById('description').style.innerHTML=""
+              document.getElementById('description').value=""
               location.reload()
              
 
       }
-    };
+    }
     xmlhttp.open("GET","reviewinsert.php?q="+json,true);
    
     xmlhttp.send();
+  }else{
+    if(rat==0.2){
+    alert('please rate it')
+  }else{
+    alert('write something about movie')
   }
+      }
     return false
     }      
 
@@ -332,17 +341,18 @@ p{
                     <p>Add to Watchlist</p>
                 </div> -->
                 <div class='review'  style="" >
-                    <div class="stars" id="requiredDiv">
-  <button class="star" onclick="rate(0)" style=""><i class="fa fa-star"></i></button>
+                    <div class="stars" id="requiredDiv" >
+  <button id="star1" class="star" onclick="rate(0)" style=""><i class="fa fa-star"></i></button>
   <button class="star"onclick="rate(1)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(2)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(3)" style=""><i class="fa fa-star"></i></button>
   <button class="star" onclick="rate(4)" style=""><i class="fa fa-star"></i></button>
+  
 </div>
 <input type="number" id='starz' name="rating" style="display:none;" value=  1  > 
   
                     <div class="text" style="">
-                               <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="50" required></textarea>
+                               <textarea id="description" name="description" placeholder="What did you think of the movie?" style="text-indent: 20px;"  name="review" rows="4" cols="50" required="true"></textarea>
                                <input type="submit" style="background-color:  #69bde7;" onclick="insert()" name="post_reviews" value="POST" >
 
                     </div>
